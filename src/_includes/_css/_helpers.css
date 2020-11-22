@@ -1,0 +1,36 @@
+
+/*  GENERAL  HELPERS  */
+
+.indent { text-indent: 2rem; } 
+
+/*  CONDITIONAL  DEVICE  SIZE  DISPLAY  */
+
+@media only screen and (min-width: 768px) {
+    .br-nodisplay { display: none; }
+}
+
+.display-small { display: inline-block; }
+.display-medium { display: none; }
+.display-large { display: none; }
+
+@media (min-width: 576px) {
+    .display-small { display: inline-block; }
+    .display-medium  { display: none; }
+    .display-large { display: none; }
+}
+@media (min-width: 768px) {
+    .display-small { display: none; }
+    .display-medium { display: inline-block; }
+    .display-large { display: none; }
+}
+@media (min-width: 992px) {
+    .display-small { display: none; }
+    .display-medium { display: none; }
+    .display-large { display: inline-block; }
+}
+
+/*  OTHER CONDITIONAL  DEVICE  SIZE  DISPLAY  HELPERS  */
+
+@media only screen and (max-width: 576px)    { .mobile-nodisplay { display: none; } }
+@media only screen and (max-width: 575.98px) { .display-mobile { display: inline-block; } .display-normal { display: none; } }
+@media only screen and (min-width: 576px)    { .display-normal { display: inline-block; } .display-mobile { display: none; } }

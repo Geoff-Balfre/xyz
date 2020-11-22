@@ -1,0 +1,169 @@
+---
+layout: _base
+title: Date Test Template
+description: Date Test Page description
+heading: Date Tests
+engagement: JS and Luxon date testing
+date: Last Modified
+tags: test
+
+email: geoff@balfre.com
+
+---
+{% import '_macros/_helpers.njk' as g %}
+{% block content %}
+
+<style>
+em {font-weight: 600;}
+</style>
+
+<hr>
+
+<script src="https://cdn.jsdelivr.net/npm/luxon@1.24.1/build/global/luxon.min.js"></script>
+
+            <p><a href="/test.html" title="test index link">&#60; Back</a></p>
+
+            <h1>{{ heading }}</h1>
+            {%- if engagement %}<p class="lead">{{ engagement }}</p>{% endif %}
+
+            <!-- https://moment.github.io/luxon/index.html -->
+
+            <p>
+              <strong style="font-size:125%;background:#98fb98;">Javascript Now: <span id="a"></span></strong><br>
+<br>
+              Year :    <span id="b"></span><br>
+              Year :    <span id="c"></span><br>
+              Month :   <span id="d"></span><br>
+              Month :   <span id="e"></span><br>
+              Day :     <span id="f"></span><br>
+              Day :     <span id="g"></span><br>
+<br>
+              Hour :    <span id="h"></span><br>
+              Mins :    <span id="i"></span><br>
+              Secs :   <span id="j"></span><br>
+<br>
+              Version : <span id="k"></span><br>
+              Short :   <span id="l"></span><br>
+              Long :    <span id="m"></span><br>
+<br>
+              Styled:   <span id="w"></span><br>
+              Styled:   <span id="x"></span><br>
+            </p>
+
+<hr>
+
+            <p>
+              <strong style="font-size:125%;background:#98fb98;">Luxon Now: <span id="l1"></span></strong><br>
+<br>
+              <em>2:</em> <span id="l2"></span><br>
+              <em>3:</em> <span id="l3"></span><br>
+
+              <em>4:</em> <span id="l4"></span><br>
+
+              <em>5:</em> <span id="l5"></span><br>
+              <em>6:</em> <span id="l6"></span><br>
+              <em>7:</em> <span id="l7"></span><br>
+
+              <em>8:</em> <span id="l8"></span><br>
+              <em>9:</em> <span id="l9"></span><br>
+
+              <em>10:</em> <span id="l10"></span><br>
+<br>
+              <em>95:</em> <span id="l95"></span><br>
+                  <!-- <em>96:</em> <span id="l96"></span> --><br>
+              <em>97:</em> <span id="l97"></span><br>
+                  <!-- <em>98:</em> <span id="l98"></span> --><br>
+              <em>99:</em> <span id="l99"></span><br>
+            </p>
+
+<hr>
+
+            <h4>Unformatted:   {{ page.date | dateToFormat() }} </h4>
+
+            <h4>Year only:     {{ page.date | dateToFormat('yyyy') }} </h4>
+
+            <h4>Update style : {{ page.date | dateToFormat('yyyy-MM-dd') }} </h4>
+
+            <h4>Special:       {{ page.date | dateToFormat('ccc d LLL yyyy HH:mm a') }} </h4>
+
+            <h4>Special:       {{ page.date | dateToISO() }} </h4>
+
+            <h4>Me:            {{ page.date | dateToMyFormat('ccc d LLL yyyy HH:mm a') }} </h4>
+
+            <h4>Email:         {{ email | obfuscate }} </h4>
+
+<hr>
+
+<script>
+
+// Pure Javascript
+
+	let dshort    = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+	let dlong     = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+	let ordinals  = ["st","nd","rd","th","th","th","th","th","th","th","th","th","th","th","th","th","th","th","th","th","st","nd","rd","th","th","th","th","th","th","th","st"];
+
+	let mshort    = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+	let mlong     = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+	let dt = new Date();					document.querySelector('#a').innerHTML = dt;
+
+	let yyyy  = dt.getFullYear();			document.querySelector('#b').innerHTML = yyyy;
+	let y2 = new Date().getFullYear();		document.querySelector('#c').innerHTML = y2;
+
+	let m   = 1 + dt.getMonth();
+	let month = mshort[dt.getMonth()];
+	let monthname = mlong[dt.getMonth()];	document.querySelector('#d').innerHTML = m + ' ' + month + ' ' + monthname;
+	let mm = (m<10) ? '0' + m : m;			document.querySelector('#e').innerHTML = mm;
+
+	let dm = dt.getDate();
+	let dw = dt.getDay();
+	let ordinal = ordinals[dm - 1];
+	let day = dshort[dw];
+	let dayname = dlong[dw];					document.querySelector('#f').innerHTML = dm + ' ' + day + ' ' + dayname;
+	let dd = (dm<10) ? '0' + dm : dm;			document.querySelector('#g').innerHTML = dd + ' ' + ordinal;
+
+	let meridiem  = (dt.getHours()<12) ? 'am' : 'pm';
+	let hr = (dt.getHours()<10) ? '0' + dt.getHours() : dt.getHours();			document.querySelector('#h').innerHTML = hr + ' ' + meridiem;
+	let mn = (dt.getMinutes()<10) ? '0' + dt.getMinutes() : dt.getMinutes();	document.querySelector('#i').innerHTML = mn;
+	let ss = (dt.getSeconds()<10) ? '0' + dt.getSeconds() : dt.getSeconds();	document.querySelector('#j').innerHTML = ss;
+
+	let a = yyyy + mm + dd + '.' + hr + mn + ss;								document.querySelector('#k').innerHTML = a;
+	let b = dd + '/' + mm + '/' + yyyy;											document.querySelector('#l').innerHTML = b;
+	let c = dd + '/' + mm + '/' + yyyy + ' ' + hr + ':' + mn + ':' + ss;		document.querySelector('#m').innerHTML = c;
+
+	let t = hr + ':' + mn + ':' + ss + meridiem;
+
+	let w = day + ' ' + dd + ordinal + ' ' + month + ' ' + yyyy + ' ' + t;		document.querySelector('#w').innerHTML = w;
+
+	let x = dayname + ' ' + dd + ordinal + ' ' + monthname + ' ' + yyyy + ' ' + t;		document.querySelector('#x').innerHTML = x;
+
+
+// Luxon Examples
+
+    let DateTime = luxon.DateTime;
+
+    dt = DateTime.local();
+
+    document.querySelector('#l1').innerHTML = dt;
+
+    document.querySelector('#l2').innerHTML = dt.toLocaleString();
+    document.querySelector('#l3').innerHTML = dt.toLocaleString(DateTime.DATETIME_MED);
+
+    document.querySelector('#l4').innerHTML = dt.day;
+    document.querySelector('#l5').innerHTML = dt.monthShort;
+    document.querySelector('#l6').innerHTML = dt.monthLong;
+    document.querySelector('#l7').innerHTML = dt.year;
+    document.querySelector('#l8').innerHTML = dt.weekdayShort;
+    document.querySelector('#l9').innerHTML = dt.weekdayLong;
+    document.querySelector('#l10').innerHTML = dt.weekdayShort + ' ' + dt.day + ' ' + dt.monthShort + ' ' + dt.year;
+
+    document.querySelector('#l95').innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY);
+//    document.querySelector('#l96').innerHTML = '';
+    document.querySelector('#l97').innerHTML = DateTime.utc().toHTTP();
+//    document.querySelector('#l98').innerHTML = '';
+    document.querySelector('#l99').innerHTML = dt.toFormat('ccc d LLL yyyy HH:mm a');
+
+</script>
+
+{% endblock %}

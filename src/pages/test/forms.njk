@@ -1,0 +1,107 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Forms 🔸
+description: Forms page description
+heading: Forms
+engagement: Forms page engagement text
+styles: ['bs4-only-buttons', 'bs4-only-forms']
+scripts: ['recaptcha']
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+<style>
+
+</style>
+
+    <main class="container">
+
+      <h1>{{ heading }}</h1>
+
+      <div class="default-grid">
+
+        <section>
+            {% form_styles %}
+        </section>
+
+        <section>
+            <h4>Base Elements:</h4>
+            {%- form_input_hidden   { name: 'theName', value: 'theValue' } %}
+            {%- form_support_text   { text: 'Example of some supporting text...' } %}
+            {%- form_input_text     { id: 'textId', label: 'Text', autofocus: true } %}
+            {%- form_input_textarea { id: 'textareaId', label: 'Textarea', rows: 3 } %}
+            {%- form_input_select   { id: 'selectId', label: 'Select', data: formData.select } %}
+            {%- form_input_checkbox { type: 'checkbox', id: 'checkboxId', label: 'Checkbox', data: formData.checkbox } %}
+            {%- form_input_radio    { type: 'radio', id: 'radioId', label: 'Radio Button', data: formData.radio } %}
+
+            {%- form_input_range    { id: 'rangeId', label: 'Range', min: 0, max: 10, step: 0.5 } %}
+
+            <!-- TESTING HERE -->
+            <h6 style="color: orange;">1. TBC switch</h6>
+            <!-- TESTING HERE -->
+
+            {%- form_input_submit   {} %}
+        </section>
+
+        <section>
+            <h4>Enhanced Elements:</h4> 
+            {%- form_input_text { type: 'date', id: 'dateId', label: 'Date' } %}
+            <h6 style="color: orange;">2. TBC Date: ??</h6>
+            <h6 style="color: orange;">3. TBC Date of Birth: ??</h6>
+            {%- form_input_text { type: 'number', id: 'numberId', label: 'Number' } %}
+            <h6 style="color: orange;">4. TBC Quantity:</h6>
+            {%- form_input_text { type: 'password', id: 'passwordId', label: 'Password', autocapitalize: 'off', autocomplete: 'current-password' } %}
+            <h6 style="color: orange;">5. TBC Password++:</h6>
+        </section>
+
+        <section>
+            <h4>Personal Elements</h4>
+            {%- form_input_text { type: 'email', id: 'emailId', label: 'Email', autocapitalize: 'off', autocorrect: 'off', autocomplete: 'email', ariaId: 'ariaId', ariatext: 'Aria hint text or comment...' } %}
+            {%- form_input_select { id: 'salutationId', label: 'Title', 'required': true, data: formData.salutation } %}
+            {%- form_input_text { type: 'text', id: 'nameId', label: 'Name', autocorrect: 'off', autocomplete: 'name' } %}
+            {%- form_input_text { type: 'text', id: 'firstnameId', label: 'First name', autocorrect: 'off', autocomplete: 'given-name' } %}
+            {%- form_input_text { type: 'text', id: 'secondnameId', label: 'Surname', autocorrect: 'off', autocomplete: 'family-name' } %}
+            {%- form_input_text { type: 'tel', id: 'phoneId', label: 'Phone no.', autocorrect: 'off', autocomplete: 'tel' } %}
+
+            <h6 style="color: orange;">6. TBC credit-card-cvs</h6>
+                <!-- inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="cc-csc" -->
+            <h6 style="color: orange;">7. TBC credit-card-number</h6>
+                <!-- inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="cc-number" -->
+        </section>
+
+        <section>
+            <h4>Address elements</h4>
+            {%- form_input_text { type: 'text', id: 'addr1Id', label: 'Address line 1', autocorrect: 'off', autocomplete: 'address-line1' } %}
+            {%- form_input_text { type: 'text', id: 'addr2Id', label: 'Address line 2', autocorrect: 'off', autocomplete: 'address-line2' } %}
+            {%- form_input_text { type: 'text', id: 'addr3Id', label: 'Address line 3', autocorrect: 'off', autocomplete: 'address-line3' } %}
+            {%- form_input_text { type: 'text', id: 'townId',  label: 'Town', autocorrect: 'off', autocomplete: 'address-level2' } %}
+            {%- form_input_text { type: 'text', id: 'countyId', label: 'County', autocorrect: 'off', autocomplete: 'address-level1' } %}
+            {%- form_input_text { type: 'text', id: 'countryId', label: 'Country', autocorrect: 'off', autocomplete: 'country' } %}
+            {%- form_input_text { type: 'text', id: 'postcodeId', label: 'Postcode', autocorrect: 'off', autocomplete: 'postal-code' } %}
+                <!-- inputmode="numeric" pattern="[0-9]*" novalidate autocorrect="off" autocomplete="postal-code" -->
+        </section>
+
+        <section>
+            <h4>Special Elements:</h4> 
+            <h6 style="color: orange;">8. TBC Autocomplete:</h6>
+            <h6 style="color: orange;">9. TBC reCaptcha:</h6>
+            {%- form_input_checkbox { type: 'checkbox', id: 'remembermeId', label: 'Remember me', data: formData.rememberme } %}
+            {%- form_input_radio    { type: 'radio', id: 'yesnoId', label: 'Yes/No', data: formData.yesno } %}
+            {%- form_input_radio    { type: 'radio', id: 'genderrId', label: 'Gender', data: formData.gender } %}
+            <h6 style="color: orange;">10. TBC input-addon-button (input)</h6>
+            <h6 style="color: orange;">11. TBC input-addon-icon (input)</h6>
+        </section>
+
+        <section>
+            <h4>Elements States:</h4> 
+            <h6 style="color: orange;">12. TBC input-success</h6>
+            <h6 style="color: orange;">13. TBC input-error</h6>
+            <h6 style="color: orange;">14. TBC readonly ??</h6>
+            <h6 style="color: orange;">15. TBC displayonly ??</h6>
+        </section>
+
+      </div>
+    </main>
+
+{% endblock %}

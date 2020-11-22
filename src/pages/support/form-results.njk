@@ -1,0 +1,60 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Form input results 📄
+description : Form input results page description
+heading: Form input results
+engagement:
+includeinsitemap: false
+includeinanalytics: true
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{%- block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content">
+
+                <h1>{{ heading }}</h1>
+
+                <div id="resultsId"> </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        const results = document.getElementById('resultsId');
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            results.append(`${name}: ${value}`);
+            results.append(document.createElement('br'));
+        })
+
+    </script>
+
+{%- endblock %}

@@ -1,0 +1,306 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Test Special Summary 🧩
+description : Test Special Summary page description
+heading: Test Special Summary
+engagement: Test Special Summary page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+<style>
+
+</style>
+<main class="container">
+<div class="column-layout">
+<h1>{{ heading }}</h1>
+
+<!-- https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet -->
+<!-- https://www.scaledagile.com/certifications/which-course-is-right-for-me/ -->
+
+## Leading SAFe®
+with [Certified SAFe® Agilist](#)
+#### 2 Day
+#### Foundational Level
+For leaders of a Lean-Agile change initiative to develop a Lean-Agile Mindset and apply the principles and practices of the Scaled Agile Framework® (SAFe®) to support Agile Teams, programs, and [more...](/pages/courses/leading-safe/ "Link to full course details")
+
+#### Learners taking this course are:
+CEO
+Program Manager
+Project Manager
+Scrum Master
+Team Lead
+Release Train Engineer
+Business Analyst
+Agile Coach
+CIO
+Portfolio Manager
+Consultant
+Engineer
+Program Manager
+Change Agent
+Solution or Systems Architect
+
+---
+
+## Implementing SAFe®
+with [Certified SAFe® Program Consultant](#)
+#### 4 Day
+#### Advanced Level
+For Lean-Agile change agents implementing and applying the principles and practices of the Scaled Agile Framework (SAFe), as part of an enterprise Lean-Agile transformation. SAFe® 5 Program Consultants (SPC) become [more...](/pages/courses/implementating-safe/ "Link to full course details")
+
+#### Learners taking this course are:
+Program or Project Manager
+Scrum Master
+Release Train Engineer
+Business Analyst
+Agile Coach
+Development Manager
+Consultant
+Director
+Manager
+Product Manager
+Product Owner
+Agile Change Agent
+Software Engineer
+
+---
+
+## SAFe® for Teams
+with [Certified SAFe® Practitioner](#)
+#### 2 Day
+#### Intermediate Level
+For Lean-Agile team members to gain experience as an Agile Team member in a SAFe Agile Release Train (ART). Break down features, write user stories, improve team and train processes, [… Keep reading](#)
+
+#### Learners taking this course are:
+Program or Project Manager
+Scrum Master
+Team Lead
+Release Train Engineer
+Business Analyst
+Agile Coach
+Consultant
+Architect
+Engineer
+Developer
+Director
+Quality
+Product Manager
+Product Owner
+Program Manager
+Change Agent
+Operations
+Programmer
+
+---
+
+## SAFe® Scrum Master
+with [Certified SAFe® Scrum Master](#)
+#### 2 Day
+#### Intermediate Level
+For Scrum Masters learning about their role in a SAFe enterprise context. Learn to facilitate Team and Program Level events for successful program execution, explore Scrum in the context of [… Keep reading](#)
+
+#### Learners taking this course are:
+Program or Project Manager
+Scrum Master
+Team Lead
+Release Train Engineer
+Business Analyst
+Agile Coach
+Portfolio Manager
+Consultant
+Architect
+Engineer
+Developer
+Director
+Quality
+Manager
+Product Manager
+Product Owner
+Delivery Manager
+Program Manager
+
+---
+
+## SAFe® Advanced Scrum Master
+with [Certified SAFe® Advanced Scrum Master](#)
+#### 2 Day
+#### Advanced Level
+For SAFe® Scrum Masters or equivalent responsible for program execution. Learn scalable engineering, DevOps practices, and facilitate cross-team interactions in support of program execution and relentless improvement in an enterprise [… Keep reading](#)
+
+#### Learners taking this course are:
+Program or Project Manager
+Scrum Master
+Release Train Engineer
+Business Analyst
+Agile Coach
+SAFe Program Consultant
+Consultant
+Product Manager
+Product Owner
+Program Manager
+
+---
+
+## SAFe® Release Train Engineer
+with [Certified SAFe® Release Train Engineer](#)
+#### 3 Day
+#### Advanced Level
+For SAFe Release Train Engineers (RTEs) to enhance their knowledge and skills as a servant leader and coach, effectively plan and execute a PI Planning event, foster relentless improvement in [… Keep reading](#)
+
+#### Learners taking this course are:
+Program or Project Manager
+Agile Coach
+SAFe Program Consultant
+IT Manager
+Consultant
+Director
+Product Manager
+Product Owner
+Solution Train Engineer
+Program Manager
+
+---
+
+## SAFe® Product Owner / Product Manager
+with [Certified SAFe® Product Owner / Product Manager](#)
+#### 2 Day
+#### Foundational Level
+For Product Management Office (PMO) professionals to apply Lean-Agile values and principles and economic prioritization, and develop skills writing epics, Capabilities, Features, and user stories within the context of SAFe. [… Keep reading](#)
+
+#### Learners taking this course are:
+Program or Project Manager
+Scrum Master
+Release Train Engineer
+Business Analyst
+Agile Coach
+SAFe Program Consultant
+Development Manager
+CTO
+Consultant
+Architect
+Engineer
+Director
+Product Manager
+Product Owner
+Delivery Manager
+Solution Train Engineer
+Software Developer
+
+---
+
+## SAFe® DevOps
+with [Certified SAFe® DevOps Practitioner](#)
+#### 2 Day
+#### Foundational Level
+The two-day, interactive SAFe® DevOps course helps people across technical, non-technical, and leadership roles work together to optimize their value stream from end to end. Attendees will learn what DevOps [… Keep reading](#)
+
+#### Learners taking this course are:
+Scrum Master
+Team Lead
+Release Train Engineer
+Business Analyst
+Agile Coach
+SAFe Program Consultant
+Consultant
+Architect
+Engineer
+Developer
+Director
+Quality
+Manager
+
+---
+
+## SAFe® for Government
+with [Certified SAFe® Government Practitioner](#)
+#### 2 Day
+#### Foundational Level
+Learn the principles and practices of the Scaled Agile Framework® (SAFe®), how to execute and release value through Agile Release Trains, and what it means to lead a Lean-Agile transformation [… Keep reading](#)
+
+#### Learners taking this course are:
+Business Analyst
+Agile Coach
+SAFe Program Consultant
+Practice Lead
+
+---
+
+## SAFe® for Architects
+with [Certified SAFe® Architect](#)
+#### 2 Day
+#### Intermediate Level
+The SAFe® for Architects course prepares Architects to engage across the organization as effective leaders and change agents. During this three-day course, attendees explore the roles, responsibilities, and mindset of [… Keep reading](#)
+
+#### Learners taking this course are:
+Scrum Master
+Agile Coach
+Consultant
+Architect
+Agile Trainer
+Solution Architect
+System Architect
+
+---
+
+## Agile Software Engineering
+with [Certified SAFe® Agile Software Engineer](#)
+#### 3 Day
+#### Intermediate Level
+This three-day course provides the foundational principles and practices that make up the Agile Software Engineering discipline. Learn how continuous flow of value delivery and building quality in are enabled [… Keep reading](#)
+
+#### Learners taking this course are:
+Scrum Master
+Agile Coach
+Consultant
+Software Developer
+Software Engineer
+Senior Manager
+
+---
+
+## Agile Product Management
+with [Certified SAFe® Agile Product Manager](#)
+#### 3 Day
+#### Foundational Level
+Define a vision, strategy, and roadmap to tap into new markets. Get fast feedback and deliver exceptional products and solutions that delight while aligning with your organization’s strategy, portfolio, evolving [… Keep reading](#)
+
+#### Learners taking this course are:
+Agile Coach
+Consultant
+Agile Trainer
+Product Manager
+
+---
+
+## Lean Portfolio Management
+with [Certified SAFe® Lean Portfolio Manager](#)
+#### 2 Day
+#### Foundational Level
+This is a two-day interactive course that includes an additional one-day Getting Started with LPM workshop. In this course, attendees gain the practical tools and techniques necessary to implement the [… Keep reading](#)
+
+### Learners taking this course are:
+CEO
+Program or Project Manager
+Release Train Engineer
+Business Owner
+Solution Manager
+Agile Coach
+SAFe Program Consultant
+Portfolio Manager
+CTO
+Consultant
+Director
+Product Manager
+Program Manager
+Enterprise Architect
+RTE
+
+---
+
+</div>
+</main>
+{% endblock %}

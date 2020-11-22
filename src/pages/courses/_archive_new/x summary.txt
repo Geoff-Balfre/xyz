@@ -1,0 +1,125 @@
+
+========
+
+heading: Leading SAFe®
+
+thisperson: Certified SAFe® Agilist
+thispersonlink: /persons/
+
+thisintro: 'For leaders of a Lean-Agile change initiative to develop a Lean-Agile Mindset and apply the principles and practices of the Scaled Agile Framework® (SAFe®) to support Agile Teams, programs, and'
+thisintrolink: '… Keep reading'
+
+thisduration: 2
+thislevel: Foundation
+
+thislearners:
+  - CEO
+  - Program or Project Manager
+  - Scrum Master
+  - Team Lead
+  - Release Train Engineer
+  - Business Analyst
+  - Agile Coach
+  - CIO
+  - Portfolio Manager
+  - Consultant
+  - Engineer
+  - Program Manager
+  - Change Agent
+  - Solution or Systems Architect
+
+========
+
+heading: SAFe® for Teams
+
+thisperson: Certified SAFe® Practitioner
+thispersonlink: /persons/
+
+thisintro: 'For Lean-Agile team members to gain experience as an Agile Team member in a SAFe Agile Release Train (ART). Break down features, write user stories, improve team and train processes,'
+thisintrolink: '… Keep reading'
+
+thisduration: 2
+thislevel: Foundation 
+
+thislearners:
+  - <em style="color:red;">Program or Project Manager</em>
+  - Scrum Master
+  - Team Lead
+  - Release Train Engineer
+  - Business Analyst
+  - Agile Coach
+  - Consultant
+  - Architect
+  - Engineer
+  - Developer
+  - Director
+  - Quality
+  - Product Manager
+  - Product Owner
+  - <em style="color:red;">Program Manager</em>
+  - Change Agent
+  - Operations
+  - Programmer
+
+========
+
+heading: SAFe® Scrum Master
+
+thisperson: Certified SAFe® Scrum Master
+thispersonlink: /persons/
+
+thisintro: 'For Scrum Masters learning about their role in a SAFe enterprise context. Learn to facilitate Team and Program Level events for successful program execution, explore Scrum in the context of'
+thisintrolink: '… Keep reading'
+
+thisduration: 2
+thislevel: Intermediate
+
+thislearners:
+  - Program or Project Manager
+  - Scrum Master
+  - Team Lead
+  - Release Train Engineer
+  - Business Analyst
+  - Agile Coach
+  - Portfolio Manager
+  - Consultant
+  - Architect
+  - Engineer
+  - Developer
+  - Director
+  - Quality
+  - Manager
+  - Product Manager
+  - Product Owner
+  - Delivery Manager
+  - Program Manager
+
+========
+
+heading: SAFe® for DevOps
+
+thisperson: Certified SAFe® DevOps Practitioner
+thispersonlink: /persons/
+
+thisintro: 'The two-day, interactive SAFe® DevOps course helps people across technical, non-technical, and leadership roles work together to optimize their value stream from end to end. Attendees will learn what DevOps'
+thisintrolink: '… Keep reading'
+
+thisduration: 2
+thislevel: Foundation 
+
+thislearners:
+  - Scrum Master
+  - Team Lead
+  - Release Train Engineer
+  - Business Analyst
+  - Agile Coach
+  - SAFe Program Consultant
+  - Consultant
+  - Architect
+  - Engineer
+  - Developer
+  - Director
+  - Quality
+  - Manager
+
+========

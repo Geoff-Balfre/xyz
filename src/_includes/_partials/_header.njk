@@ -1,0 +1,30 @@
+
+    <header>
+        <nav class="navbar">
+
+          <div class="brand-title">
+            <a href="/" title="{{ '/' | url }}">
+              <span class="display-normal"><img src="/img/brand-logo-placeholder.png" width="180px" height="45px" alt="Essential Alt text"></span>
+              <span class="display-mobile"><img src="/img/brand-logo-placeholder-mobile.png" width="45px" height="45px" alt="Essential Alt text"></span>
+            </a>
+            <small>&nbsp;<small class="page-viewport"></small></small>&nbsp;<small><small class="touched-viewport"></small></small>
+          </div>
+
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+
+          <div class="navbar-links">
+            <ul>
+              <li><a href="/pages/training/" {% if page.url == "/pages/training/" %} class="active" aria-current="page"{% endif %} target="" title="">Training</a></li>
+              <li><a href="/pages/consultancy/" {% if page.url == "/pages/consultancy/" %} class="active" aria-current="page"{% endif %} target="" title="">Consultancy</a></li>
+              <li><a href="/pages/coaching/" {% if page.url == "/pages/coaching/" %} class="active" aria-current="page"{% endif %} target="" title="">Coaching</a></li>
+              <li><a href="/pages/about/" {% if page.url == "/pages/about/" %} class="active" aria-current="page"{% endif %} target="" title="">About us</a></li>
+              <li><a href="#" class="dark-mode" target="" title="">Dark mode</a></li>
+            </ul>
+          </div>
+
+        </nav>
+	  </header>

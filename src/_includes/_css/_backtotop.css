@@ -1,0 +1,25 @@
+
+/*  BACK TO TOP STYLES  */
+/*  https://css-tricks.com/how-to-make-an-unobtrusive-scroll-to-top-button/  */
+/*  https://www.w3schools.com/howto/howto_js_scroll_to_top.asp  */
+
+.scroll-top, .scrollToTopBtn {
+    background-color: rgba(0,0,0,0.1);
+    border: none; border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 3rem;
+    width: 3rem;
+    position: fixed;
+    bottom: 2.4rem;
+    right: 2.4rem;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease;
+  }
+  .show-button, .showBtn {
+    opacity: 1;
+    transform: translateY(0);
+  }

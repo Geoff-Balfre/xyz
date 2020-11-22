@@ -1,0 +1,88 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Header Designs ✔️
+description : Header Designs page description
+heading: Header Designs
+engagement: Header/Footers Design challenge
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+     <style>
+
+.content-area {
+  margin: 0 auto; 
+  border: thin solid #cccccc;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.content-width {
+  margin: 0 auto;
+  background-color: #ebebeb;
+  padding: 0.5rem;
+  height: 4rem;
+}
+
+     </style>
+
+    <main class="container">
+
+      <h1>{{ heading }}</h1>
+      <p class="lead">{{ engagement }}</p>
+
+			<div class="content-area" style="width: 1920px;">
+			  <div class="content-width" style="width: 1860px;">
+  	  			  Desktop/Laptop content (1920)<br>
+                  Content fixed 1860px 
+			  </div>
+			</div>
+
+			<div class="content-area" style="width: 1440px;">
+			  <div class="content-width" style="width: 1380px;">
+  		  		  Desktop/Laptop content (1440)<br>
+                  Content fixed 1380px 
+			  </div>
+			</div>
+
+			<div class="content-area" style="width: 1200px;">
+			  <div class="content-width" style="width: 1140px;">
+ 			  	  Desktop/Laptop content (1200)<br>
+                  Content fixed 1140px 
+			  </div>
+			</div>
+
+			<div class="content-area" style="width: 992px;">
+			  <div class="content-width" style="width: 960px;">
+				  Tablet Header content (992) (Landscape)<br>
+                  Content fixed 960px 
+			  </div>
+			</div>
+
+			<div class="content-area" style="width: 768px">
+			  <div class="content-width" style="width: 720px">
+				  Tablet Header content (768) (Portrait)<br>
+                  Content fixed 720px 
+			  </div>
+			</div>
+
+			<div class="content-area" style="width: 576px">
+			  <div class="content-width" style="width: 540px">
+				  Mobile Header content (576) (Landscape)<br>
+                  Content fixed 540px
+			  </div>
+			</div>
+
+			<div class="content-area" style="width: 320px;">
+			  <div class="content-width" style="width: 318px">
+				  Mobile Header content (320) (Portrait)<br>
+                  Content fluid
+			  </div>
+			</div>
+            <br>
+
+    </main>
+{% endblock %}

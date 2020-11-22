@@ -1,0 +1,159 @@
+---
+thiscourse: Leading SAFe®
+thislead: '<p class="lead">Thriving in the digital age with Business Agility</p>'
+thisperson: Certified SAFe® Agilist
+thispersonlink: hash
+thisduration: 2
+thislevel: Foundation 
+thislearners:                 data.thislearners
+  - CEO
+  - # Program or Project Manager
+  - Scrum Master
+  - Team Lead
+  - Release Train Engineer
+  - Business Analyst
+  - Agile Coach
+  - CIO
+  - Portfolio Manager
+  - Consultant
+  - Engineer
+  - Program Manager
+  - Change Agent
+  - Solution or Systems Architect
+
+thiscalendarlink:
+
+
+---
+<section class="box course-content-one one">
+
+# {{ thiscourse }}
+
+# {{ thislead }}
+
+with [ {{ thisperson }} ]( {{ thispersonlink }} )
+
+During this two-day course, attendees gain the knowledge necessary to lead a Lean-Agile enterprise by leveraging the Scaled Agile Framework® (SAFe®) and its underlying principles derived from Lean, systems thinking, Agile development, product development flow, and DevOps.
+
+Participants in the class gain insights into mastering Business Agility in order to thrive in the competitive market. They discuss how to establish team and technical agility and organize and re-organize around the flow of value. They also learn and practice the skills for supporting and executing PI Planning events and coordinating multiple Agile Release Trains (ARTs). Participants in the class explore the importance of adopting a customer-centric mindset and design thinking approach to agile product delivery. Learners also develop an understanding for implementing a Lean Portfolio Management function in their enterprise.
+
+Attending the class prepares individuals to take the exam and become a certified SAFe® Agilist (SA)
+
+</section>
+<section class="box course-content-two two">
+
+## About {{ thiscourse }}
+
+#### Duration: {{ thisduration }} Day
+#### Level: {{ thislevel }}
+
+Learners taking this course are:
+
+<p>
+
+<span class="badge badge-color">CEO</span>
+<span class="badge badge-color">Program or Project Manager</span>
+<span class="badge badge-color">Scrum Master</span>
+<span class="badge badge-color">Team Lead</span>
+<span class="badge badge-color">Release Train Engineer</span>
+<span class="badge badge-color">Business Analyst</span>
+<span class="badge badge-color">Agile Coach</span>
+<span class="badge badge-color">CIO</span>
+<span class="badge badge-color">Portfolio Manager</span>
+<span class="badge badge-color">Consultant</span>
+<span class="badge badge-color">Engineer</span>
+<span class="badge badge-color">Program Manager</span>
+<span class="badge badge-color">Change Agent</span>
+<span class="badge badge-color">Solution or Systems Architect</span>
+</p>
+
+</section>
+<section class="box course-content-three three">
+
+## Course Information
+
+### Learning Goals
+
+- Lead the transformation to Business Agility with SAFe
+- Become a Lean-Agile Leader
+- Understand customer needs with Design Thinking
+- Enable Agile Product Delivery
+- Implement Lean Portfolio Management
+
+### What Attendees Get
+
+- Attendee workbook
+- Preparation and eligibility to take the SAFe® 5 Agilist exam
+- One year membership to the SAFe Community Platform
+- Course certificate of completion
+
+Attendees must attend both days of the course in order to be eligible for the exam.
+
+### Prerequisites
+
+All are welcome to attend the course, regardless of experience. However, the following prerequisites are highly recommended:
+
+- 5+ years’ experience in software development, testing, business analysis, product, or project management
+- Experience in Scrum
+
+### Exam Details
+
+Completion of this course gives you access to the exam and all related study materials as part of your Learning Plan in the SAFe Community Platform.
+
+For more information about the exam and benefits of becoming a Certified SAFe professional, click the More Exam Details button.
+
+<button id="examId" class="btn btn-primary"></button>
+
+</section>
+<section class="box course-content-four four">
+
+## Professional Development Units & Scrum Education Units
+
+Claim Code	44460OU5T4	Duration	2 days
+PMI Certification	Technical	Leadership	Strategic	Total
+PMP®	6.00	6.00	3.00	15.00
+PgMP®	6.00	6.00	3.00	15.00
+PMI_RMP®	0.00	6.00	3.00	9.00
+PMI_SP®	0.00	6.00	3.00	9.00
+PMI_ACP®	0.00	6.00	3.00	9.00
+PfMP®	0.00	6.00	3.00	9.00
+PMI_PBAsm	0.00	6.00	3.00	9.00
+
+</section>
+<section class="box course-content-five five">
+
+## Find Training
+
+Ready to start your SAFe transformation?
+
+<button id="calendarId" class="btn btn-primary">View Training Calendar</button>
+
+</section>
+<section class="box course-content-six six">
+
+## Topics Covered
+
+- Thrive in the Digital Age with Business Agility
+- Become a Lean-Agile Leader
+- Establish Team and Technical Agility
+- Build Solutions with Agile Product Delivery
+- Explore Lean Portfolio Management
+
+</section>
+<section class="box course-content-seven seven">
+
+## Related Courses
+
+Implementing SAFe
+Certified SAFe® Program Consultant
+[Learn More](#)
+
+SAFe DevOps
+Certified SAFe® DevOps Practitioner
+[Learn More](#)
+
+Lean Portfolio Management
+Certified SAFe® Lean Portfolio Manager
+[Learn More](#)
+
+</section>

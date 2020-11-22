@@ -1,0 +1,84 @@
+---
+eleventyExcludeFromCollections: false
+templateEngineOverride: njk, md
+layout: _course.njk
+title: SAFe® Scrum Master
+description : SAFe® Scrum Master page description
+heading: SAFe® Scrum Master
+engagement: Applying the Scrum Master role within a SAFe® enterprise
+includeinsitemap: true
+includeinanalytics: true
+styles: ['_course', '_badge']
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - SAFe® Scrum Master|end
+
+thisperson: Certified SAFe® Scrum Master
+thispersonlink: /pages/persons/certified-safe-scrum-master
+thisintro:
+  - 'In this two-day course, attendees gain an understanding of the role of a Scrum Master in a SAFe® enterprise. Unlike traditional Scrum Master training that focuses on the fundamentals of team-level Scrum, the SAFe® Scrum Master course explores the role of the Scrum Master in the context of the entire enterprise, and prepares attendees to successfully plan and execute the Program Increment (PI), the primary enabler of alignment throughout all levels of a SAFe® organization. This includes learning the key components of Agile at scale development, how Scrum is facilitated throughout the enterprise, and how to execute Iteration Planning.'
+  - 'Attendees discover how to build high performing Agile teams by becoming a servant leader and coach, and how to coach those teams to deliver the maximum business value at scale. SAFe® 5 Scrum Master (SSM) certification signifies that people are prepared to perform the role of Scrum Master in a SAFe® environment, increasing their value to teams and organizations that are implementing SAFe®.'
+thisduration: 2
+thislevel: Intermediate
+thislearners:
+  - Program or Project Manager
+  - Scrum Master
+  - Team Lead
+  - Release Train Engineer
+  - Business Analyst
+  - Agile Coach
+  - Portfolio Manager
+  - Consultant
+  - Architect
+  - Engineer
+  - Developer
+  - Director
+  - Quality
+  - Manager
+  - Product Manager
+  - Product Owner
+  - Delivery Manager
+  - Program Manager
+thisgoals:
+  - Describe Scrum in a SAFe® enterprise
+  - Facilitate Scrum events
+  - Facilitate effective Iteration execution
+  - Support effective Program Increment execution
+  - Support relentless improvement
+  - Coach Agile teams for maximum business results
+  - Support DevOps implementation
+thisassets:
+  - Printed workbook
+  - Preparation and eligibility to take the SAFe®® 5 Scrum Master (SSM) exam
+  - One-year membership to the SAFe® Community Platform
+  - Course certificate of completion
+thisassetsnote: Attendees must attend both days of the course in order to qualify for the exam.
+thisprereq:
+  - All are welcome to attend the course, regardless of experience.
+  - However, the following prerequisites are highly recommended
+  - Familiarity with Agile concepts and principles
+  - Awareness of Scrum, Kanban, and eXtreme Programming (XP)
+  - Working knowledge of software and hardware development processes
+thisprereqnote: All are welcome to attend the course, regardless of experience. However, the following prerequisites are highly recommended
+thisexamintro:
+  - Completion of this course gives you access to the exam and all related study materials as part of your Learning Plan in the SAFe® Community Platform.
+  - For more information about the exam and benefits of becoming a Certified SAFe® professional, click the More Exam Details button.
+thistopics:
+  - Introducing Scrum in SAFe®
+  - Characterizing the role of the Scrum Master
+  - Experiencing Program Increment planning
+  - Facilitating Iteration execution
+  - Finishing the Program Increment
+  - Coaching the Agile team
+thisrelated:
+  - title: Advanced Scrum Master
+    person: SAFe® Advanced Scrum Master
+    url: /courses/
+  - title: SAFe® Release Train Engineer
+    person: Certified SAFe® Release Train Engineer
+    url: /courses/
+---

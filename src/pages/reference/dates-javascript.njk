@@ -1,0 +1,134 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Dates Javascript
+description : Javascript Dates page description
+heading: Javascript Dates
+engagement:
+includeinsitemap: false
+includeinanalytics: false
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'stats']
+---
+{% block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content">
+
+                <h1>{{ heading }}</h1>
+  
+                <p>
+                  <em>Javascript date:</em> <strong><span id="base"></span></strong><br>
+                  <br>
+                  <em>Day:</em> <strong><span id="day"></span></strong><br>
+                  <em>Month:</em> <strong><span id="month"></span></strong><br>
+                  <em>Year:</em> <strong><span id="year"></span></strong><br>
+                  <br>
+                  <em>Time:</em> <strong><span id="time"></span></strong><br>
+                  <br>
+                  <em>Version:</em> <strong><span id="version"></span></strong><br>
+                  <br>
+                  <em>Short date:</em> <strong><span id="short"></span></strong><br>
+                  <em>Long date:</em> <strong><span id="long"></span></strong><br>
+                  <br>
+                  <em>Short styled date:</em> <strong><span id="shortstyle"></span></strong><br>
+                  <em>Long styled date:</em> <strong><span id="longstyle"></span></strong><br>
+                </p>
+ 
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+      let dshort     = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+      let dlong      = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+      let ordinals   = ["st","nd","rd","th","th","th","th","th","th","th","th","th","th","th","th","th","th","th","th","th","st","nd","rd","th","th","th","th","th","th","th","st"];
+
+      let mshort     = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      let mlong      = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+      const ordinal = n => {
+        var s = ['th', 'st', 'nd', 'rd'],
+        v = n % 100;
+        return n + (s[(v - 20) % 10] || s[v] || s[0]);
+      };
+
+      let dt         = new Date();
+
+      document.querySelector('#base').innerHTML = dt;
+
+      let date       = dt.getDate();
+      let datestr    = (date<10) ? '0' + date : date;
+      let day        = dt.getDay() + 1;
+      let ord        = ordinals[date - 1];
+      let dayshort   = dshort[day];
+      let daylong    = dlong[day];
+
+      document.querySelector('#day').innerHTML = date + ' - ' + datestr + ' - ' + day + ' - ' + date + ord + ' - ' + dayshort + ' - ' + daylong;
+
+      let mth        = dt.getMonth() + 1;
+      let mthstr     = (mth<10) ? '0' + mth : mth;
+      let monthshort = mshort[dt.getMonth()];
+      let monthlong  = mlong[dt.getMonth()];
+
+      document.querySelector('#month').innerHTML = mth + ' - ' + mthstr + ' - ' + monthshort + ' - ' + monthlong;
+
+      let yyyy       = dt.getFullYear();
+      let yyyy2      = new Date().getFullYear();
+      
+      document.querySelector('#year').innerHTML = yyyy + ' - ' + yyyy2;
+
+      let hr         = (dt.getHours()<10) ? '0' + dt.getHours() : dt.getHours();
+      let mn         = (dt.getMinutes()<10) ? '0' + dt.getMinutes() : dt.getMinutes();
+      let ss         = (dt.getSeconds()<10) ? '0' + dt.getSeconds() : dt.getSeconds();
+      let meridiem   = (dt.getHours()<12) ? 'AM' : 'PM';
+
+      let time = `${ hr }:${ mn }:${ ss }`;
+
+      document.querySelector('#time').innerHTML = `${ time }${ meridiem }`;
+      
+      let version = yyyy + mthstr + datestr + '.' + time;
+
+      document.querySelector('#version').innerHTML = version;
+
+      let short = `${ datestr }/${ mthstr }/${ yyyy }`;
+      let long  = `${ datestr }/${ mthstr }/${ yyyy } ${ hr }:${ mn }:${ ss }`;
+
+      document.querySelector('#short').innerHTML = short;
+      document.querySelector('#long').innerHTML = long;
+
+      let shortstyle = dayshort + ' ' + date + ord + ' ' + monthshort + ' ' + yyyy + ' ' + time + meridiem;
+      let longstyle  = daylong  + ' ' + date + ord + ' ' + monthlong  + ' ' + yyyy + ' ' + time + meridiem;
+
+      document.querySelector('#shortstyle').innerHTML = shortstyle;
+      document.querySelector('#longstyle').innerHTML = longstyle;
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,124 @@
+<section class="box course-content-one one">
+
+# SAFe® for DevOps
+
+<p class="lead">Optimizing Your Value Stream</p>
+
+with [Certified SAFe® DevOps Practitioner](#)
+
+To compete in a disruptive global market, every organization needs to deliver valuable technology solutions at the speed of business. This requires a shared DevOps mindset among all the people needed to define, build, test, deploy, and release software-driven systems—not just the engineers operating a CI/CD pipeline.
+
+The two-day, interactive course helps people across technical, non-technical, and leadership roles work together to optimize their value stream from end to end. Attendees will learn what DevOps is, why it is important to every role, and design a continuous delivery pipeline that is tailored to their business. Attendees work in cross-functional teams to map their current state value stream from concept to cash, identify major bottlenecks to flow, and build an actionable implementation plan that will accelerate the benefits of DevOps in their organization.
+
+</section>
+<section class="box course-content-two two">
+
+## About SAFe® DevOps
+
+#### Duration: 2 Day
+#### Level: Foundational 
+
+Learners taking this course are:
+
+<p>
+<span class="badge badge-color">Scrum Master</span>
+<span class="badge badge-color">Team Lead</span>
+<span class="badge badge-color">Release Train Engineer</span>
+<span class="badge badge-color">Business Analyst</span>
+<span class="badge badge-color">Agile Coach</span>
+<span class="badge badge-color">SAFe Program Consultant</span>
+<span class="badge badge-color">Consultant</span>
+<span class="badge badge-color">Architect</span>
+<span class="badge badge-color">Engineer</span>
+<span class="badge badge-color">Developer</span>
+<span class="badge badge-color">Director</span>
+<span class="badge badge-color">Quality</span>
+<span class="badge badge-color">Manager</span>
+</p>
+
+</section>
+<section class="box course-content-three three">
+
+## Course Information
+
+### Learning Goals
+
+After attending the class, attendees should be able to:
+
+- Explain how DevOps enables strategic business objectives
+- Apply a CALMR approach to DevOps to avoid automating broken processes
+- Understand how successful DevOps requires continuous exploration, continuous integration, continuous deployment, and the ability to release to end users on demand
+- Incorporate continuous testing and continuous security into the delivery pipeline
+- Use value stream mapping to measure flow and identify bottlenecks in the end-to-end delivery process
+- Select DevOps skills and tools strategically for the fastest, most compelling results
+- Prioritize DevOps solutions and investments for greatest economic benefit
+- Design and implement a multi-phased DevOps transformation plan tailored to their organization
+- Work with all roles and levels in the organization to continually optimize the value stream
+
+### What Attendees Get
+
+The class registration includes:
+
+- Attendee workbook
+- Preparation and eligibility to take the exam
+- One-year membership to the SAFe® Community Platform
+- Certificate of completion
+- SAFe® DevOps Practitioner (SDP) certification upon passing exam
+
+Attendees must attend both days of the course in order to qualify for the exam.
+
+### Prerequisites
+
+None. All are welcome to attend the course without prior DevOps or SAFe experience.
+
+### Exam Details
+
+Completion of this course gives you access to the exam and all related study materials as part of your Learning Plan in the SAFe Community Platform.
+
+For more information about the exam and benefits of becoming a Certified SAFe professional, click the More Exam Details button.
+
+<button id="examId" class="btn btn-primary">More Exam Details</button>
+
+</section>
+<section class="box course-content-four four">
+
+## Professional Development
+
+no content
+
+</section>
+<section class="box course-content-five five">
+
+## Find Training
+
+Ready to start your SAFe transformation?
+
+<button id="calendarId" class="btn btn-primary">View Training Calendar</button>
+
+</section>
+<section class="box course-content-six six">
+
+## Topics Covered
+
+- Introducing DevOps
+- Mapping your Continuous Delivery Pipeline
+- Gaining alignment with Continuous Exploration
+- Building quality with Continuous Integration
+- Reducing time-to-market with Continuous Deployment
+- Delivering Business Value with Release on Demand
+- Taking action
+
+</section>
+<section class="box course-content-seven seven">
+
+## Related Courses
+
+SAFe for Teams
+Certified SAFe® Practitioner
+[Learn More](#)
+
+Leading SAFe
+Certified SAFe® Agilist
+[Learn More](#)
+
+</section>

@@ -1,0 +1,31 @@
+const { DateTime } = require('luxon')
+
+
+module.exports = {
+
+  readableDate: function (date) {
+    return DateTime.fromJSDate(date, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  },
+
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  htmlDateString: function (date) {
+    return DateTime.fromJSDate(date, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+  },
+
+  auditDate: function (date) {
+    return DateTime.fromJSDate(date, {zone: 'utc'}).toFormat('dd LLL yyyy HH:mm');
+  },
+
+  dateToFormat: function (date, format) {
+    return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(String(format));
+  },
+
+  dateToMyFormat: function (date) {
+    return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(String('ccc d LLL yyyy HH:mm a'));
+  },
+
+  dateToISO: function (date) {
+    return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({ includeOffset: false, suppressMilliseconds: true })
+  }
+
+}

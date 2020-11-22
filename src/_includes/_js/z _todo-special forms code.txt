@@ -1,0 +1,72 @@
+
+//  https://www.w3schools.com/js/js_ajax_http_response.asp
+jQuery UI autocomplete for Bootstrap
+
+	https://codepen.io/massimo-cassandro/pen/NqRmMe
+
+
+//  http://form.guide/category/tips
+
+
+// enhanced html5 validation:		https://daverupert.com/2017/11/happier-html5-forms/
+//        const inputs = document.querySelectorAll('input, select, textarea');
+//        inputs.forEach( (input) => {
+//          input.addEventListener('invalid', (event) => {
+//            input.classList.add('is-invalid');    
+//          }, false);
+//        })
+
+
+update: https://jsfiddle.net/Loilo/jdct84x6/3/
+
+
+   /* Article: https://code.lengstorf.com/get-form-values-as-json/ */
+
+      var isValidElement = function isValidElement(element) {
+          return element.name && element.value;
+      };
+      var isValidValue = function isValidValue(element) {
+          return !['checkbox', 'radio'].includes(element.type) || element.checked;
+      };
+      var isCheckbox = function isCheckbox(element) {
+          return element.type === 'checkbox';
+      };
+      var isMultiSelect = function isMultiSelect(element) {
+          return element.options && element.multiple;
+      };
+      var getSelectValues = function getSelectValues(options) {
+          return [].reduce.call(options, function (values, option) {
+              return option.selected ? values.concat(option.value) : values;
+          }, []);
+      };
+      var formToJSON = function formToJSON(elements) {
+          return [].reduce.call(elements, function (data, element) {
+              if (isValidElement(element) && isValidValue(element)) {
+                  if (isCheckbox(element)) {
+                      data[element.name] = (data[element.name] || []).concat(element.value);
+                  } else if (isMultiSelect(element)) {
+                      data[element.name] = getSelectValues(element);
+                  } else {
+                      data[element.name] = element.value;
+                  }
+              }
+              return data;
+          }, {});
+      };
+      var handleFormSubmit = function handleFormSubmit(event) {
+          event.preventDefault();
+          // requires validation 
+          button.value = "Please wait...";
+          button.disabled = true;
+          var data = formToJSON(form.elements);
+          var dataContainer = document.getElementsByClassName('results__display')[0];
+          dataContainer.textContent = JSON.stringify(data, null, "  ");
+          // do something with the data here
+      };
+
+      var form = document.getElementById('inputFormId');
+      var button = document.getElementById('calltoaction');
+
+      form.addEventListener('submit', handleFormSubmit);
+
+      /* Article: END */

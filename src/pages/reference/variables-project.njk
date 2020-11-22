@@ -1,0 +1,92 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Variables Project JSON
+description : Project JSON Variables page description
+heading: Project JSON variables
+engagement:
+includeinsitemap: false
+includeinanalytics: false
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'stats']
+---
+{%- macro showVariables(js) %}
+      <p>
+      {%- for key, value in js %}
+        &nbsp;&nbsp;<strong>{{ key }}:</strong>&nbsp;{{ value | safe }}<br>
+      {%- endfor %}
+      </p>
+{%- endmacro %}
+{% block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content">
+
+                <h1>{{ heading }}</h1>
+
+                <h4 style="color:blue;">Project</h4>
+                  <strong> Brand name:</strong> {{ project.brandName }} <br>
+                  <strong> Brand strapline:</strong> {{ project.brandStrapline }} <br>
+                  <strong> Brand company:</strong> {{ project.brandCompany }} <br>
+                  <strong> Brand contact:</strong> {{ project.brandContact }} <br>
+                  <strong> Brand email:</strong> {{ project.brandEmail }} <br>
+                  <br>
+
+                  <strong> Copyright start:</strong> {{ project.copyrightStart }} <br>
+                  <strong> Copyright holder:</strong> {{ project.copyrightHolder }} <br>
+                  <strong> Copyright license:</strong> {{ project.copyrightLicense }} <br>
+                  <strong> Copyright url:</strong> {{ project.copyrightUrl }} <br>
+                  <br>
+
+                  <strong> Page engagement:</strong> {{ project.pageEngagement }} <br>
+                  <strong> Page alttext:</strong> {{ project.pageAlttext }} <br>
+                  <br>
+
+                  <strong> Palette primary:</strong> {{ project.palette.primary }} <br>
+                  <strong> Palette secondary:</strong> {{ project.palette.secondary }} <br>
+                  <strong> Palette success:</strong> {{ project.palette.success }} <br>
+                  <strong> Palette info:</strong> {{ project.palette.info }} <br>
+                  <strong> Palette warning:</strong> {{ project.palette.warning }} <br>
+                  <strong> Palette danger:</strong> {{ project.palette.danger }} <br>
+                  <strong> Palette light:</strong> {{ project.palette.light }} <br>
+                  <strong> Palette dark:</strong> {{ project.palette.dark }} <br>
+                  <strong> Palette text:</strong> {{ project.palette.text }} <br>
+                  <strong> Palette background:</strong> {{ project.palette.background }} <br>
+                  <br>
+
+                </p>
+ 
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+    </script>
+
+{% endblock %}

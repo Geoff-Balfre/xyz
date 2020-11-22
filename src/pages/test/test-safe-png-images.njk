@@ -1,0 +1,116 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Safe PNG Images
+description : Safe PNG Images page description
+heading: Safe PNG Images
+engagement: Safe PNG Images page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+
+certs: 
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-SA.png
+    url: /pages/courses/leading-safe/
+    course: Leading SAFe®
+    lead: With SAFe® 5 Agilist certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-SPC.png
+    url: /pages/courses/implementing-safe/
+    course: Implementing SAFe®
+    lead: With SAFe® 5 Program Consultant certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-SP.png
+    url: /pages/courses/safe-for-teams/
+    course: SAFe® for Teams
+    lead: With SAFe® 5 Practitioner certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-SSM.png
+    url: /pages/courses/safe-scrum-master/
+    course: SAFe® Scrum Master
+    lead: With SAFe® 5 Scrum Master certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-SASM.png
+    url: /pages/courses/safe-advanced-scrum-master/
+    course: SAFe® Advanced Scrum Master
+    lead: With SAFe® 5 Advanced Scrum Master certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-RTE.png
+    url: /pages/courses/safe-release-train-engineer/
+    course: SAFe® Release Train Engineer
+    lead: With SAFe® 5 Release Train Engineer certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-POPM.png
+    url: /pages/courses/safe-product-owner-product-manager/
+    course: SAFe® Product Owner/Product Manager
+    lead: With SAFe® 5 Product Owner/Product Manager certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-SDP.png
+    url: /pages/courses/safe-devops/
+    course: SAFe® DevOps
+    lead: With SAFe® 5 DevOps Practitioner certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-ASE.png
+    url: /pages/courses/certified-safe-agile-software-engineer/
+    course: SAFe® Agile Software Engineering
+    lead: With SAFe® 5 Agile Software Engineering certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-SGP.png
+    url: /pages/courses/safe-for-government/
+    course: SAFe® for Government
+    lead: With SAFe® 5 Government Practitioner certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-ARCH.png
+    url: /pages/courses/safe-for-architects/
+    course: SAFe® for Architects
+    lead: With SAFe® 5 Architects certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-LPM.png
+    url: /pages/courses/lean-portfolio-management/
+    course: SAFe® for Lean Portfolio Management
+    lead: With SAFe® LPM certification
+  - img: /img/safe/png/SAFe-5-Courseware-Thumbnails-APM.png
+    url: /pages/courses/agile-product-and-solution-management/
+    course: SAFe® for Agile Product Management
+    lead: With SAFe® APM certification
+---
+{% block content %}
+    <style>
+
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          grid-auto-rows: minmax(150px, auto);
+          grid-gap: 1em;
+        }
+
+        .module {
+          background: #eaeaea;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 200px;
+        }
+
+        /* If Grid is supported, remove the margin we set for the fallback */
+        @supports (display: grid) {
+          .module {
+            margin: 0;
+          }
+        }
+
+    </style>
+
+    <main class="container">
+
+        <div class="grid card-gallery">
+  
+            {% for item in certs %}
+            <div class="module">
+                <div class="" style="width:125px;height:146px;">
+                  <img class="img-fluid" src="{{ item.img }}" alt="SEO: Promotional Keyword Rich ALT text"><br>
+                </div>
+                <p>{{ item.course }}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </main>
+
+    <script>
+
+    </script>
+
+{% endblock %}

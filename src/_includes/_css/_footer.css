@@ -1,0 +1,26 @@
+
+/* revist all */
+
+footer { display: grid; grid-template-columns: 1fr 1fr; } /* footer grid layout*/
+
+footer { font-variant: small-caps; } /* font variant */
+
+footer div:nth-child(2) { border-left: 1px solid rgba(0, 0, 0, 0.1); text-align: right; }
+
+footer { background-color: #F4F5F7; padding: 1rem; }
+
+.footer-menu { font-variant: small-caps; }
+
+.footer-menu {
+  background-color: #F4F5F7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5rem;
+}
+.footer-menu div {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+.footer-menu div a {
+  padding: 1rem 0.25rem;
+}

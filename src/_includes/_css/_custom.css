@@ -1,0 +1,50 @@
+
+/*  PAGE GENERAL STYLES  */
+
+@media (max-width: 319.98px) { body { background-color: #F5B7B1; width: 320px; } } /*  320px LIMIT WARNING  */
+
+html { scroll-behavior: smooth; }
+
+@media screen and (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body { animation: fade-in .84s }
+
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+a.external[rel*="external"]::after {
+  content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
+}  
+
+.dark-mode { filter: invert(100%) } /*  DARK MODE FILTER https://dev.to/ekaterina_vu/dark-mode-with-one-line-of-code-4lkm  */
+
+
+/*  ######################  */
+/*  ## REVIST ALL BELOW ##  */
+/*  ######################  */
+
+.bi { display: inline-block; vertical-align: text-bottom; } /* SVG icons helper */
+
+.active { background-color: #C3FDB8; } /*  Active Link  */
+
+
+/*  CSSGrid Central Column Style  */
+
+/* main>* { width: 80vw; margin-left: auto; margin-right: auto; max-width: 50rem; } */
+/*
+.column-layout { margin: 0 auto; max-width: 42rem; background-color: #ffffff;}
+*/
+/*
+.grid-container-0 { display: grid; grid-template-columns: minmax(1em, 1fr) minmax(0, 32em) minmax(1em, 1fr); grid-column-gap: 1%; background-color: rgba(169, 169, 169, 0.25); margin-bottom: 1rem; }
+.col-0 { background-color: #ffffff; margin: 0.5rem 0; padding: 0.5rem; }
+.col-0-gutter { text-align: center; }
+*/
+
+/*  Layout Helpers  */
+/*
+.section-test {
+  background-color: #ebebeb;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  margin-bottom: 0.5rem;
+}
+*/

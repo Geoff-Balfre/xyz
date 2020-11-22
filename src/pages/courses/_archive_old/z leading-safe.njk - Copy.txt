@@ -1,0 +1,35 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: Leading SAFe® ✔️
+description : Leading SAFe® page description
+heading: Leading SAFe®
+engagement: Thriving in the digital age with Business Agility
+markdown: detail-leading-safe
+includeinsitemap: true
+includeinanalytics: true
+styles: ['_course']
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - Leading SAFe®|end
+---
+{% block content %}
+    <main class="container">
+
+      <div class="course-wrapper">
+
+        <section class="course-content-zero">
+          {% component_breadcrumb { data: breadcrumbs } %}
+        </section>
+
+        {% markdown '/src/pages/markdown/' + markdown + '.md' %}
+
+      </div>
+
+    </main>
+
+{% endblock %}

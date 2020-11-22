@@ -1,0 +1,29 @@
+
+x-header { display: grid; grid-template-columns: 1fr 1fr; }
+x- header div:nth-child(2) { border-left: 1px solid rgba(0, 0, 0, 0.1); padding-right: 1rem; text-align: right; }
+x- header { padding: 1rem; x-background-color: gainsboro; }
+
+
+.navbar { display: flex; position: relative; justify-content: space-between; align-items: center; x-background-color: gainsboro; }
+
+    .brand-title { font-size: 1.5rem; margin: .5rem; }
+
+.toggle-button { position: absolute; top: 1rem; right: 1rem; display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; }
+.toggle-button .bar { height: 3px; width: 100%; background-color: #2c2c2c; border-radius: 10px; }
+
+.navbar-links { height: 100%; }
+.navbar-links ul { display: flex; margin: 0; padding: 0; }
+.navbar-links li { list-style: none; }
+.navbar-links li a { display: block; text-decoration: none; padding: 1rem; }
+.navbar-links li.open { background-color: yellow; }
+.x-navbar-links li:hover { background-color: #b0b0b0; }
+
+@media (max-width: 767.98px) {
+  .navbar { flex-direction: column; align-items: flex-start; }
+  .toggle-button { display: flex; }
+  .navbar-links { display: none; width: 100%; }
+  .navbar-links ul { width: 100%; flex-direction: column; padding-bottom: 0.5rem; }
+  .navbar-links ul li { text-align: left; }
+  .navbar-links ul li a { padding: .5rem 1rem; }
+  .navbar-links.open { display: flex; }
+}

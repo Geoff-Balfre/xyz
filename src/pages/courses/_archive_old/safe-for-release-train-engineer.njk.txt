@@ -1,0 +1,35 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: SAFe® Release Train Engineer 📌
+description : SAFe® Release Train Engineer page description
+heading: SAFe® Release Train Engineer
+engagement: SAFe® Release Train Engineer page engagement text
+markdown: detail-safe-for-devops
+includeinsitemap: false
+includeinanalytics: false
+styles: ['_course']
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - SAFe® Release Train Engineer|end
+---
+{% block content %}
+    <main class="container">
+
+      <div class="course-wrapper">
+
+        <section class="course-content-zero">
+          {% component_breadcrumb { data: breadcrumbs } %}
+        </section>
+
+        {# markdown '/src/pages/markdown/' + markdown + '.md' #}
+
+      </div>
+
+    </main>
+
+{% endblock %}

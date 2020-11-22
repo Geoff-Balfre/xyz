@@ -1,0 +1,32 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Markdown
+description : Markdown page description
+heading: Markdown
+engagement: A Markdown cheat sheet
+styles: []
+scripts: []
+permalink: test/markdown.html
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+    <main class="container">
+
+      <h1>{{ heading }}</h1>
+      <p class="lead">{{ project.engagement }}</p>
+
+
+{% set stuff %}
+      {% include "./markdown-cheat-sheet.md" %}
+{% endset %}
+
+<code> [{{- stuff | safe -}}] </code>
+
+
+<!-- <div class=""><pre> {{ stuff | safe }} </pre></div> -->
+
+
+    </main>
+{% endblock %}

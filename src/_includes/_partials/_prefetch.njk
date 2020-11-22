@@ -1,0 +1,12 @@
+
+
+    <link rel="dns-prefetch" href="//google-analytics.com">
+{%-   for item in scripts %}
+{%-     if item == "holderjs" %}
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+{%-     elif item == "recaptcha" %}
+    <link rel="dns-prefetch" href="//www.google.com/recaptcha/">
+{%-     else %}
+
+{%-     endif %}
+{%-   endfor %}

@@ -1,0 +1,77 @@
+backend:
+  name: test-repo
+  x-name: git-gateway
+  x-branch: main
+  x-repo: Geoff-Balfre/xyz
+  x-stuff: https://www.netlify.com/blog/2017/08/17/a-complete-cms-with-no-server-and-18-lines-of-code/
+publish_mode: editorial_workflow
+media_folder: "img/uploads"
+# The Prime pages
+collections:
+  - name: "pages"          # Used in routes, e.g., /admin/collections/blog
+    label: "Pages"         # Used in the UI
+    description: "Prime pages" # Optional text to qualify the label and used in the UI
+    folder: "src/pages"    # The path to the folder where the documents are stored
+    create: true           # Allow users to create new documents in this collection
+    slug: "{{slug}}"       # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:                # The fields for each document, usually in front matter
+      - { label: "Exclude", name: "eleventyExcludeFromCollections", widget: "boolean", default: false }
+      - { label: "Override", name: "templateEngineOverride", widget: "list" }
+      - { label: "Layout", name: "layout", widget: "string", default: "_default.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Heading", name: "heading", widget: "string" }
+      - { label: "Engagement", name: "engagement", widget: "string" }
+      - { label: "Priority", name: "priority", widget: "string" }
+      - { label: "Sitemap", name: "includeinsitemap", widget: "boolean", default: true }
+      - { label: "Analytics", name: "includeinanalytics", widget: "boolean", default: true }
+      - { label: "Styles", name: "styles", widget: "list", allow_add: true }
+      - { label: "Scripts", name: "scripts", widget: "list", allow_add: true }
+      - { label: "Date", name: "date", widget: "string", default: "Last Modified" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ['pages', 'prime'] }
+      - { label: "Body", name: "body", widget: "markdown" }
+# The Support pages
+  - name: "support"        # Used in routes, e.g., /admin/collections/blog
+    label: "Support"       # Used in the UI
+    description: "Support pages" # Optional text to qualify the label and used in the UI
+    folder: "src/pages/support"  # The path to the folder where the documents are stored
+    create: false          # Allow users to create new documents in this collection
+    slug: "{{slug}}"       # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:                # The fields for each document, usually in front matter
+      - { label: "Exclude", name: "eleventyExcludeFromCollections", widget: "boolean", default: false }
+      - { label: "Layout", name: "layout", widget: "string", default: "_default.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Heading", name: "heading", widget: "string" }
+      - { label: "Engagement", name: "engagement", widget: "string" }
+      - { label: "Sitemap", name: "includeinsitemap", widget: "boolean", default: true }
+      - { label: "Analytics", name: "includeinanalytics", widget: "boolean", default: true }
+      - { label: "Styles", name: "styles", widget: "list", allow_add: true }
+      - { label: "Scripts", name: "scripts", widget: "list", allow_add: true }
+      - { label: "Date", name: "date", widget: "string", default: "Last Modified" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ['pages', 'support'] }
+      - { label: "Body", name: "body", widget: "markdown" }
+# The Support pages
+
+# Project Configuration
+  - name: "config"
+    label: "Configuration"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "project"
+        label: "Project"
+        file: "src/_data/project.json"
+        fields:
+          - {label: "Brand name", name: "brandName", widget: "string", required: true}
+          - {label: "Brand strapline", name: "brandStrapline", widget: "string", required: true}
+          - {label: "Brand company", name: "brandCompany", widget: "string", required: true}
+          - {label: "Brand contact", name: "brandContact", widget: "string", required: true}
+          - {label: "Brand email", name: "brandEmail", widget: "string", required: true}
+          - {label: "Copyright start", name: "copyrightStart", widget: "string", required: true}
+          - {label: "Copyright holder", name: "copyrightHolder", widget: "string", required: true}
+          - {label: "Copyright licence", name: "copyrightLicense", widget: "string", required: true}
+          - {label: "Copyright url", name: "copyrightUrl", widget: "string", required: true}
+          - {label: "Engagement text", name: "pageEngagement", widget: "string", required: true}
+          - {label: "Alt text", name: "imageAlttext", widget: "string", required: true}

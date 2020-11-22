@@ -1,0 +1,158 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Accordians
+description : Accordians page description
+heading: Accordians
+engagement: Accordians engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+<!-- https://gomakethings.com/how-to-build-a-progressively-enhanced-accordion-component-with-vanilla-js/ -->
+<!-- https://vimeo.com/470356970 -->
+<!-- https://gist.github.com/cferdinandi/490f1f42c77d4bc97442bda4013b396a -->
+    <style>
+
+		body {
+			x-margin: 0 auto;
+			x-max-width: 40em;
+			x-width: 88%;
+		}
+
+		summary {
+			font-weight: bold;
+			margin-bottom: 0.25em;
+		}
+
+		p {
+			margin: 0 0 1.5em;
+			padding: 0;
+		}
+
+    </style>
+    <main class="container">
+
+        <h1>{{ heading }}</h1>
+
+        <div class="default-grid">
+
+            <section class="accordian one">
+                <details>
+                    <summary>Click Me 1</summary>
+                    <p>Oh, hello there!</p>
+                </details>
+                <details open>
+                    <summary>Click to close 2</summary>
+                    <p>This will be expanded by default</p>
+                </details>
+            </section>
+
+            <section class="">
+                <h2>Progressively Enhanced Accordions</h2>
+            </section>
+
+            <section class="accordian two">
+                <h3>Group 1</h3>
+                <div  data-accordion="1">
+                    <details>
+                        <summary>Click Me to Show More</summary>
+                        <p>Hi there!</p>
+                    </details>
+
+                    <details>
+                        <summary>Click Me to Show More, Too</summary>
+                        <p>Hi there!</p>
+                    </details>
+
+                    <details>
+                        <summary>Click Me to Show Even More</summary>
+                        <p>Hi there!</p>
+                    </details>
+
+                    <details>
+                        <summary>Last one, I promise</summary>
+                        <p>Hi there!</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="accordian three">
+                <h2>Group 2</h2>
+                <div data-accordion="2">
+                    <details>
+                        <summary>Click Me to Show More</summary>
+                        <p>Hi there!</p>
+                    </details>
+                    <details>
+                        <summary>Click Me to Show More, Too</summary>
+                        <p>Hi there!</p>
+                    </details>
+                    <details>
+                        <summary>Click Me to Show Even More</summary>
+                        <p>Hi there!</p>
+                    </details>
+                    <details>
+                        <summary>Last one, I promise</summary>
+                        <p>Hi there!</p>
+                    </details>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+
+		var Accordions = (function () {
+
+			'use strict';
+
+			var closeOthers = function (current, parent) {
+				var opened = Array.from(parent.querySelectorAll('details[open]'));
+				opened.forEach(function (accordion) {
+					if (accordion === current) return;
+					accordion.removeAttribute('open');
+				});
+			};
+
+			var toggle = function (event, selector) {
+				var parent = event.target.closest(selector);
+				if (!parent) return;
+				if (!event.target.hasAttribute('open')) return;
+				closeOthers(event.target, parent);
+			};
+
+			var Constructor = function (selector) {
+				var publicAPIs = {};
+				var toggleHandler = function (event) {
+					toggle(event, selector);
+				};
+				publicAPIs.destroy = function () {
+					document.removeEventListener('toggle', toggleHandler, true);
+				};
+				publicAPIs.init = function () {
+					if (!selector || typeof selector !== 'string') {
+						throw new Error('Please provide a valid selector');
+					}
+					document.addEventListener('toggle', toggleHandler, true);
+				};
+				publicAPIs.init();
+				return publicAPIs;
+			};
+
+			return Constructor;
+
+		})();
+
+		// Instantiate plugin
+
+		var accordion = new Accordions('[data-accordion="1"]');
+
+		var otherAccordion = new Accordions('[data-accordion="2"]');
+
+    </script>
+
+{% endblock %}

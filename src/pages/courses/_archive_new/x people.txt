@@ -1,0 +1,43 @@
+
+https://www.scaledagile.com/certifications/which-course-is-right-for-me/
+
+=======
+
+title: SAFe® for Teams
+
+thisperson: Certified SAFe® Practitioner
+
+thispersonlink: /persons/certified-safe-practitioner
+
+=======
+
+title: SAFe® for DevOps
+
+thisperson: Certified SAFe® DevOps Practitioner
+
+thispersonlink: /persons/certified-safe-devops-practitioner
+
+=======
+
+title: Leading SAFe®
+
+thisperson: Certified SAFe® Agilist
+
+thispersonlink: /persons/certified-safe-agilist
+
+=======
+
+title: SAFe® Scrum Master
+
+thisperson: Certified SAFe® Scrum Master
+
+thispersonlink: /persons/certified-safe-scrum-master
+
+---------------------------------
+
+
+safe-practitioner.md
+safe-devops-practitioner.md
+persons/safe-agilist.md
+persons/safe-scrum-master.md
+

@@ -1,0 +1,288 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Layout Concepts 🔸
+description : Layout Concepts page description
+heading: Layout Concepts
+engagement: Layout Concepts page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+
+    <!-- THE-MASTER-ASSETS\reference-cssgrid-Net-Ninja\css-grid-playlist-lesson-7\css-grid-playlist-lesson-7\css-grid-playlist-lesson-7 -->
+
+    <style>
+
+        body {
+          x-background: url("img/device-landscape-grid.png");
+        }
+
+        input:checked + #mask{
+            display: grid;
+        }
+        #toggle {
+          position: absolute;
+          z-index: 42;
+        }
+		#content{
+          margin-top: 1.75rem;
+		}
+
+		#x-content{
+			display: grid;
+			x-grid-template-columns: repeat(12, 1fr);
+			x-grid-auto-rows: minmax(100px, auto);
+			x-grid-gap: 10px;
+			x-max-width: 960px;
+			margin: 0 auto;
+            position: relative;
+		}
+		#x-content > *{
+			background: #3bbced;
+			padding: 30px;
+		}
+
+        #mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(100%, auto);
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            padding: 0;
+            display: none;
+        }
+        #mask p{
+            border: 1px solid white;
+            background: #323232;
+            margin: 0;
+            opacity: 0.1;
+        }
+
+        .grid-container-0{
+          display: grid;
+          grid-template-columns: minmax(1em, 1fr) minmax(0, 32em) minmax(1em, 1fr);
+          grid-column-gap: 1%;
+          background-color: rgba(169, 169, 169, 0.25);
+          margin-bottom: 1rem;
+        }
+        .col-0 {
+          background-color: #ffffff;
+          font-size: 90%;
+          text-align: center;
+          height: 66px;
+          margin: 0.5rem 0;
+          padding: 0.5rem;
+        }
+        .col-0-gutter {
+          text-align: center;
+        }
+
+        .grid-container-1{
+          display: grid;
+          grid-template-columns: repeat(1, auto);
+          grid-column-gap: 1%;
+          margin-bottom: 1rem;
+        }
+        .col-1 {
+          background-color: rgba(189, 240, 255, 0.25);
+          height: 66px;
+          padding: 0.25rem 0 0 0.25rem;
+        }
+
+        .grid-container-2 {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 1%;
+          margin-bottom: 1rem;
+        }
+        .col-2 {
+          background-color: rgba(124, 252, 0, 0.25);
+          height: 66px;
+          padding: 0.25rem 0 0 0.25rem;
+        }
+        @media (max-width: 575.98px) {
+          .grid-container-2 {
+            grid-template-columns: 1fr;
+            margin-bottom: 0;
+          }
+          .col-2:nth-child(1) {
+            margin-bottom: 1rem;
+          }
+          .col-2:nth-child(2) {
+            margin-bottom: 1rem;
+          }
+        }
+
+        .grid-container-reverse {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 1%;
+          margin-bottom: 1rem;
+        }
+        .col-2r {
+          background-color: rgba(255, 255, 0, 0.25);
+          height: 66px;
+          padding: 0.25rem 0 0 0.25rem;
+        }
+        @media (max-width: 575.98px) {
+          .grid-container-reverse {
+            grid-template-columns: 1fr;
+            margin-bottom: 0;
+          }
+          .col-2r:nth-child(1) {
+            grid-row: 2;
+            grid-column: 1;
+            margin-bottom: 1rem;
+          }
+          .col-2r:nth-child(2) {
+            grid-row: 1;
+            grid-column: 1;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .grid-container-3{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 1%;
+          margin-bottom: 1rem;
+        }
+        .col-3 {
+          background-color: rgba(255, 140, 0, 0.25);
+          height: 66px;
+          padding: 0.25rem 0 0 0.25rem;
+        }
+
+        .grid-container-4{
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-column-gap: 1%;
+          margin-bottom: 1rem;
+        }
+        .col-4 {
+          background-color: rgba(240, 126, 126, 0.25);
+          height: 66px;
+          padding: 0.25rem 0 0 0.25rem;
+        }
+        @media (max-width: 767.98px) {
+          .grid-container-4 {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 0;
+          }
+          .col-4:nth-child(1) {
+            margin-bottom: 1rem;
+          }
+          .col-4:nth-child(3) {
+            margin-bottom: 1rem;
+          }
+        }
+
+        .grid-container-12 {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-column-gap: 1%;
+          margin-bottom: 1rem;
+        }
+        .col-12 {
+          background-color: rgba(203, 187, 255, 0.25);
+          height: 66px;
+          padding: 0.25rem 0 0 0.25rem;
+        }
+        @media (max-width: 575.98px) {
+          .grid-container-12 {
+            grid-column-gap: 0.5%;
+          }
+          .col-12 {
+            font-size: 0.88rem;
+          }
+        }
+        @media (max-width: 395.98px) {
+          .grid-container-12 {
+            grid-column-gap: 0.5%;
+          }
+          .col-12 {
+            font-size: 0.76rem;
+          }
+        }
+
+     </style>
+     <main>
+
+        <h1>{{ heading }}</h1>
+
+        <p id="toggle"><input type="checkbox" /> Show/Hide grid mask </p>
+
+        <div id="content">
+
+            <div id="mask">
+              <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+            </div>
+
+            <h6>Single centered content</h6> 
+            <div class="grid-container-0">
+                <div class="col-0-gutter">... </div>
+                <div class="col-0"> single centered column with auto gutters </div>
+                <div class="col-0-gutter">... </div>
+            </div>
+
+            <h6>Single full width column</h6> 
+            <div class="grid-container-1">
+                <div class="col-1">1</div>
+            </div>
+
+            <h6>Two column stack (576)</h6> 
+            <div class="grid-container-2">
+                <div class="col-2">2.1</div>
+                <div class="col-2">2.2</div>
+            </div>
+
+            <h6>Two column reverse stack (576)</h6> 
+            <div class="grid-container-reverse">
+                <div class="col-2r">2.2 (left)</div>
+                <div class="col-2r">2.1 (right)</div>
+            </div>
+
+            <h6>Three column fixed</h6> 
+            <div class="grid-container-3">
+                <div class="col-3">3.1</div>
+                <div class="col-3">3.2</div>
+                <div class="col-3">3.3</div>
+            </div>
+
+            <h6>Four column stacking pairs (768)</h6> 
+            <div class="grid-container-4">
+                <div class="col-4">4.1</div>
+                <div class="col-4">4.2</div>
+                <div class="col-4">4.3</div>
+                <div class="col-4">4.4</div>
+            </div>
+
+            <div class="grid-container-12">
+                <div class="col-12">1</div>
+                <div class="col-12">2</div>
+                <div class="col-12">3</div>
+                <div class="col-12">4</div>
+                <div class="col-12">5</div>
+                <div class="col-12">6</div>
+                <div class="col-12">7</div>
+                <div class="col-12">8</div>
+                <div class="col-12">9</div>
+                <div class="col-12">10</div>
+                <div class="col-12">11</div>
+                <div class="col-12">12</div>
+            </div>
+
+        </div><!--/#overlay-->
+
+    </main>
+    <script>
+
+    </script>
+{% endblock %}

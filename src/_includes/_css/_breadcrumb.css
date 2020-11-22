@@ -1,0 +1,8 @@
+
+/*  BREADCRUMBS  */
+
+.breadcrumb { display: flex; flex-wrap: wrap; list-style: none; padding: .5rem .5rem; margin-top: .5rem; margin-bottom: .5rem; }
+.breadcrumb-item { display: inline-block; }
+.breadcrumb-item:not(:last-child) { margin-right: .5rem; }
+.breadcrumb-item.active { color: #6c757d; background: transparent; }
+.breadcrumb-item+.breadcrumb-item:before { display: inline-block; padding-right: 0.5rem; color: #6c757d; content: ">"; }

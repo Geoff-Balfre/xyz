@@ -1,0 +1,9 @@
+---
+eleventyExcludeFromCollections: true
+title: Google Verification
+permalink: /google0c16cb50fcdd0abf.html     TBC
+date: Last Modified
+tags: ['pages', 'support']
+googleverification: c16cb50fcdd0abf         TBC add to config.js
+---
+TBC google-site-verification: google{{ googleverify }}.html

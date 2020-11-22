@@ -1,0 +1,32 @@
+
+//common variables
+//required packages
+//const { DateTime } = require('luxon')
+
+module.exports = {
+
+  dateOne: function (props) {
+    return `Date one`
+  },
+
+  dateTwo: function (props) {
+    return `Date two`
+  },
+
+  dateThree: function (props) {
+    return `Date three`
+  },
+
+
+
+  xobfuscate: function (str) {
+    const chars = []
+    for (var i = str.length - 1; i >= 0; i--) {
+      chars.unshift(['&#', str[i].charCodeAt(), ';'].join(''))
+    }
+    return chars.join('')
+  }
+
+
+
+}

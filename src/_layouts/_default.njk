@@ -1,0 +1,20 @@
+---
+template: _default
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    {%- include "_partials/_head.njk" %}
+  </head>
+  <body>
+
+    {%- include "_partials/_header.njk" %}
+    {{- content | safe }}
+    {%- include "_partials/_footer.njk" %}
+
+    {%- include "_partials/_backtotop.njk" %}
+
+    {%- if homepage %}{% include "_partials/_netlifyidentity.njk" %}{%- endif %}
+    {%- include "_partials/_scripts.njk" %}
+  </body>
+</html>

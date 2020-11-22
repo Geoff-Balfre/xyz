@@ -1,0 +1,49 @@
+
+/*  STICKY FOOTER CSSGRID PAGE LAYOUT STYLE  */
+
+body { display:grid; grid-template-rows: auto 1fr auto; height:100vh; }
+
+/*  HOME CSSGRID LAYOUT STYLES  */
+
+.home-grid {
+
+}
+
+/*  DEFAULT CSSGRID LAYOUT STYLES  */
+/*  https://joshwcomeau.com/css/full-bleed/  */
+
+.default-grid {
+    display: grid;
+    grid-template-columns: 1fr min(72ch, calc(100% - 1rem)) 1fr;
+}
+  
+.default-grid > * {
+    grid-column: 2;
+    border: 1px dashed teal; 
+}
+
+.default-grid > section {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.default-breakout {
+    width: 100%;
+    grid-column: 1 / 4;
+    background-color: #EEEEEE;
+}
+
+/*  COURSE CSSGRID LAYOUT STYLES  */
+
+.course-grid {
+
+}
+
+
+/*  REVIEW  */
+
+.adefault-grid { display: grid; grid-gap: 10px; grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr minmax(0, 1fr); grid-template-rows: auto; padding-bottom: 1rem; }
+.adefault-content { border: 1px solid #c7c7c7; border-radius: .25rem; padding: 1rem; }
+.acolumn { grid-column: 2 / 5; }
+@media only screen and (max-width: 576px) { .acolumn { grid-column: 1 / 6; } }
+

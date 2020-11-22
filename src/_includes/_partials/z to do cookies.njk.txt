@@ -1,0 +1,3 @@
+{%- if shouldIncludeCookieAlert %}
+        <!-- cookie alert code goes here -->
+{%- endif %}

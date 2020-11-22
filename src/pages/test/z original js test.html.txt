@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>42 HTML5 skeleton</title>
+
+    <meta name="description" content="Page description">
+    <!-- meta tags etc go here... -->
+
+    <style>
+
+    </style>
+
+    <script> document.documentElement.classList.remove("no-js"); </script>
+    <!-- google analytics code goes here -->
+
+  </head>
+  <body>
+
+<p>Viewport: <span class="viewport-size"></span></p>
+
+<p id="addId1">Adds a named class 1</p>
+<p id="addId2" class="qwerty">Adds a named class 2</p>
+
+<p id="removeId1" class="remove-class-1">Removal of a named class 1</p>
+<p id="removeId2" class="remove-another-class remove-class-2">Removal of a named class 2</p>
+
+<p id="toggleId1" class="">Toggle a named class 1</p>
+<p id="toggleId2" class="toggle-class-2">Toggle a named class 2</p>
+
+<p id="replaceId1" class="replace-class-1">Replace a named class 1</p>
+<p id="replaceId2" class="replace-another-class replace-class-2">Replace a named class 1</p>
+
+<p id="containsId1" class="">Contains a named class 1</p>
+<p id="containsId2" class="contains-class-2">Contains a named class 2</p>
+<p id="containsId3" class="contains-another-class contains-class-3">Contains a named class 2</p>
+
+<br>
+  <div class="form-group">
+    <label for="passwordId">Password</label>
+    <input id="passwordId" class="form-control" name="passwordId" type="password" autocomplete="current-password" aria-describedby="emailHelp">
+    <small id="passwordHelp" class="form-text text-muted">Please enter yor password nn characters etc.</small>
+    [<a id="showpasswordId" aria-label="Show password. Warning: this will display your password.">Show password</a>]
+  </div>
+<br>
+
+<br>
+  <div class="form-group">
+    <label for="rangeId">Range</label>
+    <input id="rangeId" class="form-control-range" name="rangeId" type="range" title="Range input" min="1" max="10" step="0.5" value="5" aria-describedby="rangeHelp">
+    <small id="rangeHelp" class="form-text text-muted">Please do something with this range</small>
+    [<span id="rangevalueId" style="font-weight:bold;color:blue;"></span>]
+  </div>
+<br>
+
+
+
+
+
+<p>TO DO other</p>
+
+<p>TO DO show forms input</p>
+
+
+  <script>
+
+// SHOW VIEWPORT SIZE
+
+const viewportSize = (el) => {
+//  document.querySelector(el).innerHTML = '' + window.innerWidth + '<small>x</small>' + window.innerHeight + '';
+}
+
+// PASSWORD "TO DO"
+
+const showPassword = (e) => {
+  e.preventDefault();
+  let p = document.getElementById('passwordId');
+  let t  = document.getElementById('showpasswordId');
+  let type = p.getAttribute('type');
+
+  if (type == 'password') {
+    p.setAttribute('type', 'text');
+    t.innerHTML = 'Hide';    // add html css to vary for small mobile
+  } else {
+    p.setAttribute('type', 'password');
+    t.innerHTML = 'Show';    // add html css to vary for small mobile
+  }
+
+  console.log ("clicked show/hide password action");
+
+}
+
+
+// RANGE "TO DO"
+
+const showRange = (e) => {
+  e.preventDefault();
+  let r = document.getElementById("rangeId");
+  let rv = document.getElementById("rangevalueId");
+  rv.innerHTML = r.value;
+}
+
+// ADD CLASS
+
+const addClass = (el, cl) => { document.getElementById(el).classList.add(cl); }
+
+// REMOVE CLASS
+
+const removeClass = (el, cl) => { document.getElementById(el).classList.remove(cl); }
+
+// TOGGLE CLASS
+
+const toggleClass = (el, cl) => { document.getElementById(el).classList.toggle(cl); }
+
+// REPLACE CLASS
+
+const replaceClass = (el, rcl, acl) => {
+  document.getElementById(el).classList.remove(rcl);
+  document.getElementById(el).classList.add(acl);
+}
+
+// CONTAINS CLASS
+
+const containsClass = (el, cl) => document.getElementById(el).classList.contains(cl);
+
+// VIEWPORT RESIZE ACTION
+
+// ## TEST
+
+const resizeAction = (el) => {
+  if (document.querySelector(el)) {
+    window.onresize = viewportSize(el);
+    window.dispatchEvent(new Event('resize'));
+  }
+}
+
+// EVENT ACTION
+
+// ## TEST
+
+const eventAction = (ac) => {
+  document.addEventListener(ac, (e) => dosomethingelse(e));
+}
+
+// ONLOAD ACTION
+
+// ## TO DO
+
+//resizeAction(viewport-size)
+//eventAction('input')
+//eventAction('click')
+//eventAction('submit')
+
+// ADD CLICK EVENT LISTENER (general forms)
+
+document.addEventListener("click", (e) => dosomethingelse(e));
+
+// ADD INPUT EVENT LISTENER (range element)
+
+document.addEventListener("input", (e) => dosomethingelse(e));
+
+// ========== ========== ========== ========== ========== ==========
+
+  if (document.querySelector('.viewport-size')) {
+    window.onresize = viewportSize;
+    window.dispatchEvent(new Event('resize'));
+  }
+
+
+  // ## set event listener for all password inputs, to cover testing, see historical "js" ##
+  if (document.querySelector('#showpasswordId')) {
+    document.querySelector('#showpasswordId').addEventListener("click", (e) => showPassword(e))
+  }
+
+
+  // ## set event listener for all range inputs, to cover testing, see historical "js" ##
+  if (document.getElementById('rangeId')) {
+    document.getElementById('rangeId').addEventListener("input", (e) => showRange(e))
+    let r = document.getElementById("rangeId");
+    let rv = document.getElementById("rangevalueId");
+    rv.innerHTML = r.value;
+  }
+
+  // THE TESTING AND LOGGING FUNCTIONS
+ 
+  const dosomethingelse = (e) => { 
+    e.preventDefault();
+    let target = e.target;
+    let id = (target.id) ? target.id : 'no id defined' ;
+    let cl = (target.class) ? target.class : 'no class defined' ;
+    let vl = (target.value) ? target.value : 'no value set' ;
+    console.log('#LOG# TAG: ' + target.tagName.toLowerCase() + ' ID: ' + id + ' CLASS: ' + cl + ' VALUE: ' + vl + '');
+  };
+
+  const testLog = (txt, el) => { 
+    // console.log(txt + ": " + document.getElementById(el).outerHTML);
+  };
+
+  testLog ("Before 1: ", "addId1");			addClass("addId1", "new-class-1");				testLog ("After 1: ", "addId1");
+  testLog ("Before 2: ", "addId2");			addClass("addId2", "new-class-2");				testLog ("After 2: ", "addId2");
+
+  testLog ("Before 3: ", "removeId1");		removeClass("removeId1", "remove-class-1");		testLog ("After 3: ", "removeId1");
+  testLog ("Before 4: ", "removeId2");		removeClass("removeId2", "remove-class-2");		testLog ("After 4: ", "removeId2");
+
+  testLog ("Before 5: ", "toggleId1");		toggleClass("toggleId1", "toggle-class-1");
+  testLog ("After 5: ", "toggleId1");		toggleClass("toggleId1", "toggle-class-1");		testLog ("After 5: ", "toggleId1");
+
+  testLog ("Before 6: ", "toggleId2");		toggleClass("toggleId2", "toggle-class-2");
+  testLog ("After 6: ", "toggleId2");		toggleClass("toggleId2", "toggle-class-2");
+  testLog ("After 6: ", "toggleId2");
+
+  testLog ("Before 7: ", "replaceId1");		replaceClass("replaceId1", "replace-class-1", "replace-class-a");		testLog ("After 7: ", "replaceId1");
+  testLog ("Before 8: ", "replaceId2");		replaceClass("replaceId2", "replace-class-2", "replace-class-b");		testLog ("After 8: ", "replaceId2");
+
+  let token1 = (containsClass("containsId1", "contains-class-1")) ? "True" : "False";		testLog ("9a: State: " + token1, "containsId1");
+  let token2 = (containsClass("containsId2", "contains-class-2")) ? "True" : "False";		testLog ("9b: State: " + token2, "containsId2");
+  let token3 = (containsClass("containsId3", "contains-class-3")) ? "True" : "False";		testLog ("9c: State: " + token3, "containsId3");
+
+  </script>
+
+  </body>
+</html>

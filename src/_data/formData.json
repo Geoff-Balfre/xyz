@@ -1,0 +1,43 @@
+{
+  "select": [
+    { "display": "Please select one", "value": "", "selected": false },
+    { "display": "Option 1", "value": "1", "selected": false },
+    { "display": "Option 2", "value": "2", "selected": true },
+    { "display": "Option 3", "value": "3", "selected": false },
+    { "display": "Option 4", "value": "4", "selected": false },
+    { "display": "Option 5", "value": "5", "selected": false }
+  ],
+  "checkbox": [
+    { "display": "Checkbox 1", "value": "1", "checked": false },
+    { "display": "Checkbox 2", "value": "2", "checked": false },
+    { "display": "Checkbox 3", "value": "3", "checked": true }
+  ],
+  "radio": [
+    { "display": "Default", "value": 1, "checked": false },
+    { "display": "Intermediate", "value": 2, "checked": true },
+    { "display": "Advanced", "value": 3, "checked": false }
+  ],
+  "salutation": [
+    { "display": "Mrs", "value": "Mrs", "selected": true },
+    { "display": "Ms", "value": "Ms", "selected": false },
+    { "display": "Miss", "value": "Miss", "selected": false },
+    { "display": "Mr", "value": "Mr", "selected": false },
+    { "display": "Dr", "value": "Dr", "selected": false },
+    { "display": "Prof", "value": "Prof", "selected": false },
+    { "display": "Rev", "value": "Rev", "selected": false },
+    { "display": "Sister", "value": "Sister", "selected": false },
+    { "display": "Other", "value": "Other", "selected": false }
+  ],
+  "gender": [
+    { "display": "Female", "value": "F", "selected": true  },
+    { "display": "Male", "value": "M", "selected": false },
+    { "display": "Prefer not to say", "value": "O", "selected": false }
+  ],
+  "yesno": [
+    { "display": "Yes", "value": true, "checked": false },
+    { "display": "No", "value": false, "checked": true }
+  ],
+  "rememberme": [
+    { "display": "Remember me (do not select for shared computers)", "value": true, "selected": false }
+  ]
+}

@@ -1,0 +1,104 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Safe SVG Images
+description : Safe SVG Images page description
+heading: Safe SVG Images
+engagement: Safe SVG Images page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+
+certs: 
+  - img: /img/safe/svg/cert_mark_SA.svg
+    url: /pages/courses/leading-safe/
+    course: Leading SAFe®
+    lead: With SAFe® 5 Agilist certification
+  - img: /img/safe/svg/cert_mark_SPC.svg
+    url: /pages/courses/implementing-safe/
+    course: Implementing SAFe®
+    lead: With SAFe® 5 Program Consultant certification
+  - img: /img/safe/svg/cert_mark_SP.svg
+    url: /pages/courses/safe-for-teams/
+    course: SAFe® for Teams
+    lead: With SAFe® 5 Practitioner certification
+  - img: /img/safe/svg/cert_mark_SSM.svg
+    url: /pages/courses/safe-scrum-master/
+    course: SAFe® Scrum Master
+    lead: With SAFe® 5 Scrum Master certification
+  - img: /img/safe/svg/cert_mark_SASM.svg
+    url: /pages/courses/safe-advanced-scrum-master/
+    course: SAFe® Advanced Scrum Master
+    lead: With SAFe® 5 Advanced Scrum Master certification
+  - img: /img/safe/svg/cert_mark_RTE.svg
+    url: /pages/courses/safe-release-train-engineer/
+    course: SAFe® Release Train Engineer
+    lead: With SAFe® 5 Release Train Engineer certification
+  - img: /img/safe/svg/cert_mark_POPM.svg
+    url: /pages/courses/safe-product-owner-product-manager/
+    course: SAFe® Product Owner/Product Manager
+    lead: With SAFe® 5 Product Owner/Product Manager certification
+  - img: /img/safe/svg/cert_mark_SDP.svg
+    url: /pages/courses/safe-devops/
+    course: SAFe® DevOps
+    lead: With SAFe® 5 DevOps Practitioner certification
+  - img: /img/safe/svg/cert_mark_ASE.svg
+    url: /pages/courses/certified-safe-agile-software-engineer/
+    course: SAFe® Agile Software Engineering
+    lead: With SAFe® 5 Agile Software Engineering certification
+  - img: /img/safe/svg/cert_mark_SGP.svg
+    url: /pages/courses/safe-for-government/
+    course: SAFe® for Government
+    lead: With SAFe® 5 Government Practitioner certification
+  - img: /img/safe/svg/cert_mark_ARCH.svg
+    url: /pages/courses/safe-for-architects/
+    course: SAFe® for Architects
+    lead: With SAFe® 5 Architects certification
+  - img: /img/safe/svg/cert_mark_LPM.svg
+    url: /pages/courses/lean-portfolio-management/
+    course: SAFe® for Lean Portfolio Management
+    lead: With SAFe® LPM certification
+  - img: /img/safe/svg/cert_mark_APM.svg
+    url: /pages/courses/agile-product-and-solution-management/
+    course: SAFe® for Agile Product Management
+    lead: With SAFe® APM certification
+---
+{% block content %}
+    <style>
+    
+
+    </style>
+
+    <main class="cotainer">
+
+      <div class="xdefault-grid">
+
+        <section>
+
+          <h1>{{ heading }}</h1>
+
+          <h2 class="text-center">SAFe® Certifications</h2>
+
+          {% for item in certs %}
+          <p>
+              <div class="" style="width:66px;height:66px;"><img class="img-fluid" src="{{ item.img }}" alt="SEO: Promotional Keyword Rich ALT text"></div>
+              <div class=""><a class="" href="{{ item.url }}"><strong>{{ item.course }}</strong></a> {{ item.lead }}</div>
+          </p>
+          {% endfor %}
+
+          <p>
+              <div class=""><a class="btn btn-primary mt-2 ml-3 text-white" href="/about-safe-certification/">Explore SAFe training &amp; certification</a></div>
+          </p>
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <script>
+
+    </script>
+
+{% endblock %}

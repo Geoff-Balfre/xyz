@@ -1,0 +1,10 @@
+
+/* THE PRIME PAGES CSS */
+
+.prime-wrapper { display: grid; grid-gap: 1rem; grid-template-columns: minmax(0, 1fr) repeat(10, 1fr) minmax(0, 1fr); padding-bottom: 1rem; background-color: LavenderBlush; }
+.prime-content { grid-column: 1 / 13 ; grid-row: 1; }
+@media only screen and (min-width: 576px) { .prime-content { grid-column: 2 / 12 ; grid-row: 1; } }
+@media only screen and (min-width: 768px) { .prime-content { grid-column: 2 / 12; grid-row: 1 / 2; } }
+@media only screen and (min-width: 992px) { .prime-content { grid-column: 3 / 11; grid-row: 1 / 2; } }
+.prime-section { border: 1px solid #c7c7c7; border-radius: .5rem; padding: 1rem; margin-bottom: 1rem; }
+.prime-section p { margin-bottom: 0.5rem; }

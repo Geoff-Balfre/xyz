@@ -1,0 +1,161 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Breakpoints ✔️
+description : Breakpoints page description
+heading: Breakpoints
+engagement: Breakpoints engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+
+breadcrumbs:
+  - Home|/
+  - Level 1|/pages/training/
+  - Here...|end
+
+---
+{% block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+
+        :root {
+            --bg-color-xs:  #FADBD8; /* light red */
+            --bg-color-sm:  #E8DAEF; /* light purple */
+            --bg-color-md:  #D6EAF8; /* light blue */
+            --bg-color-lg:  #D5F5E3; /* light green */
+            --bg-color-xl:  #F9FDD0; /* light yellow */
+            --bg-color-xll: #FDEBD0; /* light orange */
+        }
+ 
+        /*  Small (portrait phones, 0px upto 576px)  */
+
+        .breakpoint {
+            background-color: var(--bg-color-xs);
+        }
+        .breakpoint-size:before {
+            content: "XS";
+        }
+
+        /*  Small (landscape phones, 576px upto 768px)  */
+
+        @media (min-width: 576px) {
+            .breakpoint {
+                background-color: var(--bg-color-sm);
+            }
+            .breakpoint-size:before {
+                content: "SM";
+            }
+        }
+
+        /*  Medium (tablets, 768px up to 992px)  */
+
+        @media (min-width: 768px) {
+            .breakpoint {
+                background-color: var(--bg-color-md);
+            }
+            .breakpoint-size:before {
+                content: "MD";
+            }
+        }
+
+        /*  Large (desktops, 992px up to 1200px)  */
+
+        @media (min-width: 992px) {
+            .breakpoint {
+                background-color: var(--bg-color-lg);
+            }
+            .breakpoint-size:before {
+                content: "LG";
+            }
+        }
+
+        /*  XLarge (large desktops, 1200px up to 1440px)  */
+
+        @media (min-width: 1200px) {
+            breakpoint {
+                background-color: var(--bg-color-xl);
+            }
+            .breakpoint-size:before {
+                content: "XL";
+            }
+        }
+
+        /*  XXLarge (large desktops, 1440px no max)  */
+
+        @media (min-width: 1440px) {
+            .breakpoint {
+                background-color: var(--bg-color-xll);
+            }
+            .breakpoint-size:before {
+                content: "XLL";
+            }
+        }
+
+
+        .display-small   { display: inline-block; }
+        .display-medium  { display: none; }
+        .display-large   { display: none; }
+
+        @media (min-width: 576px) {
+            .display-small   { display: inline-block; }
+            .display-medium  { display: none; }
+            .display-large   { display: none; }
+        }
+
+        @media (min-width: 768px) {
+            .display-small   { display: none; }
+            .display-medium  { display: inline-block; }
+            .display-large   { display: none; }
+        }
+
+        @media (min-width: 992px) {
+            .display-small   { display: none; }
+            .display-medium  { display: none; }
+            .display-large   { display: inline-block; }
+        }
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content breakpoint">
+
+                {% component_breadcrumb { data: breadcrumbs } %}
+
+                <h1>{{ heading }} <small class="breakpoint-size"></small></h1>
+
+                <p class="display-small" style="color:blue;"> Small </p>
+
+                <p class="display-medium" style="color:blue;"> Medium </p>
+
+                <p class="display-large" style="color:blue;"> Large </p>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+    </script>
+
+{% endblock %}

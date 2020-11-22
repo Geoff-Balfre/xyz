@@ -1,0 +1,36 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: SAFe® for DevOps ✔️
+description : SAFe® for DevOps page description
+heading: SAFe® for DevOps
+engagement: Optimizing Your Value Stream
+markdown: detail-safe-for-devops
+includeinsitemap: true
+includeinanalytics: true
+styles: ['_course']
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - SAFe® for DevOps|end
+---
+{% block content %}
+    <main class="container">
+
+      <div class="course-wrapper">
+
+        <section class="course-content-zero">
+          {% component_breadcrumb { data: breadcrumbs } %}
+        </section>
+
+        {% markdown '/src/pages/markdown/' + markdown + '.md' %}
+        {# markdown '/src/pages/markdown/' ++ ' detail-safe-for-devops.md' #}
+
+      </div>
+
+    </main>
+
+{% endblock %}

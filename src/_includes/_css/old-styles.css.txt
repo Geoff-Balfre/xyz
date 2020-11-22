@@ -1,0 +1,160 @@
+
+/*  Setup  */
+
+html {
+  box-sizing:border-box;
+  color:#212529;
+  font-family:sans-serif;
+  font-size:18px;
+  font-weight:400;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%
+}
+*,:after,:before{
+  box-sizing:inherit;
+  margin:0
+}
+body{
+  background:#fff;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size:1rem;
+  line-height:1.5;
+  padding:0;
+  text-align:left;
+  animation:fadeinAnim .42s
+}
+@keyframes fadeinAnim{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+
+.text-mono {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/*  Page Layout  */
+
+body{
+  display:grid;
+  grid-template-rows: auto 1fr auto;
+  height:100vh
+}
+
+header {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+header div:nth-child(2) {
+border-left: 1px solid rgba(0, 0, 0, 0.1);
+padding-right: 1rem;
+text-align: right;
+}
+header {
+padding: 1rem;
+background-color: gainsboro;
+}
+
+  main {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer div:nth-child(2) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+footer {
+  background-color: gainsboro;
+  padding: 1rem;
+}
+
+/*  Design Limit Warning  */
+
+@media (max-width: 319.98px) {
+  body {
+    background-color: lightyellow;
+    width: 320px;
+  }
+}
+
+/*  Mobile Display helpers  */
+
+@media only screen and (min-width: 768px) {
+  .br-nodisplay {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .mobile-nodisplay {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .display-mobile {
+    display: inline-block;
+  }
+  .display-normal {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .display-normal {
+    display: inline-block;
+  }
+  .display-mobile {
+    display: none;
+  }
+}
+
+/*  General Padding  */
+
+h1, h2, h3, h4, h5, h6, p, ul, ol{
+  padding-bottom: 0.5rem;
+}
+
+/*  Lead Paragraph  */
+
+.lead{
+  font-weight: 500;
+}
+
+/*  Active Link  */
+
+.active{
+  background-color: #C3FDB8;
+}
+
+/*  General Indent  */
+
+.indent{
+  text-indent: 2rem;
+}
+
+/*  CSSGrid Column Styles  */
+
+.grid-container-0{
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 32em) minmax(1em, 1fr);
+  grid-column-gap: 1%;
+  background-color: rgba(169, 169, 169, 0.25);
+  margin-bottom: 1rem;
+}
+.col-0 {
+  background-color: #ffffff;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+.col-0-gutter {
+  text-align: center;
+}
+
+
+

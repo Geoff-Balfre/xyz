@@ -1,0 +1,40 @@
+---
+template: _template
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+
+    {#- include "_partials/_head.njk" - the indented below are found in the "head" partial #}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {%- include "_partials/_prefetch.njk" %}
+
+        <title>{{ title }} | {{ project.brand.name }}</title>
+        <meta name="description" content="{{ description }}">
+
+        {%- include "_partials/_metatags.njk" %}
+        {%- include "_partials/_styles.njk" %}
+        {%- include "_partials/_analytics.njk" %}
+
+        {%- if homepage %}<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{% endif %}
+
+  </head>
+  <body>
+    {%- include "_partials/_noscript.njk" %}
+    {%- include "_partials/_browsercheck.njk" %}
+    {%- include "_partials/_loader.njk" %}
+    {%- include "_partials/_accessibility.njk" %}
+
+    {%- include "_partials/_header.njk" %}
+    {{- content | safe }}
+    {%- include "_partials/_footer.njk" %}
+
+    {%- include "_partials/_backtotop.njk" %}
+    {%- include "_partials/_cookies.njk" %}
+
+    {%- if homepage %}{% include "_partials/_netlifyidentity.njk" %}{% endif %}
+    {%- include "_partials/_scripts.njk" %}
+  </body>
+</html>

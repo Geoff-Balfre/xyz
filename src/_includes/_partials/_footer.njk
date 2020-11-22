@@ -1,0 +1,29 @@
+
+    <div class="footer-menu">
+        <div class="footer-menu-item">
+          {% element_svgicon { style: 'font-size: 2rem;', icon: 'im-facebook2' } -%} &nbsp;&nbsp;
+          {% element_svgicon { style: 'font-size: 2rem;', icon: 'im-linkedin' } -%} &nbsp;&nbsp;
+          {% element_svgicon { style: 'font-size: 2rem;', icon: 'im-twitter' } -%} &nbsp;&nbsp;
+        </div>
+
+        <div class="footer-menu-item">
+          <a href="/pages/contact/"{% if page.url === "/pages/contact/" %} class="active" aria-current="page"{% endif %} target="" title="Link to Contact Us">Contact Us</a> | 
+          <a href="/pages/terms-and-conditions/"{% if page.url === "/pages/terms-and-conditions/" %} class="active" aria-current="page"{% endif %} target="" title="Link to the Terms and Conditions">Terms and Conditions</a> | 
+          <a href="/pages/privacy-policy/"{% if page.url === "/pages/privacy-policy/" %} class="active" aria-current="page"{% endif %} target="" title="Link to Privacy Policy">Privacy Policy</a> | 
+          <a href="/pages/cookies/"{% if page.url === "/pages/cookies/" %} class="active" aria-current="page"{% endif %} target="" title="Link to Cookies information">Cookies</a> | 
+          <a href="/pages/sitemap/"{% if page.url === "/pages/sitemap/" %} class="active" aria-current="page"{% endif %} target="" title="Link to the Sitemap">The Sitemap</a>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <span class="display-normal"><small>Copyright &copy; {{ project.copyrightStart }}-{{ config.year }} {{ project.brandName }}.</small></span>
+        <!-- <span class="display-tablet"> TO DO </span> -->
+        <span class="display-mobile"><small>&copy; {{ project.copyrightStart }}-{{ config.year }} {{ project.brandName }}.</small></span>
+      </div>
+      <div>
+        <span class="display-normal"><small>Update {{ page.date | dateToFormat('ccc d MMM hh:mm a') }}</small></span>
+        <!-- <span class="display-tablet"> TO DO <small>Update <br class="br-nodisplay">{{ page.date | dateToFormat('ccc d MMM hh:mm a') }}</small></span> -->
+        <span class="display-mobile"><small>{{ page.date | dateToFormat('d MMM hh:mm a') }}</small></span>
+	    </div>
+  	</footer>

@@ -1,0 +1,35 @@
+
+//  CLEAN CODE EXAMPLE
+
+const checkbox = document.getElementById('animation-checkbox');
+checkbox.addEventListener('change', () => {
+  if (checkbox.checked) {
+    document.querySelector('.container').classList.add('reduce-motion')
+  } else {
+    document.querySelector('.container').classList.remove('reduce-motion')
+  }
+})
+
+
+//  CLICK TESTING
+
+document.addEventListener('clickx', (e) => {
+  e.preventDefault();
+  let target = e.target;
+  let id = (target.id) ? target.id : 'undefined' ;
+  let cl = (target.class) ? target.class : 'undefined' ;
+  console.log('TAG: ' + target.tagName.toLowerCase() + ' ID: ' + id + ' CLASS: ' + cl + '');
+});
+
+//  INPUT TESTING
+
+document.addEventListener('inputx', (e) => {
+  e.preventDefault();
+  let target = e.target;
+  let id = (target.id) ? target.id : 'undefined' ;
+  let cl = (target.class) ? target.class : 'undefined' ;
+  console.log('TAG: ' + target.tagName.toLowerCase() + ' ID: ' + id + ' CLASS: ' + cl + '');
+});
+
+
+

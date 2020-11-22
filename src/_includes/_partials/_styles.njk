@@ -1,0 +1,35 @@
+{%- set css %}
+{%-   include "_css/_bs4-only-reboot.css" %}
+{%-   include "_css/_bs4-only-type.css" %}
+{%-   include "_css/_bs4-only-image.css" %}
+{%-   include "_css/_bs4-only-content.css" %}
+{#-   include "_css/_bs4-only-buttons.css" #}
+{#-   include "_css/_bs4-only-forms.css" #}
+{%-   include "_css/_animation.css" %}
+{%-   include "_css/_arrows.css" %}
+{%-   include "_css/_backtotop.css" %}
+{%-   include "_css/_breadcrumb.css" %}
+{%-   include "_css/_color.css" %}
+{%-   include "_css/_footer.css" %}
+{%-   include "_css/_header.css" %}
+{%-   include "_css/_custom.css" %}
+{%-   include "_css/_layout.css" %}
+{%-   include "_css/_helpers.css" %}
+{%-   for item in styles %}
+{%-     include "_css/_" +  item + ".css" %}
+{%-   endfor %}
+{%- endset %}
+
+
+{%- if config.environment !== "production" %}
+    <!-- production -->
+    <style> {{ css | cssmin | safe }} </style>
+{% else %}
+    <!-- development -->
+    <style> {{ css | safe }} </style>
+{% endif %}
+
+{#- _course.css #}
+{#- _prime.css #}
+{#- _ribbon.css #}
+{#- _helpers.css #}

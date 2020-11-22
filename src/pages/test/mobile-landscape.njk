@@ -1,0 +1,184 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Mobile Landscape ✔️
+description : Mobile Landscape page description
+heading: Mobile Landscape
+engagement: Mobile Landscape page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+<style>
+body {
+  background-color: #fff;
+  background-image: url('/img/layout-grid-optimized-2000-1300.png');
+  background-size: cover;
+  background-position: left top;
+  x-padding: 4rem;
+}
+
+.iphone5 {
+  position: absolute;
+  width: 318px; /* 320 */
+  height: 566px; /* 568 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+.iphone5l {
+  position: absolute;
+  width: 566px; /* 568 */
+  height: 318px; /* 320 */
+  top: 0;
+  left: 0;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.galaxys3 {
+  position: absolute;
+  width: 358px; /* 360 */
+  height: 638px; /* 640 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+.galaxys3l {
+  position: absolute;
+  height: 359px; /* 360 */
+  width: 639px; /* 640 */
+  top: 0;
+  left: 0;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.galaxys8 {
+  position: absolute;
+  width: 358px; /* 360 */
+  height: 738px; /* 740 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+.galaxys8l {
+  position: absolute;
+  height: 358px; /* 360 */
+  width: 738px; /* 740 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+
+.iphone6 {
+  position: absolute;
+  width: 373px; /* 375 */
+  height: 665px; /* 667 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+.iphone6l {
+  position: absolute;
+  height: 373px; /* 375 */
+  width: 665px; /* 667 */
+  top: 0;
+  left: 0;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.iphone6p {
+  position: absolute;
+  width: 412px; /* 414 */
+  height: 734px; /* 736 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+.iphone6pl {
+  position: absolute;
+  height: 412px; /* 414 */
+  width: 734px; /* 736 */
+  top: 0;
+  left: 0;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.iphoneX {
+  position: absolute;
+  width: 373px; /* 375 */
+  height: 810px; /* 812 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+.iphoneXl {
+  position: absolute;
+  width: 810px; /* 812 */
+  height: 373px; /* 375 */
+  top: 0;
+  left: 0;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.tablet {
+  position: absolute;
+  width: 766px; /* 768 */
+  height: 1022px; /* 1024 */
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+}
+.tabletl {
+  position: absolute;
+  height: 767px; /* 768 */
+  width: 1023px; /* 1024 */
+  top: 0;
+  left: 0;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.device {
+  position: absolute;
+  bottom: 0.25em;
+  right: 0.25em;
+  font-weight: bold;
+}
+
+.devicex {
+  position: absolute;
+  bottom: 2.00em;
+  right: 0.25em;
+  font-weight: bold;
+}
+
+</style>
+    <main class="container">
+
+        <h1>{{ heading }}</h1>
+
+        <div class="iphone5"><span class="device">iPhone 5</span></div>
+        <div class="galaxys3"><span class="device">Galaxy S3-S7</span></div>
+        <div class="iphone6"><span class="device">iPhone 6 7 8</span></div>
+        <div class="galaxys8"><span class="device">Galaxy S8 S8+ S9</span></div>
+        <div class="iphone6p"><span class="devicex">iPhone 6+ 7+ 8+</span></div>
+        <div class="iphoneX"><span class="device">iPhone X</span></div>
+        <div class="tablet"><span class="device">Tablet portrait</span></div>
+
+        <div class="iphone5l"><span class="device">iPhone 5</span></div>
+        <div class="galaxys3l"><span class="device">Galaxy S3-S7</span></div>
+        <div class="iphone6l"><span class="device">iPhone6 7 8</span></div>
+        <div class="galaxys8l"><span class="device">Galaxy S8 S8+ S9</span></div>
+        <div class="iphone6pl"><span class="device">iPhone 6+ 7+ 8+</span></div>
+        <div class="iphoneXl"><span class="device">iPhone X</span></div>
+        <div class="tabletl"><span class="device">Tablet landscape</span></div>
+
+    </main>
+{% endblock %}

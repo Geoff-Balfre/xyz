@@ -1,0 +1,31 @@
+{%- set js %}
+{%- set holderjs = false %}
+{%- set recaptcha = false %}
+{%-   include "_js/_scripts.js" %}
+{%-   for item in scripts %}
+{%-     if item == "holderjs" %}
+{%-        set holderjs = true %}
+{%-     elif item == "recaptcha" %}
+{%-        set recaptcha = true %}
+{%-     else %}
+{%-        include "_js/_" +  item + ".js" %}
+{%-     endif %}
+{%-   endfor %}
+{%- endset %}
+
+{%- if config.environment !== "production" %}
+    <!-- production -->
+    <script>{{ js | jsmin | safe }}</script>
+{%-  else %}
+    <!-- development -->
+    <script>
+        {{ js | safe }}
+    </script>
+{%-  endif %}
+
+{%- if holderjs %}
+    <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.6/holder.min.js"></script>
+{%- endif %}
+{%- if recaptcha %}
+    <script src="https://www.google.com/recaptcha/api.js?render={{ project.recaptchasitekey }}"></script>
+{%- endif %}

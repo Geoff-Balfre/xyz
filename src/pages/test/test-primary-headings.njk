@@ -1,0 +1,89 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Primary Headings ✔️
+description : Primary Headings page description
+heading: Primary Headings
+engagement: Primary Headings page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content">
+
+                <h1>{{ heading }}</h1>
+                <p class="lead">{{ engagement }}</p>
+
+                <h1>Training</h1>
+                <h1>Consultancy</h1>
+                <h1>Coaching</h1>
+                <h1>About</h1>
+                <hr>
+
+                <h1>Contact</h1>
+                <h1>Terms and Conditions</h1>
+                <h1>Privacy Policy</h1>
+                <h1>Sitemap</h1>
+                <hr>
+
+                <h1>Leading SAFe®</h1>
+                <h1>SAFe® Scrum Master</h1>
+                <h1>SAFe® for Teams</h1>
+                <h1>SAFe® for DevOps</h1>
+                <hr>
+
+                <h1>Booking</h1>
+                <h1>Schedule</h1>
+                <hr>
+
+<p>
+    Leading SAFe®<br>
+    Implementing SAFe®<br>
+SAFe® Agile Product Management<br>
+SAFe® Agile Software Engineering<br>
+SAFe® for Architects<br>
+SAFe® for Government<br>
+SAFe® Lean Portfolio Management<br>
+SAFe® for Product Owner/Product Manager<br>
+SAFe® Release Train Engineer<br>
+    SAFe® Scrum Master<br>
+    SAFe® for Teams<br>
+SAFe® for Advanced Scrum Master<br>
+    SAFe® for DevOps<br>
+</p>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+    </script>
+
+{% endblock %}

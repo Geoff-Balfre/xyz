@@ -1,0 +1,36 @@
+---
+layout: _base
+title: Analytics data
+description: Analytics data page description
+heading: Analytics data
+permalink: analytics.html
+date: Last Modified
+tags: ['pages', 'stats']
+---
+{%- block content %}
+
+    <main>
+
+      <h1>{{ heading }}</h1>
+      <p class="lead">{{ configdata.engagement }}</p>
+
+      <table class="analytics">
+{%- for item in analytics %}
+{%-   if loop.first %}
+        <thead>
+          <tr><th>&nbsp; {{ item.id }} </th><th>&nbsp; {{ item.name }} </th><th>&nbsp; {{ item.stat }} </th></tr>
+        </thead>
+        <tbody>
+{%-   else %}
+          <tr class=""><td>{{ item.id }}</td><td>{{ item.name }}</td><td>{{ item.stat }}</td></tr>
+{%-   endif %}
+{%- endfor %}
+        </tbody>
+        <tfoot>
+          <tr><td colspan="3"> {site} sample </td></tr>
+        </tfoot>
+      </table>
+
+    </main>
+
+{%- endblock %}

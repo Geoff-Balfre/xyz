@@ -1,0 +1,58 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Operating Systems
+description: Operating System statistics
+heading: Operating Systems
+engagement:
+includeinsitemap: false
+includeinanalytics: false
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'stats']
+---
+{%- block content %}
+    <style>
+
+table { border-collapse: collapse; margin: 0 auto; x-width: 480px; }
+thead { background-color: #d9d9d9; }
+thead th { padding: 0.5rem 1rem; }
+                  thead th:nth-child(1) { border-radius: 0.5rem 0 0 0; }
+        .standard thead th:nth-child(2) { border-radius: 0 0.5rem 0 0; }
+
+       .analytics thead th:nth-child(3) { border-radius: 0 0.5rem 0 0; }
+ .analyticsbysize thead th:nth-child(3) { border-radius: 0 0.5rem 0 0; }
+
+        .viewport thead th:nth-child(4) { border-radius: 0 0.5rem 0 0; }
+tr:nth-child(even) { background-color: #f8f8f8; }
+tr td { padding-left: 1rem; }
+tfoot td { background-color: #f2f2f2; border-radius: 0 0 0.5rem 0.5rem; padding: 0.5rem; text-align: center; }
+
+    </style>
+
+    <main>
+      <div class="default-grid">
+        <section style="border: 1px dashed #ccc;">
+
+            <h1>{{ heading }}</h1>
+
+            <table class="standard">
+                <thead>
+                    <tr><th>Name</th><th>% Use</th></tr>
+                </thead>
+                <tbody>
+                    {%- for item in referenceData.os %}
+                    <tr class=""><td>{{ item.name }}</td><td>{{ item.use }}</td></tr>
+                    {%- endfor %}
+                </tbody>
+                <tfoot>
+                    <tr><td colspan="2"><strong>Source:</strong> {{ referenceData.os_source | url }}<br><strong>Update:</strong> {{ referenceData.os_update }}</td></tr>
+                </tfoot>
+            </table>
+
+        </section>
+      </div>
+    </main>
+
+{%- endblock %}

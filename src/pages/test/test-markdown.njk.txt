@@ -1,0 +1,42 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Test Markdown Include 🔸
+description : Test Markdown Include page description
+heading: Test Markdown Include
+engagement: Test Markdown Include page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+
+<style>
+</style>
+
+    <main class="container">
+
+      <div class="column-layout">
+
+        <h1>{{ heading }}</h1>
+        <p class="lead">{{ engagement }}</p>
+
+        <section class="one">
+          <h4 style="background-color: #ffffea;">Section 1</h4>
+
+          {% markdown '/src/pages/test/markdown-1.md' %}
+
+        </section>
+
+        <section class="two">
+          <h4 style="background-color: #ffffea;">Section 2</h4>
+
+          {% markdown '/src/pages/test/markdown-2.md' %}
+
+        </section>
+
+      </div>
+
+    </main>
+{% endblock %}

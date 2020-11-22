@@ -1,0 +1,74 @@
+{%- macro showCollection(collect, text) %}
+            <h4 style="color:blue;">{{ text }} (collections) </h4>
+            <p>
+              {%- for item in collect %}
+                {{ item.data.title | safe }}<br>
+              {%- endfor %}
+            </p>
+{%- endmacro %}
+
+{%- macro showVariables(data, text) %}
+            <h4 style="color:blue;">{{ text }} (JSON variables)</h4>
+            <p>
+              {%- for key, value in data %}
+                &nbsp;&nbsp;<strong>{{ key }}:</strong>&nbsp;{{ value | safe }}<br>
+              {%- endfor %}
+            </p>
+{%- endmacro %}
+
+{%- macro showObject(object, text) %}
+            <h4 style="color:blue;">{{ text }} (object) </h4>
+            <p>{{ object | dump }}</p>
+{%- endmacro %}
+
+{%- macro showObjects(object, text) %}
+            <h4 style="color:blue;">{{ text }} (object) </h4>
+            <p>{# object | dump #}</p>
+            <p>
+              {%- for item in object.list %}
+                  {{ loop.index }} -
+              {%-   for key, value in item %}
+                      <strong>{{ key }}:</strong> {{ value | safe }} {{ "  " if not loop.last }}
+              {%-   endfor %}
+                  <br>
+              {%- endfor %}
+            </p>
+{%- endmacro %}
+
+{%- macro showPage(object, text) %}
+            <h4 style="color:blue;">{{ text }} </h4>
+            <ul>
+              <li>fileSlug:     {{ object.fileSlug }}</li>
+              <li>filePathStem: {{ object.filePathStem }}</li>
+              <li>date:         {{ object.date }}</li>
+              <li>inputPath:    {{ object.inputPath }}</li>
+              <li>outputPath:   {{ object.outputPath }}</li>
+              <li>url:          {{ object.url }}</li>
+              <li>----</li>
+              <li>data:         {{ object.data | dump }}</li>
+              <li>----</li>
+              <li>title:        {{ object.title }}</li>
+              <li>desc:         {{ object.description }}</li>
+              <li>heading:      {{ object.heading }}</li>
+              <li>engagement:   {{ object.engagement }}</li>
+              <li>permalink:    {{ object.permalink }}</li>
+              <li>tags:         {{ object.tags }}</li>
+            </ul>
+{%- endmacro %}
+
+{%- macro showNav(data, name, text) %}
+            <p>{{ text }}:-&nbsp;
+            {%- for item in data %}
+              <a href="{{ name }}/{{ item.name }}/index.html">{{ item.name }}</a>{{ " | " if not loop.last }}
+            {%- endfor %}
+            </p>
+{%- endmacro %}
+
+{%- macro showSitemap(c) %}
+            <h4 style="color:blue;">Pages:</h4>
+            <ul>
+              {%- for key in c.pages %}
+                  <li><a href="{{ key.url }}" title="{{ key.data.title }}">{{ key.data.title }}</a> - {{ key.url }}</li>
+              {%- endfor %}
+            </ul>
+{%- endmacro %}

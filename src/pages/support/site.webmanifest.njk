@@ -1,0 +1,46 @@
+---
+eleventyExcludeFromCollections: true
+title: Site Web Manifest
+permalink: /site.webmanifest
+date: Last Modified
+tags: ['pages', 'support']
+background_color: '#ffffff'
+description: Deidre Luzmore manifest
+display: standalone
+icons:
+    - file: img/manifest/icon-72x72.png
+      size: 72x72
+    - file: img/manifest/icon-96x96.png
+      size: 96x96
+    - file: img/manifest/icon-128x128.png
+      size: 128x128
+    - file: img/manifest/icon-144x144.png
+      size: 144x144
+    - file: img/manifest/icon-152x152.png
+      size: 152x152
+    - file: img/manifest/icon-192x192.png
+      size: 192x192
+    - file: img/manifest/icon-384x384.png
+      size: 384x384
+    - file: img/manifest/icon-512x512.png
+      size: 512x512
+name: Diedre Luzmore
+orientation: portrait
+scope: '/'
+short_name: 'DLS'
+start_url: '/'
+theme_color: '#ffffff'
+---
+{
+  "background_color": "{{ background_color }}",
+  "description": "{{ description }}",
+  "display": "{{ display }}",
+  "icons": [{%- for icon in icons %}{"src": "{{ icon.file }}","sizes": "{{ icon.size }}","type": "image/png"}{% if not loop.last %},{% endif %}{%- endfor %}],
+  "name": "{{ name }}",
+  "orientation": "{{ orientation }}",
+  "scope": "{{ scope }}",
+  "short_name": "{{ short_name }}",
+  "splash_pages": null,
+  "start_url": "{{ start_url }}",
+  "theme_color": "{{ theme_color }}"
+}

@@ -1,0 +1,25 @@
+{
+  "brandName": "DLS Brand",
+  "brandStrapline": "DLS strapline",
+  "brandCompany": "DLS Ltd",
+  "brandContact": "A N Other",
+  "brandEmail": "another@domain.com",
+  "copyrightStart": "2001",
+  "copyrightHolder": "TBC",
+  "copyrightLicense": "TBC",
+  "copyrightUrl": "TBC",
+  "pageEngagement": "Value proposition, engagement text goes here...",
+  "imageAlttext": "SEO: The image promotional and keyword rich ALT text",
+  "palette": {
+    "primary": "#007bff",
+    "secondary": "#6c757d",
+    "success": "#28a745",
+    "info": "#17a2b8",
+    "warning": "#ffc107",
+    "danger": "#dc3545",
+    "light": "#f8f9fa",
+    "dark": "#343a40",
+    "text": "#212529",
+    "background": "#fff"
+  }
+}

@@ -1,0 +1,23 @@
+
+/*  FULL BLEED COLUMN STYLES  */
+/*  https://joshwcomeau.com/css/full-bleed/  */
+
+.full-bleed-grid {
+    display: grid;
+    grid-template-columns: 1fr min(72ch, calc(100% - 1rem)) 1fr;
+}
+  
+.full-bleed-grid > * {
+    grid-column: 2;
+}
+
+.full-bleed-grid > section {
+    border: 1px solid #c7c7c7;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.full-bleed-breakout {
+    width: 100%;
+    grid-column: 1 / 4;
+}

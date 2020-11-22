@@ -1,0 +1,155 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Dates Luxon
+description : Luxon Dates page description
+heading: Luxon Dates
+engagement:
+includeinsitemap: false
+includeinanalytics: false
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'stats']
+---
+{% block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content">
+
+                <h1>{{ heading }}</h1>
+  
+                <p>
+                  <em>Luxon date:</em> <strong><span id="l0"></span></strong><br>
+                  <br>
+
+                  <em>Local date(s):</em> <strong><span id="l1a"></span></strong><br> or <strong><span id="l1b"></span></strong><br>
+                  <br>
+                  <em>Week Day:</em> <strong><span id="l2"></span></strong><br>
+                  <em>Day:</em> <strong><span id="l3"></span></strong><br>
+                  <em>Month:</em> <strong><span id="l4"></span></strong><br>
+                  <em>Year:</em> <strong><span id="l5"></span></strong><br>
+                  <em>Time:</em> <strong style="color:red;"><span id="l6"></span></strong><br>
+                  <br>
+                  <em>Date and Time:</em> <strong><span id="l7a"></span></strong><br> or <strong><span id="l7b"></span></strong><br> or <strong><span id="l7c"></span></strong><br>
+                  <br>
+                  <em>Time Zone:</em> <strong><span id="l8"></span></strong><br>
+                  <br>
+
+                  <em>ISO:</em> <strong><span id="l9a"></span></strong><br>
+                  <em>Local:</em> <strong><span id="l9b"></span></strong><br>
+                  <br>
+
+                  <em>97:</em> <span id="l97"></span><br>
+                  <em>98:</em> <span id="l98"></span><br>
+                  <em>99:</em> <span id="l99"></span><br>
+               </p>
+
+                <h4>Eleventy filters</h4>
+                <p>
+                  <em>The page date:</em>   <strong>{{ page.date }}</strong> <br>
+                  <em>Filter to Short:</em> <strong>{{ page.date | dateToFormat('yyyy-MM-dd') }}</strong> <br>
+                  <em>Filter to Full:</em>  <strong>{{ page.date | dateToFormat('ccc d LLL yyyy HH:mm a') }}</strong> <br>
+                  <em>Filter to UTC:</em>   <strong>{{ page.date | dateToFormat('yyyy-LL-dd') }}</strong> <br>
+                  <em>Filter to ISO:</em>   <strong>{{ page.date | dateToISO() }}</strong> <br>
+                  <br>
+
+                  {% set email = 'geoff@balfre.com' %}
+                  <em>Email:</em> <strong style="overflow-wrap: break-word;">{{ email | obfuscate }}</strong><br>
+                </p>
+
+<!--
+                    <em>97:</em> <span id="l97"></span><br>
+                    <em>98:</em> <span id="l98"></span><br>
+                    <em>99:</em> <span id="l99"></span><br>
+                    <em>Plain:</em>         ?? {# page.date | dateToFormat() #} <br>
+                    <em>Year:     </em>     ?? {# page.date | dateToFormat('yyyy') #} <br>
+                    <em>Full:</em>          ?? {# page.date | dateToFormat('ccc d LLL yyyy HH:mm a') #} <br>
+-->
+ 
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.24.1/build/global/luxon.min.js"></script>
+    <script>
+
+      const ordinal = n => {
+        var s = ['th', 'st', 'nd', 'rd'],
+        v = n % 100;
+        return n + (s[(v - 20) % 10] || s[v] || s[0]);
+      };
+
+      let DateTime = luxon.DateTime;
+      dt = DateTime.local();
+
+      document.querySelector('#l0').innerHTML = DateTime.local();
+
+      document.querySelector('#l1a').innerHTML = dt.toLocaleString();
+      document.querySelector('#l1b').innerHTML = dt.toLocaleString(DateTime.DATETIME_MED);
+
+      document.querySelector('#l2').innerHTML = dt.weekdayLong + ' - ' + dt.weekdayShort + ' - ' + dt.weekday;
+
+//    does lexon support ordinals see local javascript implementation
+
+      document.querySelector('#l3').innerHTML = dt.day + ' - ' + ordinal(dt.day);
+      document.querySelector('#l4').innerHTML = dt.monthLong + ' - ' + dt.monthShort + ' - ' + dt.month;
+      document.querySelector('#l5').innerHTML = dt.year;
+      document.querySelector('#l6').innerHTML =  dt.hour + ':' + dt.minute + ':' +  dt.second;
+
+      let dd = (dt.day < 10)       ? '0' + dt.day : dt.day;
+      let mm = (dt.month < 10)     ? '0' + dt.month : dt.month;
+
+      let thedate1 = dt.weekdayShort + ' ' + ordinal(dt.day) + ' ' + dt.monthShort + ' ' + dt.year;
+      let thedate2 = dt.day + '/' + dt.month + '/' + dt.year;
+      let thedate3 = dt.year + '-' + mm + '-' + dd;
+
+      let hr = (dt.hour < 10)      ? '0' + dt.hour : dt.hour;
+      let mn = (dt.minute < 10)    ? '0' + dt.minute : dt.minute;
+      let ss = (dt.second < 10)    ? '0' + dt.second : dt.second;
+
+//    does lexon support AM/PM see local javascript implementation
+
+      let meridiem = (dt.hour < 12) ? 'AM' : 'PM';
+
+      let thetime1 = dt.hour + ':' + dt.minute + ':' +  dt.second + ' ' +  meridiem;
+      let thetime2 = hr + ':' + mn + ':' +  ss + ' ' +  meridiem;
+
+      document.querySelector('#l7a').innerHTML =  thedate1 + ' ' + thetime1;
+      document.querySelector('#l7b').innerHTML =  thedate2 + ' ' + thetime2;
+      document.querySelector('#l7c').innerHTML =  thedate3 + ' ' + thetime2;
+
+      document.querySelector('#l8').innerHTML = dt.offsetNameLong + ' - ' + dt.offsetNameShort + ' - ' + dt.offset + ' - ' + dt.locale;
+
+      document.querySelector('#l9a').innerHTML = dt.toISO();
+      document.querySelector('#l9b').innerHTML = dt.toLocal();
+
+document.querySelector('#l97').innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY);
+document.querySelector('#l98').innerHTML = DateTime.utc().toHTTP();
+document.querySelector('#l99').innerHTML = dt.toFormat('ccc d LLL yyyy HH:mm a');
+
+    </script>
+
+{% endblock %}

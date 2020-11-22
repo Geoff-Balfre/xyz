@@ -1,0 +1,50 @@
+
+/*  BRAND COLORS  */
+
+.text      { color: #212529; }
+
+.primary   { color: #007bff; }
+.secondary { color: #6c757d; }
+.tertiary  { color: #28a745; }
+.success   { color: #28a745; }
+.info      { color: #17a2b8; }
+.warning   { color: #ffc107; }
+.danger    { color: #dc3545; }
+.light     { color: #f8f9fa; }
+.dark      { color: #343a40; }
+
+/*  PASTEL BACKGROUND TESTING COLORS  */
+
+.one   { background-color: #FFCDD2; }
+.two   { background-color: #E1BEE7; }
+.three { background-color: #C5CAE9; }
+.four  { background-color: #B3E5FC; }
+.five  { background-color: #B2DFDB; }
+.six   { background-color: #DCEDC8; }
+.seven { background-color: #FFF9C4; }
+.eight { background-color: #FFE0B2; }
+.nine  { background-color: #D7CCC8; }
+
+/* THE GRAY PALETTE */
+
+.gray-50  { color: #FAFAFA; }
+.gray-100 { color: #F5F5F5; }
+.gray-200 { color: #EEEEEE; }
+.gray-300 { color: #E0E0E0; }
+.gray-400 { color: #BDBDBD; }
+.gray-500 { color: #9E9E9E; }
+.gray-600 { color: #757575; }
+.gray-700 { color: #616161; }
+.gray-800 { color: #424242; }
+.gray-900 { color: #212121; }
+
+.bg-gray-50  { background-color: #FAFAFA; }
+.bg-gray-100 { background-color: #F5F5F5; }
+.bg-gray-200 { background-color: #EEEEEE; }
+.bg-gray-300 { background-color: #E0E0E0; }
+.bg-gray-400 { background-color: #BDBDBD; }
+.bg-gray-500 { background-color: #9E9E9E; }
+.bg-gray-600 { background-color: #757575; }
+.bg-gray-700 { background-color: #616161; }
+.bg-gray-800 { background-color: #424242; }
+.bg-gray-900 { background-color: #212121; }

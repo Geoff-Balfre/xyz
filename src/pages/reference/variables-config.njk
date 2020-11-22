@@ -1,0 +1,130 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Variables Config JS
+description : Config JS Variables page description
+heading: Config JS variables
+engagement:
+includeinsitemap: false
+includeinanalytics: false
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'stats']
+---
+{%- macro showVariables(js) %}
+      <p>
+      {%- for key, value in js %}
+      &nbsp;&nbsp;<strong>{{ key }}:</strong>&nbsp;{{ value | safe }}<br>
+      {%- endfor %}
+      </p>
+{%- endmacro %}
+{% block content %}
+    <style>
+    
+         .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content">
+
+                <h1>{{ heading }}</h1>
+
+                <h4 style="color:blue;">Page</h4>
+                {{- showVariables(page) }}
+
+                <h4 style="color:blue;">package.json</h4>
+                <p>
+                  <strong> Pkj.json author:</strong> {{ pkg.author }} <br>
+                  <strong> Pkj.json licence:</strong> {{ pkg.license }} <br>
+                </p>
+
+                <h4 style="color:blue;">Config</h4>
+                <p>
+                  <strong> Environment:</strong> ({{ config.environment }}) <br>
+                  <strong> Generator:</strong> {{ config.generator }} <br>
+                  <strong> Year:</strong> {{ config.year }} <br>
+                  <br>
+
+                  <strong> Github:</strong> {{ config.github }} <br>
+                  <strong> Domain:</strong> {{ config.domain }} <br>
+                  <strong> Host:</strong> {{ config.host }} <br>
+                  <strong> Canonical:</strong> {{ config.canonical }} <br>
+                  <strong> Sitemap:</strong> {{ config.sitemap }} <br>
+                  <strong> Google Verify:</strong> {{ config.googleverify }} <br>
+                  <strong> Analytics:</strong> {{ config.analytics }} <br>
+                  <strong> Recaptcha JS:</strong> {{ config.recaptchajs }} <br>
+                  <strong> Recaptcha site key:</strong> {{ config.recaptchasitekey }} <br>
+                  <strong> Recaptcha secret key:</strong> {{ config.recaptchasecretkey }} <br>
+                  <br>
+
+                  <strong> Author name:</strong> {{ config.author.name }} <br>
+                  <strong> Author email:</strong> {{ config.author.email }} <br>
+                  <br>
+
+                  <strong> Brand name:</strong> {{ config.brand.name }} <br>
+                  <strong> Brand strapline:</strong> {{ config.brand.strapline }} <br>
+                  <strong> Brand company:</strong> {{ config.brand.company }} <br>
+                  <strong> Brand contact:</strong> {{ config.brand.contact }} <br>
+                  <strong> Brand email:</strong> {{ config.brand.email }} <br>
+                  <br>
+
+                  <strong> Copyright start:</strong> {{ config.copyright.start }} <br>
+                  <strong> Copyright holder:</strong> {{ config.copyright.holder }} <br>
+                  <strong> Copyright license:</strong> {{ config.copyright.license }} <br>
+                  <strong> Copyright url:</strong> {{ config.copyright.url }} <br>
+                  <br>
+
+                  <strong> Page title:</strong> {{ config.page.title }} <br>
+                  <strong> Page desccription:</strong> {{ config.page.desccription }} <br>
+                  <strong> Page engagement:</strong> {{ config.page.engagement }} <br>
+                  <strong> Page alttext:</strong> {{ config.page.alttext }} <br>
+                  <br>
+
+                  <strong> Palette primary:</strong> {{ config.palette.primary }} <br>
+                  <strong> Palette secondary:</strong> {{ config.palette.secondary }} <br>
+                  <strong> Palette success:</strong> {{ config.palette.success }} <br>
+                  <strong> Palette info:</strong> {{ config.palette.info }} <br>
+                  <strong> Palette warning:</strong> {{ config.palette.warning }} <br>
+                  <strong> Palette danger:</strong> {{ config.palette.danger }} <br>
+                  <strong> Palette light:</strong> {{ config.palette.light }} <br>
+                  <strong> Palette dark:</strong> {{ config.palette.dark }} <br>
+                  <strong> Palette text:</strong> {{ config.palette.text }} <br>
+                  <strong> Palette background:</strong> {{ config.palette.background }} <br>
+                  <br>
+
+                  <strong> Test string:</strong> {{ config.teststring }} <br>
+                  <strong> Test boolean true:</strong> {{ config.testbooleantrue }} <br>
+                  <strong> Test boolean false:</strong> {{ config.testbooleanfalse }} <br>
+                  <strong> Test tags 1:</strong> {{ config.testtags1 }} <br>
+
+                </p>
+ 
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Test Grid Layout 🔸
+description : Test Grid Layout page description
+heading: Test Grid Layout
+engagement: Test Grid Layout page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+
+    <!-- THE-MASTER-ASSETS\reference-cssgrid-Net-Ninja\css-grid-playlist-lesson-7\css-grid-playlist-lesson-7\css-grid-playlist-lesson-7 -->
+
+<style>
+    .one { background-color: #FFCDD2;}
+    .two { background-color: #E1BEE7;}
+    .three { background-color: #C5CAE9;}
+    .four { background-color: #B3E5FC;}
+    .five { background-color: #B2DFDB;}
+    .six { background-color: #DCEDC8;}
+    .seven { background-color: #FFF9C4;}
+    .eight { background-color: #FFE0B2;}
+    .nine { background-color: #D7CCC8;}
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 
+        [viewport-start] minmax(1em, 1fr)
+        [container-start] minmax(0, 8fr)
+        [container-end] minmax(1em, 1fr) [viewport-end];
+    }
+
+    .content {
+      grid-column: container;
+      margin-top: 1rem;
+    }
+
+
+    .box {
+
+      border: 1px solid #c7c7c7;
+      border-radius: .25rem;
+
+      margin-bottom: 1rem;
+
+    }
+
+
+</style>
+
+    <main>
+        <div class="wrapper nine">
+            <div class="content nine">
+                <div class="box one">SAFe for Teams</div>
+                <div class="box two">About SAFe for Teams</div>
+                <div class="box three">Course Information</div>
+                <div class="box four">Professional Development</div>
+                <div class="box five">Find Training</div>
+                <div class="box six">Topics Covered</div>
+                <div class="box seven">Related Courses</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+    </script>
+{% endblock %}

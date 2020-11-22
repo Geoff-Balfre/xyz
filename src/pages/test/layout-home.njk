@@ -1,0 +1,75 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Layout Home ✔️
+description : Layout Home page description
+heading: Layout Home
+engagement: Layout Home page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+    <style>
+    
+        .wrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr minmax(0, 1fr);
+            grid-template-rows: repeat(7, [row] auto  );
+            padding-bottom: 1rem;
+        }
+
+        .box {
+           border: 1px solid #c7c7c7;
+           border-radius: .25rem;
+           padding: 1rem;
+        }
+
+        .one   { grid-column: 1 / 6; grid-row: 1 / 2; }
+        .two   { grid-column: 2 / 5; grid-row: 2 / 3; }
+        .three { grid-column: 2 / 5; grid-row: 3 / 4; }
+        .four  { grid-column: 1 / 6; grid-row: 4 / 5; }
+        .five  { grid-column: 2 / 5; grid-row: 5 / 6; }
+        .six   { grid-column: 1 / 6; grid-row: 6 / 7; }
+        .seven { grid-column: 2 / 5; grid-row: 7 / 8; }
+        .eight { grid-column: 2 / 5; grid-row: 8 / 9; }
+
+        @media only screen and (max-width: 576px) {
+            .one   { grid-column: 1 / 6; grid-row: 1 / 2; }
+            .two   { grid-column: 1 / 6; grid-row: 2 / 3; }
+            .three { grid-column: 1 / 6; grid-row: 3 / 4; }
+            .four  { grid-column: 1 / 6; grid-row: 4 / 5; }
+            .five  { grid-column: 1 / 6; grid-row: 5 / 6; }
+            .six   { grid-column: 1 / 6; grid-row: 6 / 7; }
+            .seven { grid-column: 1 / 6; grid-row: 7 / 8; }
+            .eight { grid-column: 1 / 6; grid-row: 8 / 9; }
+        }
+
+    </style>
+    <main>
+
+        <h4>Home page content grid layout</h4>
+
+        <div class="wrapper">
+
+            <div class="box one"># 1. Header Image full width with call to action</div>
+
+            <div class="box two">2. Banner/block USP Why book with us? points (3-4 max)</div>
+
+            <div class="box three">3. Upcoming Courses Blocks (3 to start)</div>
+
+            <div class="box four"># 4. Banner full width Looking for in-house course in your location?</div>
+
+            <div class="box five">5. Banner/block : Image  / Our Values / we specialise in , etc</div>
+
+            <div class="box six"># 6. Full width banner/block- Lean-Agile Consultancy Services with short blurb</div>
+
+            <div class="box seven">7. Blocks (4-6) with images with headings describing specialisations</div>
+
+            <div class="box eight">8. Globally recognised standards 12 SAFe Logos </div>
+
+        </div>
+    </main>
+{% endblock %}

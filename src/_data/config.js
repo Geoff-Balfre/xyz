@@ -1,0 +1,58 @@
+
+const eleventyPackage = require('@11ty/eleventy/package.json');
+
+module.exports = {
+
+    environment: process.env.ELEVENTY_ENV,
+    generator: `${eleventyPackage.name} v${eleventyPackage.version}`,
+    year: new Date().getFullYear(),
+
+    github: 'Geoff-Balfre/xyz',
+    domain: 'domain TBA',
+    url: 'https://www.balfre.com',
+    canonical: 'Site canonical',
+    sitemap: 'https://balfre.com/sitemap.xml',
+
+    googleverify: 'Verification  file/code',
+    analytics: 'UA-99999999-9',
+    recaptchajs: '',
+    recaptchasitekey: 'reCAPTCHA_site_key',
+    recaptchasecretkey: '',
+
+    author: {
+        name: 'Geoff Balfre Ltd',
+        email: 'geoff@balfre.com'
+    },
+
+    brand: {
+        name: 'DLS Brand',
+        strapline: 'DLS strapline',
+        company: 'DLS Ltd',
+        contact: 'A N Other',
+        email: 'another@domain.com'
+    },
+    copyright: {
+        start: '2001',
+        holder: 'TBC',
+        license: 'TBC',
+        url: 'TBC'
+    },
+    page: {
+        title: 'Site title',
+        desccription: 'Site desccription',
+        engagement: 'Value proposition, engagement text goes here...',
+        alttext: 'SEO: The image promotional and keyword rich ALT text'
+    },
+    palette: {
+        primary:    '#007bff',
+        secondary:  '#6c757d',
+        success:    '#28a745',
+        info:       '#17a2b8',
+        warning:    '#ffc107',
+        danger:     '#dc3545',
+        light:      '#f8f9fa',
+        dark:       '#343a40',
+        text:       '#212529',
+        background: '#fff'
+    },
+}

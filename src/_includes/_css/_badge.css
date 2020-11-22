@@ -1,0 +1,22 @@
+
+/*  BADGE STYLE  */
+
+.badge {
+  border-radius: .25rem;
+  display: inline-block;
+  font-size: 85%;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: .25rem;
+  padding: .25rem .4rem;
+  text-align: center;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+   
+.badge-color {
+  color: #fff;
+  background-color:#8a929a;
+}
+   

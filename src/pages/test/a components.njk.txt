@@ -1,0 +1,23 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Components
+description: Components page description
+heading: Components
+engagement: Components page engagement text
+styles: []
+scripts: []
+permalink: test/components.html
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+     <main>
+
+      <h1>{{ heading }}</h1>
+      <p class="lead">{{ project.engagement }}</p>
+
+      <p>{{ page.fileSlug }}: page content goes here...</p>
+
+    </main>
+{% endblock %}

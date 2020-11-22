@@ -1,0 +1,3 @@
+{%- if shouldIncludeAnalyticsTracking %}
+        <!-- analytics code goes here -->
+{%- endif %}

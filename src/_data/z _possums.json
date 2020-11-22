@@ -1,0 +1,74 @@
+[
+    {
+        "live": true,
+        "name": "leading-safe",
+        "titlelink": "/courses/leading-safe/",
+
+        "title": "Leading SAFe® 🦞",
+        "description": "Leading SAFe® page description",
+        "heading": "Leading SAFe®",
+        "engagement": "Thriving in the digital age with Business Agility",
+
+        "with": "with Certified SAFe® Agilist",
+        "withlink": "/pages/certified-safe-agilist/",
+        "duration": "2 Day",
+        "level": "Foundation level",
+        "intro": "For leaders of a Lean-Agile change initiative to develop a Lean-Agile Mindset and apply the principles and practices of the Scaled Agile Framework® (SAFe®) to support Agile Teams, programs, and",
+        "introlink": "# &hellip; keep reading /courses/leading-safe/",
+        "attendees": "CEO|# Program or Project Manager|Scrum Master|Team Lead|Release Train Engineer|Business Analyst|Agile Coach|CIO|Portfolio Manager|Consultant|Engineer|# Program Manager|Change Agent|Solution or Systems Architect",
+        "calendar": "Find Training BUTTON /pages/calendar/?course_id=leading-safe"
+    },
+    {
+        "live": true,
+        "name": "safe-for-teams",
+        "titlelink": "/courses/safe-for-teams/",
+
+        "title": "SAFe® for Teams 🦞",
+        "description": "",
+        "heading": "",
+        "engagement": "",
+
+        "with": "with Certified SAFe® Practitioner",
+        "withlink": "/pages/certified-safe-practitioner/",
+        "duration": "2",
+        "level": "Intermediate",
+        "intro": "For Lean-Agile team members to gain experience as an Agile Team member in a SAFe Agile Release Train (ART). Break down features, write user stories, improve team and train processes,",
+        "introlink": "# &hellip; keep reading [more...] (/pages/courses/leading-safe/)",
+        "attendees": "# Program or Project Manager|Scrum Master|Team Lead|Release Train Engineer|Business Analyst|Agile Coach|Consultant|Architect|Engineer|Developer|Director|Quality|Product Manager|Product Owner|# Program Manager|Change Agent|Operations|Programmer",
+        "calendar": "Find Training BUTTON (course specific calendar) /pages/calendar/?course_id=safe-for-teams"
+    },
+    {
+        "live": true,
+        "name": "safe-scrum-master",
+        "titlelink": "/courses/safe-scrum-master/",
+        "title": "SAFe® Scrum Master 🦞",
+        "description": "",
+        "heading": "",
+        "engagement": "",
+        "with": "with Certified SAFe® Scrum Master",
+        "withlink": "/pages/certified-safe-scrum-master/",
+        "duration": "2",
+        "level": "Intermediate",
+        "intro": "For Scrum Masters learning about their role in a SAFe enterprise context. Learn to facilitate Team and Program Level events for successful program execution, explore Scrum in the context of",
+        "introlink": "# &hellip;  … Keep reading [more...] (/pages/courses/leading-safe/)",
+        "attendees": "# Program or Project Manager|Scrum Master|Team Lead|Release Train Engineer|Business Analyst|Agile Coach|Portfolio Manager|Consultant|Architect|Engineer|Developer|Director|Quality|Manager|# Product Manager|Product Owner|Delivery Manager|# Program Manager",
+        "calendar": "Find Training BUTTON (course specific calendar) /pages/calendar/?course_id=safe-scrum-master"
+    },
+    {
+        "live": true,
+        "name": "safe-devops",
+        "titlelink": "/courses/safe-devops/",
+        "title": "SAFe® DevOps 🦞",
+        "description": "",
+        "heading": "",
+        "engagement": "",
+        "with": "with Certified SAFe® DevOps Practitioner",
+        "withlink": "/pages/certified-safe-devops-practitioner/",
+        "duration": "2 Day",
+        "level": "Foundation level",
+        "intro": "The two-day, interactive SAFe® DevOps course helps people across technical, non-technical, and leadership roles work together to optimize their value stream from end to end. Attendees will learn what DevOps",
+        "introlink": "# &hellip; keep reading /courses/dev-ops/",
+        "attendees": "Scrum Master|Team Lead|Release Train Engineer|Business Analyst|Agile Coach|SAFe® Program Consultant|Consultant|Architect|Engineer|Developer|Director|Quality|Manager",
+        "calendar": "Find Training BUTTON /pages/calendar/?course_id=safe-devops"
+    }
+]

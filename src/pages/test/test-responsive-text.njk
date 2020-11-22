@@ -1,0 +1,91 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Responsive Text ✔️
+description : Responsive Text page description
+heading: Responsive Text
+engagement: Responsive Text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+        .size {
+            font-weight: 400;
+            font-size: 84%;
+            color: purple;
+        }
+
+    </style>
+    <main class="container">
+        <div class="test-grid">
+            <div class="test-content">
+
+				<h1 id="id1">Heading style 1 <span id="c1" class="size"></span></h1>
+				<h2 id="id2">Heading style 2 <span id="c2" class="size"></span></h2>
+				<h3 id="id3">Heading style 3 <span id="c3" class="size"></span></h3>
+				<h4 id="id4">Heading style 4 <span id="c4" class="size"></span></h4>
+				<h5 id="id5">Heading style 5 <span id="c5" class="size"></span></h5>
+				<h6 id="id6">Heading style 6 <span id="c6" class="size"></span></h6>
+
+				<p id="p1" class="lead">Lead paragraph style, the value proposition, engagement text goes here...<span id="c7"></span></p>
+				<p id="p2" class="standard">Standard paragraph style. Today weather conditions will be mainly dry, very warm and often sunny. Isolated showers may break out during the afternoon in the east. <span id="c8"></span></p>
+				<p id="p3" class="small">Small paragraph style, the value proposition, engagement text goes here...<span id="c9"></span></p>
+
+				<p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+				<p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+				<p>¬ &#96; ! " £ $ € % ^ &amp; * ( ) _ + - =</p>
+				<p>{ } [ ] : @ ~ ; &#39; # | &#92; &lt; &gt; ? , . /</p>
+				<p>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        const prop_val = ( e, p, d ) => {
+  		    let s = window.getComputedStyle( document.querySelector(e), null ).getPropertyValue(p);
+		    document.getElementById(d).innerHTML = '[' + s + ']';
+		}
+
+        const font_size = () => {
+			prop_val( 'h1', 'font-size', 'c1' );
+			prop_val( 'h2', 'font-size', 'c2' );
+			prop_val( 'h3', 'font-size', 'c3' );
+			prop_val( 'h4', 'font-size', 'c4' );
+			prop_val( 'h5', 'font-size', 'c5' );
+			prop_val( 'h6', 'font-size', 'c6' );
+			prop_val( '.lead', 'font-size', 'c7' );
+			prop_val( '.standard', 'font-size', 'c8' );
+			prop_val( '.small', 'font-size', 'c9' );
+        }
+
+        window.onresize = font_size;
+        window.dispatchEvent(new Event('resize'));
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,114 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Test Special Detail 🧩
+description : Test Special Detail page description
+heading: Test Special Detail
+engagement: Test Special Detail page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+<style>
+
+</style>
+<main class="container">
+<div class="column-layout">
+<h1>{{ heading }}</h1>
+
+---
+
+<!-- https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet -->
+<!-- https://www.scaledagile.com/certifications/which-course-is-right-for-me/ -->
+
+---
+
+## Leading SAFe®
+with [Certified SAFe® Agilist](#)
+#### 2 Day
+#### Foundational Level
+For leaders of a Lean-Agile change initiative to develop a Lean-Agile Mindset and apply the principles and practices of the Scaled Agile Framework® (SAFe®) to support Agile Teams, programs, and [more...](/pages/courses/leading-safe/ "Link to full course details")
+#### Learners taking this course are:
+<span class="some-class">CEO</span>
+<span class="some-class">Program Manager</span>
+Project Manager
+Scrum Master
+Team Lead
+Release Train Engineer
+Business Analyst
+Agile Coach
+CIO
+Portfolio Manager
+Consultant
+Engineer
+Program Manager
+Change Agent
+Solution or Systems Architect
+
+---
+---
+
+## Leading SAFe®
+Thriving in the digital age with Business Agility
+with [Certified SAFe® Agilist](#)
+
+During this two-day course, attendees gain the knowledge necessary to lead a Lean-Agile enterprise by leveraging the Scaled Agile Framework® (SAFe®) and its underlying principles derived from Lean, systems thinking, Agile development, product development flow, and DevOps.
+
+Participants in the class gain insights into mastering Business Agility in order to thrive in the competitive market. They discuss how to establish team and technical agility and organize and re-organize around the flow of value. They also learn and practice the skills for supporting and executing PI Planning events and coordinating multiple Agile Release Trains (ARTs). Participants in the class explore the importance of adopting a customer-centric mindset and design thinking approach to agile product delivery. Learners also develop an understanding for implementing a Lean Portfolio Management function in their enterprise.
+
+Attending the class prepares individuals to take the exam and become a certified SAFe® Agilist (SA)
+
+### About Leading SAFe®
+#### 2 Day
+#### Foundational Level
+#### Learners taking this course are:
+CEO
+Program Manager
+Project Manager
+Project Manager
+Scrum Master
+Team Lead
+Release Train Engineer
+Business Analyst
+Agile Coach
+CIO
+Portfolio Manager
+Consultant
+Engineer
+Program Manager
+Change Agent
+Solution or Systems Architect
+
+### Course Information
+#### Learning Goals
+Lead the transformation to Business Agility with SAFe
+Become a Lean-Agile Leader
+Understand customer needs with Design Thinking
+Enable Agile Product Delivery
+Implement Lean Portfolio Management
+#### What Attendees Get
+Attendee workbook
+Preparation and eligibility to take the SAFe® 5 Agilist exam
+One year membership to the SAFe Community Platform
+Course certificate of completion
+Attendees must attend both days of the course in order to be eligible for the exam.
+#### Prerequisites
+All are welcome to attend the course, regardless of experience. However, the following prerequisites are highly recommended:
+* 5+ years’ experience in software development, testing, business analysis, product, or project management
+* Experience in Scrum
+#### Exam Details
+Completion of this course gives you access to the exam and all related study materials as part of your Learning Plan in the SAFe Community Platform.
+For more information about the exam and benefits of becoming a Certified SAFe professional, click the More Exam Details button.
+<button class="btn btn-secondary">More Exam details...</button>
+#### Professional Development Units & Scrum Education Units
+TBC
+
+
+
+
+
+</div>
+</main>
+{% endblock %}

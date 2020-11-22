@@ -1,0 +1,46 @@
+---
+eleventyExcludeFromCollections: true
+layout: _default.njk
+title: Testing 🍔
+description : Testing page description
+heading: Testing
+engagement: Testing page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+<style>
+body {
+  background-color: #fff;
+  background-image: url('/img/layout-grid-optimized-2000-1300.png');
+  background-size: cover;
+  background-position: left top;
+  x-padding: 4rem;
+}
+</style>
+    <main class="container">
+
+      <div class="column-layout" style="border: 1px solid teal;border-radius:1rem;margin-top:1rem;padding:1rem;background-color:rgba(0,0,0,0.1);">
+
+        <h1>{{ heading }}</h1>
+
+        <ul>
+          {% for item in collections.test -%}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} class="active" aria-current="page"{% endif %} target="_blank">{{ item.data.title }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <h2>CSS Arrows</h2>
+        <p>
+          Up arrow: <i class="arrow arrow-up"></i> &nbsp;&nbsp;
+          Right arrow: <i class="arrow arrow-right"></i> &nbsp;&nbsp;
+          Down arrow: <i class="arrow arrow-down"></i> &nbsp;&nbsp;
+          Left arrow: <i class="arrow arrow-left"></i> &nbsp;&nbsp;
+        </p>
+
+      </div>
+
+    </main>
+{% endblock %}

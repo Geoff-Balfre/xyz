@@ -1,0 +1,55 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: SAFe® Agile Product Management
+description : SAFe® Agile Product Management page description
+heading: SAFe® Agile Product Management
+engagement: SAFe® Agile Product Management page engagement text
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - SAFe® Agile Product Management|end
+---
+{% block content %}
+
+# {{ heading }}
+
+<p class="lead">{{ engagement }}</p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+<section id="about">
+
+## About {{ title }}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+</section>
+ 
+<section id="topics">
+
+## Course Information
+### Learning Goals
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+ 
+### What Attendees Get
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+### Prerequisites
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+### Exam Details
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+<p style="background-color: orange;">More Call to Action</p>
+
+### Professional Development Units &amp; Scrum Education Units
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+</section>
+
+{% endblock %}

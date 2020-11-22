@@ -1,0 +1,64 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: Leading SAFe® ✔️
+description : Leading SAFe® page description
+heading: Leading SAFe®
+engagement: Thriving in the digital age with Business Agility
+
+markdown: detail-leading-safe
+includeinsitemap: true
+includeinanalytics: true
+styles: ['_course']
+
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - Leading SAFe®|end
+---
+{% block content %}
+    <main class="container">
+
+      <div class="course-wrapper">
+
+        <section class="course-content-zero">
+          {% component_breadcrumb { data: breadcrumbs } %}
+        </section>
+
+        <section class="box course-content-one one">
+          {% markdown '/src/pages/markdown/' + stuff + '.md' %}
+        </section>
+
+        <section class="box course-content-two two">
+          {% markdown '/src/pages/markdown/' + stuff + '.md' %}
+        </section>
+
+        <section class="box course-content-three three">
+          {% markdown '/src/pages/markdown/' + stuff + '.md' %}
+        </section>
+
+        <section class="box course-content-four four">
+          {% markdown '/src/pages/markdown/' + stuff + '.md' %}
+        </section>
+
+        <section class="box course-content-five five">
+          {% markdown '/src/pages/markdown/' + stuff + '.md' %}
+        </section>
+
+        <section class="box course-content-six six">
+          {% markdown '/src/pages/markdown/' + stuff + '.md' %}
+        </section>
+
+        <section class="box course-content-seven seven">
+          {% markdown '/src/pages/markdown/' + stuff + '.md' %}
+        </section>
+
+      </div>
+
+    </main>
+
+{% endblock %}

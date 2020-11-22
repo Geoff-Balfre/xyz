@@ -1,0 +1,227 @@
+---
+eleventyExcludeFromCollections: false
+layout: _default.njk
+title: Living Styleguide ✏️
+description: Living Styleguide page description
+heading: Living Styleguide
+engagement: Living Styleguide page engagement text
+styles: []
+scripts: ['holderjs', 'recaptcha']
+date: Last Modified
+tags: ['pages', 'test']
+---
+{% block content %}
+    <style>
+    
+        .test-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(0, 1fr) 1fr 1fr 1fr 1fr 1fr minmax(0, 1fr);
+            x-grid-template-rows: repeat(7, [row] auto  );
+            padding-bottom: 1rem;
+        }
+
+        .test-content {
+            grid-column: 2 / 7; grid-row: 1 / 2;
+            border: 1px solid #c7c7c7;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .test-content   { grid-column: 1 / 8; grid-row: 1 / 2; }
+        }
+
+        h6.info { color: purple; font-variant: small-caps; }
+
+        /* https://catswhocode.com/css-spinner/ */
+        /* https://cssminifier.com/ */
+        .w3s-loader1{display:inline-block;border:4px solid #f3f3f3;border-radius:50%;border-top:4px solid #ccc;width:30px;height:30px;-webkit-animation:spin1 2s linear infinite;animation:spin1 2s linear infinite}
+        .w3s-loader2{display:inline-block;border:4px solid #f3f3f3;border-radius:50%;border-top:4px solid #add8e6;border-bottom:4px solid #add8e6;width:30px;height:30px;-webkit-animation:spin1 2s linear infinite;animation:spin1 2s linear infinite}
+        .small.progress { font-size: 6px; }
+        .large.progress { font-size: 24px; }
+        .progress{position:relative;display:inline-block;width:5em;height:5em;margin:0 .5em;font-size:12px;text-indent:999em;overflow:hidden;animation:spin1 2s infinite steps(8)}
+        .progress:after,.progress:before,.progress>div:after,.progress>div:before{content:'';position:absolute;top:0;left:2.25em;width:.5em;height:1.5em;border-radius:.2em;background:#eee;box-shadow:0 3.5em #eee;transform-origin:50% 2.5em}
+        .progress:before { background: #555; }
+        .progress:after { transform: rotate(-45deg); background: #777; }
+        .progress > div:before { transform: rotate(-90deg); background: #999; }
+        .progress > div:after { transform: rotate(-135deg); background: #bbb; }
+        @-webkit-keyframes spin1{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}
+        @keyframes spin1{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}00%{transform:rotate(360deg)}
+
+    </style>
+
+    <main class="container">
+
+        <div class="test-grid">
+            <div class="test-content">
+
+                <h1>{{ heading }}</h1>
+
+                <h6 class="info">Spacing:</h6>
+                {% element_spacing %}
+                <hr>
+
+                <!--<h6 class="info">Art:</h6>-->
+                {# element_art #}
+
+                <h6 class="info">Brand:</h6>
+                {% element_brand %} 
+                <hr>
+
+                <h6 class="info">Palette:</h6>
+                {% element_palette { data: project.palette } %} 
+                <hr>
+
+                <h6 class="info">Iconography:</h6>
+                <p>Navigation: &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'list' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'three-dots-vertical' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'three-dots' } -%} &nbsp;&nbsp;
+                </p>
+                <p>Directional: &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'chevron-up' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'chevron-right' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'chevron-down' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'chevron-left' } -%} &nbsp;&nbsp;
+                </p>
+                <p>View Password: &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'eye' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'eye-slash' } -%} &nbsp;&nbsp;
+                </p>
+                <p>Social: &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'im-facebook2' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'im-linkedin' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'im-twitter' } -%} &nbsp;&nbsp;
+                </p>
+                <p>Miscellaneous: &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem; color: blue;', icon: 'link' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem; color: blue;', icon: 'box-arrow-up-right' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'search' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem; color: green;', icon: 'check' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem; color: red;', icon: 'dash' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'plus' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem;', icon: 'envelope' } -%} &nbsp;&nbsp;
+                      {% element_svgicon { style: 'font-size: 2rem; color: magenta;', icon: 'telephone' } -%} &nbsp;&nbsp;
+                </p>
+                <hr>
+
+                <h6 class="info">Progress Spinners:</h6>
+                <p><br>
+                    <span class="w3s-loader1"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="w3s-loader2"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="small progress"><div></div></span>
+                </p>
+                <hr>
+
+                <h6 class="info">Mono font families:</h6>
+                {% element_mono %}
+                <hr>
+
+                <h6 class="info">Mono style:</h6>
+                {% element_monotext %}
+                <hr>
+
+                <h6 class="info">Native font families:</h6>
+                {% element_native %}
+                <hr>
+
+                <h6 class="info">Character Set:</h6>
+                {% element_characterset %}
+                <hr>
+
+                <h6 class="info">Headings:</h6>
+                {% element_headings %} 
+                <hr>
+
+                <h6 class="info">Paragraphs:</h6>
+                {% element_paragraphs %}
+                <hr>
+
+                <h6 class="info">Blockquote:</h6>
+                {% element_blockquote %}
+                <hr>
+
+                <h6 class="info">In Paragraph styles:</h6>
+                {% element_in_paragraph_style %}
+                <hr>
+
+                <h6 class="info">Links:</h6>
+                {% element_links %}
+                <hr>
+
+                <h6 class="info">Unstyled List:</h6>
+                {% element_unstyled_list %}
+                <hr>
+
+                <h6 class="info">Unordered List:</h6>
+                {% element_unordered_list %}
+                <hr>
+
+                <h6 class="info">Ordered List:</h6>
+                {% element_ordered_list %}
+                <hr>
+
+                <h6 class="info">Inline List:</h6>
+                {% element_inline_list %}
+                <hr>
+
+                <h6 class="info">Definition List:</h6>
+                {% element_definition_list %}
+                <hr>
+
+                <h6 class="info">Base Table:</h6>
+                {% element_basic_table %}
+                <hr>
+
+                <h6 class="info">Styled Table:</h6>
+                {% element_styled_table %}
+                <hr>
+
+                <h6 class="info">Buttons:</h6>
+                <p>
+                  {% element_button { style: 'primary', text: 'Primary' } %}&nbsp;&nbsp;
+                  {% element_button { style: 'primary', state: 'active', text: 'Active state' } %}&nbsp;&nbsp;
+                  {% element_button { style: 'primary', state: 'disabled', text: 'Disabled state' } %}
+                </p>
+                <br>
+                <p>{% element_button { style: 'primary', state: 'touch', text: 'Touched state' } %}</p>
+                <p>{% element_button { style: 'primary', state: 'disabled x-progress', text: 'Working state(s)' } %}</p><!-- disabled and progress and finish -->
+                <br>
+                <p>{% element_button { style: 'secondary', text: 'Secondary' } %}</p>
+                <p>{% element_button { style: 'link', text: 'Link (Button)' } %}</p>
+                <hr>
+
+                <h6 class="info">Vertical Menu (component):</h6>
+                {% element_menu_list %}
+                <hr>
+
+                <h6 class="info">Horizontal Menu (component):</h6>
+                {% element_inline_menu_list %}
+                <hr>
+
+                <h6 class="info">Breadcrumbs (component):</h6>
+                {% element_breadcrumbs %}
+                <hr>
+
+                <h6 class="info">Pagination (component):</h6>
+                {% element_pagination %}
+                <hr>
+
+                <h6 class="info">Hero Imagery:</h6>
+                {% element_hero %}
+                <hr>
+
+                <h6 class="info">Card Imagery:</h6>
+                {% element_card %}
+                <hr>
+
+                <p>Other image considerations: Portrait, Landscape, Responsive, Art Direction, and &lt;img srceset=" sizes "&gt;</p>
+
+            </div>
+        </div>
+
+    </main>
+
+{% endblock %}

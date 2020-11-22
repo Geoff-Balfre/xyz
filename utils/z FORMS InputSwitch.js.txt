@@ -1,0 +1,70 @@
+module.exports = ( props ) => {
+
+      const elementgroup = props.elementgroup ? props.elementgroup : 'form-group row';
+
+      const grouplabel  = props.customlabel  ? props.customlabel  : 'col-sm-4 group-label';
+
+      const id           = props.id           ? props.id           : 'switchId';
+      const labeltext    = props.label        ? props.label        : '# Switch';
+
+      const labelstyle   = props.labelstyle   ? props.labelstyle   : 'col-sm-4 col-form-label';
+      const labeladdon   = props.required     ? ''                 : '<small>(optional)</small>';
+
+      const checkgroup   = props.checkgroup   ? props.checkgroup   : 'form-check';
+      const checkstyle   = props.checkstyle   ? props.checkstyle   : 'form-check-input';
+      const checklabel   = props.checklabel   ? props.checklabel   : 'form-check-label';
+
+      const inputgroup   = props.inputgroup   ? props.inputgroup   : 'col-sm-6 col-md-5 col-lg-4';
+
+      const inputstyle   = props.style        ? props.style        : 'form-control';
+      const inputname    = props.name         ? props.name         : props.id;
+
+      const inputtype    = props.type         ? props.type         : 'checkbox';
+      const inputtitle   = props.title        ? props.title        : 'Switch input';
+
+
+
+      const x            = 'custom-control custom-switch';
+      const y            = 'custom-control-input';
+      const z            = 'custom-control-label';
+
+
+
+//  CHANGE BELOW HERE
+//  add others "input" attributes here and validation details
+//  "aria": "araiaId"
+//  "ariatext": "Please..."
+      const autofocus    = props.autofocus    ? 'autofocus' : '';
+      const required     = props.required     ? 'required'  : '';
+      const str          = `${ autofocus } ${ required }`;
+      const attributes   = str.trim();
+
+
+
+      return `
+              <section class="${ elementgroup }">
+                <div class="${ grouplabel }">${ labeltext }</div>
+                <div class="">
+                  <div class="custom-control custom-switch">
+                    <input id="${ id }" class="custom-control-input" type="${ inputtype }" checked>
+
+                    <label for="${ id }" class="custom-control-label">XXXXX TBC</label>
+
+                  </div>
+                </div>
+              </section>
+      `;
+};
+
+/*
+
+                    <div class="form-group row">
+                      <div class="col-sm-4 offset-sm-4">
+                          <div class="custom-control custom-switch">
+                            <input  id="toggleIde" class="custom-control-input" type="checkbox">
+                            <label for="toggleIde" class="custom-control-label">Toggle this switch element</label>
+                          </div>
+                      </div>
+                    </div>
+
+*/

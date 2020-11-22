@@ -1,0 +1,55 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: Implementing SAFe®
+description : Implementing SAFe® page description
+heading: Implementing SAFe®
+engagement: Achieving Business Agility with the Scaled Agile Framework
+styles: []
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - Implementing SAFe®|end
+---
+{% block content %}
+
+# {{ heading }}
+
+<p class="lead">{{ engagement }}</p>
+
+During this four-day course, attendees learn how to lead a Lean-Agile transformation by leveraging the practices and principles of the Scaled Agile Framework® (SAFe®) and the seven core competencies of the Lean Enterprise. Attendees gain insights and practice how to coach programs, launch Agile Release Trains, build a Continuous Delivery Pipeline with DevOps culture, and empower a Lean Portfolio.
+
+The first two days of the course — Leading SAFe® — provide the basis to teach SAFe to leaders. The final two days focus exclusively on what it takes to successfully implement SAFe in the enterprise. Certifying as a SAFe® 5 Program Consultant (SPC), and becoming a change agent, enables attendees to coach and guide the enterprise to succeed in a disruptive marketplace and empower them to implement a Lean-Agile SAFe transformation.
+
+<section id="about">
+
+## About {{ title }}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+</section>
+ 
+<section id="topics">
+
+## Course Information
+### Learning Goals
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+ 
+### What Attendees Get
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+### Prerequisites
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+### Exam Details
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+<p style="background-color: orange;">More Call to Action</p>
+
+### Professional Development Units &amp; Scrum Education Units
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis condimentum ligula eget porttitor. Aliquam pellentesque, mauris ut ultricies ornare, arcu velit suscipit dui, ut vehicula nunc erat in nunc. Donec sed congue lectus.
+
+</section>
+
+{% endblock %}

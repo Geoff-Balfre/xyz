@@ -1,0 +1,21 @@
+---
+eleventyExcludeFromCollections: true
+title: Sitemap XML
+permalink: /sitemap.xml
+date: Last Modified
+tags: ['pages', 'support']
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+{%-   if page.data.includeinsitemap %}
+{%-     set absoluteurl %}{{ config.url }}{{ page.url }}{% endset %}
+    <url>
+        <loc>{{ absoluteurl }}</loc>
+        <lastmod>{{ page.date | dateToFormat('yyyy-MM-dd') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>{%- if page.data.priority %}{{ page.data.priority }}{% else %}0.50{% endif %}</priority>
+    </url>
+{%-   endif %}
+{%- endfor %}
+</urlset>

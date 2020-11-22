@@ -1,0 +1,80 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: SAFe® for Teams
+description : SAFe® for Teams page description
+heading: SAFe® for Teams
+engagement: Establishing Team Agility for Agile Release Trains
+includeinsitemap: true
+includeinanalytics: true
+styles: ['_course', '_badge']
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - SAFe® for Teams|end
+
+thisperson: Certified SAFe® Practitioner
+thispersonlink: /pages/persons/certified-safe-practitioner
+thisintro:
+  - 'Build the skills needed to become a high-performing team member of an Agile Release Train (ART)—and learn how to collaborate effectively with other teams—by becoming a SAFe® 5 Practitioner.'
+  - 'During this two-day course, gain an in-depth understanding of the ART, how it delivers value, and what you can do to effectively perform your role using Scrum, Kanban, and XP. Learn how to write stories and break down features, plan and execute iterations, and plan Program Increments. Finally, learn about the continuous delivery pipeline and DevOps culture, how to effectively integrate with other teams in the program, and what it takes to continuously improve the train.'
+thisduration: 2
+thislevel: Intermediate 
+thislearners:
+  - <em style="color:red;">Program or Project Manager</em>
+  - Scrum Master
+  - Team Lead
+  - Release Train Engineer
+  - Business Analyst
+  - Agile Coach
+  - Consultant
+  - Architect
+  - Engineer
+  - Developer
+  - Director
+  - Quality
+  - Product Manager
+  - Product Owner
+  - <em style="color:red;">Program Manager</em>
+  - Change Agent
+  - Operations
+  - Programmer
+thisgoals:
+  - Apply SAFe to scale Lean and Agile development in their enterprise
+  - Know their team and its role on the Agile Release Train
+  - Know all other teams on the train, their roles, and the dependencies between the teams
+  - Plan iterations
+  - Execute iterations and demonstrate value
+  - Plan Program Increments
+  - Integrate and work with other teams on the train
+thisassets:
+- Attendee workbook
+- Preparation and eligibility to take the SAFe® 5 Practitioner (SP) exam
+- One-year membership to the SAFe Community Platform
+- Course certificate of completion.
+thisassetsnote: Attendees must attend both days of the course in order to qualify for the exam.
+thisprereq:
+  - Familiarity with Agile concepts and principles
+  - Awareness of Scrum, Kanban, and XP
+  - Working knowledge of software and hardware development processes
+thisprereqnote: All are welcome to attend the course, regardless of experience. However, the following prerequisites are highly recommended
+thisexamintro:
+  - Completion of this course gives you access to the exam and all related study materials as part of your Learning Plan in the SAFe Community Platform.
+  - For more information about the exam and benefits of becoming a Certified SAFe professional, click the More Exam Details button.
+thistopics:
+  - Introducing the Scaled Agile Framework (SAFe)
+  - Building an Agile Team
+  - Planning the Iteration
+  - Executing the Iteration
+  - Executing the Program Increment
+thisrelated:
+  - title: Leading SAFe®
+    person: Certified SAFe® Agilist
+    url: /courses/
+  - title: SAFe® DevOps
+    person: Certified SAFe® DevOps Practitioner
+    url: /courses/
+---

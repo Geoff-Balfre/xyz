@@ -1,0 +1,36 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+title: SAFe® Scrum Master ✔️
+description : SAFe® Scrum Master page description
+heading: SAFe® Scrum Master
+engagement: SAFe® Scrum Master page engagement text
+markdown: detail-safe-for-scrum-master
+includeinsitemap: true
+includeinanalytics: true
+styles: ['_course']
+scripts: []
+date: Last Modified
+tags: ['pages', 'course']
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - SAFe® Scrum Master|end
+---
+{% block content %}
+    <main class="container">
+
+      <div class="course-wrapper">
+
+        <section class="course-content-zero">
+          {% component_breadcrumb { data: breadcrumbs } %}
+        </section>
+
+        {% markdown '/src/pages/markdown/' + markdown + '.md' %}
+        {# markdown '/src/pages/markdown/' ++ ' detail-safe-for-devops.md' #}
+
+      </div>
+
+    </main>
+
+{% endblock %}

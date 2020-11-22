@@ -1,0 +1,68 @@
+---
+eleventyExcludeFromCollections: false
+layout: _course.njk
+
+tags: ['pages', 'squib']
+
+pagination:
+    data: possums
+    size: 1
+    alias: possum
+permalink: "courses/{{ possum.name | slug }}/"
+
+title: "{{ possums.title }}" 🔸
+---
+
+<!-- READ THIS: https://stackoverflow.com/questions/61106975/eleventy-11ty-data-pagination-title-from-data -->
+
+    <main class="container">
+
+      <div class="x-course-wrapper">
+
+        <section class="x-course-content-zero">
+          {% component_breadcrumb { data: breadcrumbs } %}
+        </section>
+
+<p>
+
+ 1 {{ possum.live }} <br>
+ 4 {{ possum.titlelink }} <br>
+ 2 {{ possum.name }} <br>
+ 3 with {{ possum.title }} <br>
+
+ {{ possum.description }} <br>
+ {{ possum.heading }} <br>
+ {{ possum.engagement }} <br>
+
+ 5 {{ possum.with }} <br>
+ 6 {{ possum.withlink }} <br>
+ 7 {{ possum.duration }} DAY<br>
+ 8 {{ possum.level }} LEVEL<br>
+ 9 {{ possum.intro }} <br>
+10 {{ possum.introlink }} <br>
+Learners taking this course are:<br>
+11 {{ possum.attendees }} <br>
+Find Training BUTTON <br>
+12 {{ possum.calendar }} <br>
+
+<hr>
+ 
+ a {{ eleventyExcludeFromCollections }} <br>
+ b {{ layout }} <br>
+ 
+ d {{ title }} <br>
+ e {{ description }} <br>
+ f {{ heading }} <br>
+ g {{ engagement }} <br>
+ 
+ h {{ markdown }} <br>
+ i {{ styles }} <br>
+ j {{ scripts }} <br>
+ k {{ date }} <br>
+ l {{ tags }} <br>
+ m {{ breadcrumbs }} <br>
+</p>
+
+      </div>
+
+    </main>

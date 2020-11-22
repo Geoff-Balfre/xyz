@@ -1,0 +1,33 @@
+{
+  "github":       "tbc",
+  "netlify":      "tbc",
+  "analytics":    "UA-99999999-9",
+
+  "brand":        "GrB",
+  "brandlogo":    "GrB",
+
+  "company":      "Geoff Balfre Ltd",
+  "domain":       "https://balfre.com",
+  "copyright":    "1995",
+
+  "app":          "Geoff Balfre",
+  "appshort":     "Grb",
+  "theme":        "#00FFFF",
+  "bgcolor":      "#FFFFFF",
+
+  "title":        "Site title",
+  "description":  "Site description",
+
+  "canonical":    "Site canonical",
+  "bodyclass":    "",
+
+  "lang":         "en-GB",
+
+  "engagement":   "Value proposition, engagement text goes here...",
+  "alttext":      "SEO: Promotional and keyword rich ALT text",
+
+  "holder":       "https://cdn.jsdelivr.net/npm/holderjs@2.9.6/holder.min.js",
+  "recaptcha":    "",
+  "bs4css":       "",
+  "bs4js":        ""
+}
