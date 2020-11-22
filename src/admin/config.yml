@@ -14,43 +14,63 @@ collections:
     slug: "{{slug}}"       # Filename template, e.g., YYYY-MM-DD-title.md
     fields:                # The fields for each document, usually in front matter
       - { label: "Exclude", name: "eleventyExcludeFromCollections", widget: "boolean", default: false }
-      - { label: "Override", name: "templateEngineOverride", widget: "list" }
+      - { label: "Override", name: "templateEngineOverride", widget: "hidden", default: "njk, md" }
       - { label: "Layout", name: "layout", widget: "string", default: "_default.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Engagement", name: "engagement", widget: "string" }
-      - { label: "Priority", name: "priority", widget: "string" }
-      - { label: "Sitemap", name: "includeinsitemap", widget: "boolean", default: true }
-      - { label: "Analytics", name: "includeinanalytics", widget: "boolean", default: true }
+      - { label: "Priority", name: "priority", widget: "hidden" }
+      - { label: "Show in Sitemap", name: "includeinsitemap", widget: "boolean", default: true }
+      - { label: "Show in Analytics", name: "includeinanalytics", widget: "boolean", default: true }
       - { label: "Styles", name: "styles", widget: "list", allow_add: true }
       - { label: "Scripts", name: "scripts", widget: "list", allow_add: true }
       - { label: "Date", name: "date", widget: "string", default: "Last Modified" }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ['pages', 'prime'] }
       - { label: "Body", name: "body", widget: "markdown" }
+# The Course pages
+  - name: "courses"
+    label: "Courses"
+    description: "Course pages"
+    folder: "src/pages/courses"
+    create: false
+    fields:
+      - { label: "Exclude", name: "eleventyExcludeFromCollections", widget: "boolean", default: false }
+      - { label: "Override", name: "templateEngineOverride", widget: "hidden", default: "njk, md" }
+      - { label: "Layout", name: "layout", widget: "string", default: "_default.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Heading", name: "heading", widget: "string" }
+      - { label: "Engagement", name: "engagement", widget: "string" }
+      - { label: "Show in Sitemap", name: "includeinsitemap", widget: "boolean", default: true }
+      - { label: "Show in Analytics", name: "includeinanalytics", widget: "boolean", default: true }
+      - { label: "Styles", name: "styles", widget: "list", allow_add: true }
+      - { label: "Scripts", name: "scripts", widget: "list", allow_add: true }
+      - { label: "Date", name: "date", widget: "string", default: "Last Modified" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ['pages', 'course'] }
+      - { label: "Body", name: "body", widget: "markdown" }
 # The Support pages
-  - name: "support"        # Used in routes, e.g., /admin/collections/blog
-    label: "Support"       # Used in the UI
-    description: "Support pages" # Optional text to qualify the label and used in the UI
-    folder: "src/pages/support"  # The path to the folder where the documents are stored
-    create: false          # Allow users to create new documents in this collection
-    slug: "{{slug}}"       # Filename template, e.g., YYYY-MM-DD-title.md
-    fields:                # The fields for each document, usually in front matter
+  - name: "support"
+    label: "Support"
+    description: "Support pages"
+    folder: "src/pages/support"
+    create: false
+    slug: "{{slug}}"
+    fields:
       - { label: "Exclude", name: "eleventyExcludeFromCollections", widget: "boolean", default: false }
       - { label: "Layout", name: "layout", widget: "string", default: "_default.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Engagement", name: "engagement", widget: "string" }
-      - { label: "Sitemap", name: "includeinsitemap", widget: "boolean", default: true }
-      - { label: "Analytics", name: "includeinanalytics", widget: "boolean", default: true }
+      - { label: "Show in Sitemap", name: "includeinsitemap", widget: "boolean", default: true }
+      - { label: "Show in Analytics", name: "includeinanalytics", widget: "boolean", default: true }
       - { label: "Styles", name: "styles", widget: "list", allow_add: true }
       - { label: "Scripts", name: "scripts", widget: "list", allow_add: true }
       - { label: "Date", name: "date", widget: "string", default: "Last Modified" }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ['pages', 'support'] }
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: "" }
       - { label: "Body", name: "body", widget: "markdown" }
-# The Support pages
-
 # Project Configuration
   - name: "config"
     label: "Configuration"
@@ -62,14 +82,14 @@ collections:
         label: "Project"
         file: "src/_data/project.json"
         fields:
-          - {label: "Brand name", name: "brandName", widget: "string", required: true}
-          - {label: "Brand strapline", name: "brandStrapline", widget: "string", required: true}
-          - {label: "Brand company", name: "brandCompany", widget: "string", required: true}
-          - {label: "Brand contact", name: "brandContact", widget: "string", required: true}
-          - {label: "Brand email", name: "brandEmail", widget: "string", required: true}
-          - {label: "Copyright start", name: "copyrightStart", widget: "string", required: true}
-          - {label: "Copyright holder", name: "copyrightHolder", widget: "string", required: true}
-          - {label: "Copyright licence", name: "copyrightLicense", widget: "string", required: true}
-          - {label: "Copyright url", name: "copyrightUrl", widget: "string", required: true}
-          - {label: "Engagement text", name: "pageEngagement", widget: "string", required: true}
-          - {label: "Alt text", name: "imageAlttext", widget: "string", required: true}
+          - { label: "Brand name", name: "brandName", widget: "string", required: true }
+          - { label: "Brand strapline", name: "brandStrapline", widget: "string", required: true }
+          - { label: "Brand company", name: "brandCompany", widget: "string", required: true }
+          - { label: "Brand contact", name: "brandContact", widget: "string", required: true }
+          - { label: "Brand email", name: "brandEmail", widget: "string", required: true }
+          - { label: "Copyright start", name: "copyrightStart", widget: "string", required: true }
+          - { label: "Copyright holder", name: "copyrightHolder", widget: "string", required: true }
+          - { label: "Copyright licence", name: "copyrightLicense", widget: "string", required: true }
+          - { label: "Copyright url", name: "copyrightUrl", widget: "string", required: true }
+          - { label: "Engagement text", name: "pageEngagement", widget: "hidden" }
+          - { label: "Alt text", name: "imageAlttext", widget: "hidden" }
