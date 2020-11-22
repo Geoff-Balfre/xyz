@@ -75,6 +75,58 @@ certs:
     name: SAFe® for Agile Product Management
     lead: With SAFe® APM certification
 ---
+<style>
+
+        .grid-container-3 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 1rem;
+          place-items: center;
+        }
+        .col-3 {
+          background-color: lightyellow;
+          margin: 0 auto;
+          margin-bottom: 1rem;
+          padding: 0.42rem;
+        }
+        @media (max-width: 767.98px) {
+          .grid-container-3 {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .col-3:nth-child(3) {
+            border: 1px solid red;
+          }
+        }
+
+        .grid-container-4 {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-column-gap: 1rem;
+          margin-bottom: 1rem;
+          place-items: center;
+        }
+        .col-4 {
+          background-color: lightyellow;
+          margin: 0 auto;
+          margin-bottom: 1rem;
+          padding: 0.42rem;
+        }
+
+
+
+        @media (max-width: 767.98px) {
+          .grid-container-4 {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 0;
+          }
+          .col-4 {
+            margin-bottom: 1rem;
+          }
+        }
+
+
+
+</style>
 <main>
 
 <div class="default-grid">
@@ -100,7 +152,19 @@ certs:
 
 <section>
 
-  3. Upcoming Courses – Blocks ( 3 to start)
+  <p>3. Upcoming Courses – Blocks ( 3 to start)</p>
+
+  <div class="grid-container-3" style="margin: 0 auto; text-align: center;">
+    <div class="col-3">
+      <img class="img-fluid" data-src="holder.js/180x180?auto=yes&textmode=exact" alt="SEO: Promotional Keyword Rich ALT text">
+    </div>
+    <div class="col-3">
+      <img class="img-fluid" data-src="holder.js/180x180?auto=yes&textmode=exact" alt="SEO: Promotional Keyword Rich ALT text">
+    </div>
+    <div class="col-3">
+      <img class="img-fluid" data-src="holder.js/180x180?auto=yes&textmode=exact" alt="SEO: Promotional Keyword Rich ALT text">
+    </div>
+  </div>
 
 </section>
 
@@ -122,15 +186,30 @@ certs:
 </section>
 <section>
 
-  <p>7. 4 to 6 Blocks with images with headings describing specialisations</p>
+  <p>7. (4 to 6) Blocks with images with headings describing specialisations</p>
+
+  <div class="grid-container-4" style="margin: 0 auto; text-align: center;">
+    <div class="col-4">
+      <img class="img-fluid" data-src="holder.js/180x180?auto=yes&textmode=exact" alt="SEO: Promotional Keyword Rich ALT text">
+    </div>
+    <div class="col-4">
+      <img class="img-fluid" data-src="holder.js/180x180?auto=yes&textmode=exact" alt="SEO: Promotional Keyword Rich ALT text">
+    </div>
+    <div class="col-4">
+      <img class="img-fluid" data-src="holder.js/180x180?auto=yes&textmode=exact" alt="SEO: Promotional Keyword Rich ALT text">
+    </div>
+    <div class="col-4">
+      <img class="img-fluid" data-src="holder.js/180x180?auto=yes&textmode=exact" alt="SEO: Promotional Keyword Rich ALT text">
+    </div>
+  </div>
 
 </section>
 <section>
 
   <p>8. Globally recognised standards – 12 SAFe Logos </p>
-
-  <div class="" style="margin: 0 auto;">
-  {% for item in certs %}<img class="x-img-fluid" style="margin:0.25rem;width:66px;height:66px;" src="{{ item.img }}" alt="SEO: Promotional Keyword Rich ALT text">&nbsp;{% endfor %}
+  
+  <div class="" style="margin: 0 auto; text-align: center;">
+  {% for item in certs %}<img class="x-img-fluid" style="margin: 0.25rem; width: 66px; height: 66px;" src="{{ item.img }}" alt="SEO: Promotional Keyword Rich ALT text">&nbsp;{% endfor %}
   </div>
 
 </section>
