@@ -1,32 +1,4 @@
 ---
-eleventyExcludeFromCollections: false
-templateEngineOverride: njk, md
-layout: _default.njk
-title: Leading SAFe®
-description : Leading SAFe® page description
-heading: Leading SAFe®
-engagement: Thriving in the digital age with Business Agility
-includeinsitemap: true
-includeinanalytics: true
-styles: ['course', 'badge']
-scripts: []
-date: Last Modified
-tags: ['pages', 'course']
-breadcrumbs:
-  - Home|/
-  - Training|/pages/training/
-  - Leading SAFe®
-
-thisperson: Certified SAFe® Agilist
-thispersonlink: /pages/persons/certified-safe-agilist
-thisintro: |
-  During this two-day course, attendees gain the knowledge necessary to lead a Lean-Agile enterprise by leveraging the Scaled Agile Framework® (SAFe®) and its underlying principles derived from Lean, systems thinking, Agile development, product development flow, and DevOps.
-
-  Participants in the class gain insights into mastering Business Agility in order to thrive in the competitive market. They discuss how to establish team and technical agility and organize and re-organize around the flow of value. They also learn and practice the skills for supporting and executing PI Planning events and coordinating multiple Agile Release Trains (ARTs). Participants in the class explore the importance of adopting a customer-centric mindset and design thinking approach to agile product delivery. Learners also develop an understanding for implementing a Lean Portfolio Management function in their enterprise.
-
-  Attending the class prepares individuals to take the exam and become a certified SAFe® Agilist (SA)'
-thisduration: 2
-thislevel: Foundation 
 thislearners:
   - CEO
   - Program or Project Manager
@@ -42,6 +14,42 @@ thislearners:
   - Program Manager
   - Change Agent
   - Solution or Systems Architect
+eleventyExcludeFromCollections: false
+templateEngineOverride: njk, md
+layout: _default.njk
+description: Leading SAFe® page description
+heading: Leading SAFe®
+includeinsitemap: true
+includeinanalytics: true
+styles:
+  - course
+  - badge
+thislevel: Foundation
+scripts: []
+thispersonlink: /pages/persons/certified-safe-agilist
+thisintro: >
+  During this two-day course, attendees gain the knowledge necessary to lead a
+  Lean-Agile enterprise by leveraging the Scaled Agile Framework® (SAFe®) and
+  its underlying principles derived from Lean, systems thinking, Agile
+  development, product development flow, and DevOps.
+
+
+  Participants in the class gain insights into mastering Business Agility in order to thrive in the competitive market. They discuss how to establish team and technical agility and organize and re-organize around the flow of value. They also learn and practice the skills for supporting and executing PI Planning events and coordinating multiple Agile Release Trains (ARTs). Participants in the class explore the importance of adopting a customer-centric mindset and design thinking approach to agile product delivery. Learners also develop an understanding for implementing a Lean Portfolio Management function in their enterprise.
+
+
+  Attending the class prepares individuals to take the exam and become a certified SAFe® Agilist (SA)'
+title: Leading SAFe®
+engagement: Thriving in the digital age with Business Agility towards resilience
+date: Last Modified
+breadcrumbs:
+  - Home|/
+  - Training|/pages/training/
+  - Leading SAFe®
+thisduration: 2
+thisperson: Certified SAFe® Agilist
+tags:
+  - pages
+  - course
 ---
 <main class="container">
 
