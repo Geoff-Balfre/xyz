@@ -3,16 +3,18 @@ eleventyExcludeFromCollections: false
 templateEngineOverride: njk, md
 layout: _default.njk
 title: About
-description : About page description
+description: About page description
 heading: About
 engagement: About page engagement
-priority: '0.80'
+priority: "0.80"
 includeinsitemap: true
 includeinanalytics: true
 styles: []
 scripts: []
 date: Last Modified
-tags: ['pages', 'prime']
+tags:
+  - pages
+  - prime
 ---
 <main>
 
@@ -22,37 +24,33 @@ tags: ['pages', 'prime']
 
 # {{ heading }}
 
-<p class="lead">{{ engagement }}</p>
+{{ engagement }}{.lead}
 
-## What is Lorem Ipsum?
+The Lean-Agile Coach was born in 2016 out of a desire to help spread the positive benefits of organisational agility.
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+We have been supporting change and transformation across industries such as telecommunications, banking, insurance services, global e-commerce, government for over 10 years.  We have implemented Agile practices and supported the growth and development of Scrum Masters, Product Owners, Business Analysts & Software Development teams. We have developed highly interactive and inspiring Agile courses and we provide advice that goes beyond the simple transmission of an Agile method because we know that there is no single version of Agile.
 
-</section>
+We are deeply convinced that Agility is the key to envisioning a profitable and sustainable future for organisations. Our thinking and core values are firmly based in the Agile Principles and the Agile Manifesto.
 
-<section class="default-grid-breakout">
+We want to provide individuals and companies with the best tools and solutions to help create a learning culture that ensures sustainable growth for the entire company.
 
-## Where does it come from?
+We are passionate about human relationships: considering people as unique and singular is one of our preferred Agile values with the goal of doing things together. We believe that becoming Agile means that you can adapt more effectively in a VUCA world and be resilient in times of uncertainty.
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+As Agile Coaches, we need to wear different hats when it suits a particular situation. At times we are agile lean practitioners and others we are teachers, mentors, coaches and facilitators.
 
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+Ongoing learning is key for agile coaches and those involved in agile change and transformation and this is why we want to take the ICAgile courses to more agile roles. We wish to contribute to the ICAgile community by teaching about an agile mindset and growth mindset and encourage agile practitioners towards mastery in their chosen discipline.
 
-</section>
+Deidre Luzmore is a thoughtful and reflective coach with an immense sense of justice and the desire to nurture team members and enable them to reach their full potential.
 
-<section>
+Deidre’s years of experience in implementing agile techniques in different industries, cultures and environments give her a unique perspective on business agility. She has successfully run agile projects of varying size and complexity whilst applying principles of Lean-Agile leadership to programmes. As an Agile coach, she has provided coaching to teams and senior management as well as training (in-person and virtual) to teams, executives and leaders.
 
-## Why do we use it?
+She is skilled in remote or virtual training, workshops and active learning sessions.
 
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+Deidre is an Agile Coach & Trainer and ICAgile Certified Agile Coach. She has excelled in Senior Scrum Master & Technical Delivery Manager roles. She is a Certified Scrum Master (CSM), Certified SAFe 5.0 Program Consultant certified. She has provided SAFe training & Scrum Master Training and has over 20 years of experience of agile project management & agile project delivery. 10 years of experience in applications of agile methodologies: Scrum, Kanban, SAFe, DevOps.
 
-</section>
+Deidre’s years of experience in implementing agile techniques in different industries, cultures and environments give her a unique perspective on business agility. She has successfully run agile projects of varying size and complexity whilst applying principles of Lean-Agile leadership to programmes. As an Agile coach, she has provided coaching to teams and senior management as well as training (in-person and virtual) to teams, executives and leaders.
 
-<section>
-
-## Where can I get some?
-
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+She is skilled in remote or virtual training, workshops and active learning sessions.
 
 </section>
 
