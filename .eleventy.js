@@ -31,6 +31,16 @@ module.exports = function(eleventyConfig) {
         eleventyConfig.addShortcode(shortcodeName, component_shortcodes[shortcodeName])
     });
 
+    //  EXTEND MARKDOWN FEATURES
+
+    let markdownIt = require("markdown-it");
+    let markdownItAttrs = require('markdown-it-attrs');
+    let options = {
+        html: true
+    };
+    let markdownLib = markdownIt(options).use(markdownItAttrs);
+    eleventyConfig.setLibrary("md", markdownLib);
+
     //  JS FILTER
 
     eleventyConfig.addNunjucksAsyncFilter("jsmin", async function ( code, callback ) {
