@@ -4,6 +4,19 @@ const eleventyPackage = require('@11ty/eleventy/package.json');
 module.exports = {
 
     environment: process.env.ELEVENTY_ENV,
+
+    environment: process.env.ELEVENTY_ENV,
+
+    env1: process.env.ELEVENTY_RTA,
+    env2: process.env.ELEVENTY_ENV,
+    env3: process.env.NETLIFY,
+    env4: process.env.URL,
+    env5: process.env.ENVIRONMENT,
+    env6: process.env.INIT_CWD,
+    netlify: process.env.NETLIFY || 'https://some_netlify_url/',
+    url: process.env.URL         || 'https://some_url_url/',
+    github:  process.env.GITHUB  || 'https://github.com/Geoff-Balfre/xyz'
+      
     generator: `${eleventyPackage.name} v${eleventyPackage.version}`,
     year: new Date().getFullYear(),
 
