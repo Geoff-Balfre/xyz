@@ -15,7 +15,7 @@ module.exports = {
     env6: process.env.INIT_CWD,
     netlify: process.env.NETLIFY || 'https://some_netlify_url/',
     url: process.env.URL         || 'https://some_url_url/',
-    github:  process.env.GITHUB  || 'https://github.com/Geoff-Balfre/xyz'
+    github:  process.env.GITHUB  || 'https://github.com/Geoff-Balfre/xyz',
       
     generator: `${eleventyPackage.name} v${eleventyPackage.version}`,
     year: new Date().getFullYear(),
