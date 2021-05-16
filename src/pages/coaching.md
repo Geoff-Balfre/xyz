@@ -53,16 +53,16 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 
 <hr>
 
-a: {{ env.env0 }} #<br>
-b: {{ env.env1 }} #<br>
-c: {{ env.env2 }} #<br>
-d: {{ env.env3 }} #<br>
-e: {{ env.env4 }} #<br>
-f: {{ env.env5 }} #<br>
-g: {{ env.env6 }} #<br>
-h: {{ env.netlify }} #<br>
-i: {{ env.url }} #<br>
-j: {{ env.github }} #<br>
+a: {{ config.env0 }} #<br>
+b: {{ config.env1 }} #<br>
+c: {{ config.env2 }} #<br>
+d: {{ config.env3 }} #<br>
+e: {{ config.env4 }} #<br>
+f: {{ config.env5 }} #<br>
+g: {{ config.env6 }} #<br>
+h: {{ config.netlify }} #<br>
+i: {{ config.url }} #<br>
+j: {{ config.github }} #<br>
 
 <hr>
 
