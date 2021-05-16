@@ -54,15 +54,15 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 <hr>
 
 a: {{ config.env0 }} #<br>
-b: {{ config.env1 }} #<br>
-c: {{ config.env2 }} #<br>
-d: {{ config.env3 }} #<br>
-e: {{ config.env4 }} #<br>
-f: {{ config.env5 }} #<br>
-g: {{ config.env6 }} #<br>
-h: {{ config.netlify }} #<br>
-i: {{ config.url }} #<br>
-j: {{ config.github }} #<br>
+ELEVENTY_RTA: {{ config.env1 }} #<br>
+ELEVENTY_ENV: {{ config.env2 }} #<br>
+NETLIFYd: {{ config.env3 }} #<br>
+URLe: {{ config.env4 }} #<br>
+ENVIRONMENT: {{ config.env5 }} #<br>
+INIT_CWD: {{ config.env6 }} #<br>
+NETLIFY: {{ config.netlify }} #<br>
+URL: {{ config.url }} #<br>
+GITHUB: {{ config.github }} #<br>
 
 <hr>
 
