@@ -7,6 +7,7 @@ module.exports = {
 
     environment: process.env.ELEVENTY_ENV,
 
+    env0: process.env.HAPPY_DAYS,
     env1: process.env.ELEVENTY_RTA,
     env2: process.env.ELEVENTY_ENV,
     env3: process.env.NETLIFY,
