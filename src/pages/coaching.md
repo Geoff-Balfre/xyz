@@ -53,6 +53,7 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 
 <hr>
 
+HAPPY_DAYS: {{ config.env0 }} #<br>  
 a: {{ config.env0 }} #<br>
 ELEVENTY_RTA: {{ config.env1 }} #<br>
 ELEVENTY_ENV: {{ config.env2 }} #<br>
