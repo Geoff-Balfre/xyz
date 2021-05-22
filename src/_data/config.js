@@ -5,7 +5,7 @@ module.exports = {
 
     environment: process.env.ELEVENTY_ENV,
 
-    env0:   process.env.ELEVENTY_ENV || ELEVENTY_ENV,
+    env0:   process.env.ELEVENTY_ENV,
     env1:            process.env.URL || 'http://localhost:8080',
     env2: process.env.REPOSITORY_URL || 'https://github.com/Geoff-Balfre/',
     env3: 'https://kind-kowalevski-ec8e42.netlify.app/',
