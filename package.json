@@ -4,9 +4,9 @@
   "description": "Diedre SAFE Cosultancy and Training",
   "main": "",
   "scripts": {
-    "start": "npm run clean && npx eleventy --serve",
+    "start": "set ELEVENTY_ENV=development && npm run clean && npx eleventy --serve",
     "quiet": "npm run clean && npx eleventy --serve --quiet",
-    "build": "npm run clean && npx eleventy",
+    "build": "set ELEVENTY_ENV=production && npm run clean && npx eleventy",
     "debug": "set DEBUG=* && npx eleventy",
     "clean": "rimraf dist",
 
