@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "quiet": "npm run clean && npx eleventy --serve --quiet",
-    "start": "set ELEVENTY_ENV=development && npm-run-all clean npx eleventy --serve",
-    "build": "set ELEVENTY_ENV=production && npm-run-all clean npx eleventy",
+    "start": "npm run clean && npx eleventy --serve",
+    "build": "npm run clean && npx eleventy",
     "debug": "set DEBUG=* && npx eleventy",
     "clean": "rimraf dist",
 
