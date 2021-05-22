@@ -86,6 +86,12 @@ tags: ['pages', 'prime']
 {%- endfor %}
 </p>
 
+### Config  
+
+{%- for key, value in config %}
+Key: {{ key }}  Value: {{ value | safe }}<br>
+{%- endfor %}  
+  
 </section>
 
 </div>
